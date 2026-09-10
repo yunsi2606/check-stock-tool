@@ -109,7 +109,13 @@ function saveData(data) {
 
 function getSettings() {
     const data = loadData();
-    return data.settings;
+    const envToken = process.env.TELEGRAM_BOT_TOKEN;
+    const envChat = process.env.TELEGRAM_CHAT_ID;
+    return {
+        ...data.settings,
+        telegramBotToken: data.settings.telegramBotToken || envToken || '',
+        telegramChatId: data.settings.telegramChatId || (envChat ? sanitizeChatId(envChat) : '')
+    };
 }
 
 function updateSettings(newSettings) {
