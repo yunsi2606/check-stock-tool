@@ -238,8 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch('/api/settings');
             currentSettings = await res.json();
 
-            document.getElementById('telegramBotToken').value = currentSettings.telegramBotToken || '';
-            document.getElementById('telegramChatId').value = currentSettings.telegramChatId || '';
+            // Client-side localStorage fallback for Vercel Ephemeral Lambdas
+            const localToken = localStorage.getItem('boki_telegram_token') || '';
+            const localChat = localStorage.getItem('boki_telegram_chat') || '';
+
+            const activeToken = currentSettings.telegramBotToken || localToken;
+            const activeChat = currentSettings.telegramChatId || localChat;
+
+            document.getElementById('telegramBotToken').value = activeToken;
+            document.getElementById('telegramChatId').value = activeChat;
             
             const intervalSec = currentSettings.checkIntervalSeconds || ((currentSettings.checkIntervalMinutes || 5) * 60);
             document.getElementById('checkIntervalSeconds').value = String(intervalSec);
@@ -259,6 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const chatId = document.getElementById('telegramChatId').value.trim();
         const intervalSec = parseInt(document.getElementById('checkIntervalSeconds').value, 10);
         const autoCheck = document.getElementById('autoCheckEnabled').checked;
+
+        if (botToken) localStorage.setItem('boki_telegram_token', botToken);
+        if (chatId) localStorage.setItem('boki_telegram_chat', chatId);
 
         try {
             const res = await fetch('/api/settings', {
