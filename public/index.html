@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Stock Monitor - Tool Check Kho Sách & Telegram Alert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <div>
+                    <h1>Stock Monitor PRO</h1>
+                    <p class="subtitle">Theo dõi kho sách tự động (Tiki, AZ Vietnam, Fahasa, Nobita.vn)</p>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <div class="status-indicator" id="autoCheckStatus">
+                    <span class="pulse-dot"></span>
+                    <span id="autoCheckText">Tự động check: 5 phút/lần</span>
+                </div>
+                <button class="btn btn-primary" id="btnCheckAll">
+                    <i class="fa-solid fa-rotate"></i>
+                    <span>Check Toàn Bộ</span>
+                </button>
+                <button class="btn btn-success" id="btnOpenAddModal">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Thêm Sản Phẩm</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Overview Bar -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon icon-total">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label">Tổng Theo Dõi</span>
+                    <h3 class="stat-value" id="statTotal">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-instock">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label">Còn Hàng</span>
+                    <h3 class="stat-value text-success" id="statInStock">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-outstock">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label">Hết Hàng</span>
+                    <h3 class="stat-value text-danger" id="statOutOfStock">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label">Telegram Bot</span>
+                    <h3 class="stat-value" id="statTelegramStatus">Chưa cấu hình</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area with Navigation Tabs -->
+        <div class="main-content">
+            <div class="tabs-bar">
+                <button class="tab-btn active" data-tab="productsTab">
+                    <i class="fa-solid fa-book"></i> Danh Sách Sản Phẩm
+                </button>
+                <button class="tab-btn" data-tab="telegramTab">
+                    <i class="fa-brands fa-telegram"></i> Cấu Hình Telegram & Tần Suất
+                </button>
+                <button class="tab-btn" data-tab="logsTab">
+                    <i class="fa-solid fa-terminal"></i> Log Thực Thi Live
+                </button>
+            </div>
+
+            <!-- Tab 1: Products List -->
+            <div class="tab-content active" id="productsTab">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Sản Phẩm Đang Theo Dõi</h2>
+                        <span class="badge" id="productCountBadge">0 sản phẩm</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nền Tảng</th>
+                                    <th>Sản Phẩm</th>
+                                    <th>Chi Tiết Phân Loại (Variants)</th>
+                                    <th>Trạng Thái Kho</th>
+                                    <th>Tốc Độ Cào</th>
+                                    <th>Check Gần Nhất</th>
+                                    <th class="text-right">Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                                <tr>
+                                    <td colspan="7" class="empty-state">
+                                        <i class="fa-solid fa-spinner fa-spin"></i> Đang tải dữ liệu sản phẩm...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Telegram Settings -->
+            <div class="tab-content" id="telegramTab">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-brands fa-telegram text-primary"></i> Cấu Hình Telegram Bot Notification</h2>
+                    </div>
+                    <form id="settingsForm" class="settings-form">
+                        <div class="form-group">
+                            <label for="telegramBotToken">
+                                Telegram Bot Token
+                                <span class="help-text">(Tạo từ @BotFather trên Telegram)</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" id="telegramBotToken" placeholder="Ví dụ: 7123456789:AAFxxx...xxx" autocomplete="off">
+                                <button type="button" class="btn-toggle-show" id="btnToggleToken">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telegramChatId">
+                                Telegram Chat ID / Group ID
+                                <span class="help-text">(ID nhóm hoặc cá nhân nhận thông báo)</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-users"></i>
+                                <input type="text" id="telegramChatId" placeholder="Ví dụ: -1004324379848">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="checkIntervalSeconds">Tần Suất Tự Động Check</label>
+                                <select id="checkIntervalSeconds">
+                                    <option value="20">⚡ 20 Giây / Lần (Săn Flash Sale / Restock Nhanh)</option>
+                                    <option value="30">🚀 30 Giây / Lần</option>
+                                    <option value="60">⏱️ 1 Phút / Lần</option>
+                                    <option value="120">⏱️ 2 Phút / Lần</option>
+                                    <option value="300" selected>⏱️ 5 Phút / Lần (Khuyên dùng chuẩn)</option>
+                                    <option value="600">⏱️ 10 Phút / Lần</option>
+                                    <option value="900">⏱️ 15 Phút / Lần</option>
+                                    <option value="1800">⏱️ 30 Phút / Lần</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <label>Bật/Tắt Tự Động Check</label>
+                                <label class="switch-container">
+                                    <input type="checkbox" id="autoCheckEnabled" checked>
+                                    <span class="switch-slider"></span>
+                                    <span class="switch-label" id="switchLabelText">Đang BẬT</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-floppy-disk"></i> Lưu Cấu Hình
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="btnTestTelegram">
+                                <i class="fa-paper-plane fa-regular"></i> Gửi Tin Nhắn Thử Nghiệm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tab 3: Live Logs -->
+            <div class="tab-content" id="logsTab">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-terminal"></i> Nhật Ký Thực Thi Live (Log Console)</h2>
+                        <button class="btn btn-sm btn-secondary" id="btnClearLogUI">
+                            <i class="fa-solid fa-broom"></i> Xóa Màn Hình
+                        </button>
+                    </div>
+                    <div class="terminal-window" id="logConsole">
+                        <div class="log-line log-info">[SYSTEM] Đã kết nối với Web Console Log.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Add Product -->
+    <div class="modal-backdrop" id="addProductModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Thêm Sản Phẩm Mới Vào Tool Check</h3>
+                <button class="modal-close" id="btnCloseModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label for="productUrl">Đường Dẫn (URL) Sản Phẩm</label>
+                        <input type="url" id="productUrl" required placeholder="Dán link Tiki, AZ Vietnam, Fahasa, hoặc Nobita.vn..." class="form-control">
+                        <small class="form-text">Ví dụ: https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871</small>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 14px;">
+                        <label for="targetVariant">Phân Loại Cần Theo Dõi Cụ Thể (Tùy chọn)</label>
+                        <input type="text" id="targetVariant" placeholder="Ví dụ: Bản Đặc Biệt (Để trống nếu theo dõi tất cả phân loại)" class="form-control">
+                        <small class="form-text">Mẹo đối với Tiki: Nếu Tiki ẩn phân loại hết hàng, việc nhập tên phân loại đích (ví dụ: Bản Đặc Biệt) sẽ giúp tool phát hiện ngay khi Tiki hiện và mở bán lại phân loại đó.</small>
+                    </div>
+
+                    <div class="platform-preview-badge" id="platformPreview" style="display: none; margin-top: 12px;">
+                        Nền tảng phát hiện: <span id="detectedPlatformText" class="badge-platform">...</span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="btnCancelModal">Hủy</button>
+                        <button type="submit" class="btn btn-primary" id="btnSubmitAdd">
+                            <i class="fa-solid fa-plus"></i> Thêm Sản Phẩm
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

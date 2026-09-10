@@ -1,0 +1,1610 @@
+{
+  "settings": {
+    "telegramBotToken": "",
+    "telegramChatId": "",
+    "checkIntervalMinutes": 5,
+    "autoCheckEnabled": true,
+    "checkIntervalSeconds": 300
+  },
+  "products": [
+    {
+      "id": "tiki-1",
+      "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
+      "platform": "tiki",
+      "title": "Sách Ai Đó - Tập 3",
+      "targetVariant": "all",
+      "lastChecked": "2026-09-10T16:29:59.687Z",
+      "lastStatus": "in_stock",
+      "lastData": {
+        "success": true,
+        "platform": "tiki",
+        "title": "Sách Ai Đó - Tập 3",
+        "price": 151000,
+        "originalPrice": 189000,
+        "available": true,
+        "stockQty": 1000,
+        "image": "https://salt.tikicdn.com/ts/product/0e/f9/34/47342bc983694d23aa1df2e5b819d304.png",
+        "variants": [
+          {
+            "id": "279695871",
+            "title": "Bản Thường",
+            "price": 151000,
+            "available": true,
+            "inventoryStatus": "available"
+          }
+        ],
+        "targetVariant": "all",
+        "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
+        "responseTimeMs": 485,
+        "timestamp": "2026-09-10T16:29:59.680Z"
+      },
+      "created": "2026-09-10T03:13:07.383Z",
+      "lastError": null
+    },
+    {
+      "id": "fahasa-1",
+      "url": "https://www.fahasa.com/ai-do-tap-3-ban-dac-biet-bia-cung-tang-kem-bookmark-postcard-card-pvc-moc-dien-thoai-bao-dung-the-kem-day-deo-so-lo-xo.html?fhs_campaign=SEARCH",
+      "platform": "fahasa",
+      "title": "Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo",
+      "targetVariant": "all",
+      "lastChecked": "2026-09-10T16:29:59.889Z",
+      "lastStatus": "out_of_stock",
+      "lastData": {
+        "success": true,
+        "platform": "fahasa",
+        "title": "Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo",
+        "price": 0,
+        "available": false,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/2/_/2_19_111.jpg",
+        "variants": [
+          {
+            "id": "default",
+            "title": "Mặc định",
+            "price": 0,
+            "available": false
+          }
+        ],
+        "url": "https://www.fahasa.com/ai-do-tap-3-ban-dac-biet-bia-cung-tang-kem-bookmark-postcard-card-pvc-moc-dien-thoai-bao-dung-the-kem-day-deo-so-lo-xo.html?fhs_campaign=SEARCH",
+        "responseTimeMs": 434,
+        "timestamp": "2026-09-10T16:29:59.881Z"
+      },
+      "created": "2026-09-10T03:13:07.384Z",
+      "lastError": null
+    },
+    {
+      "id": "azvietnam-1",
+      "url": "https://azvietnam.vn/products/aido3",
+      "platform": "azvietnam",
+      "title": "Sách - Ai Đó (Tập 3)",
+      "targetVariant": "all",
+      "lastChecked": "2026-09-10T16:29:59.668Z",
+      "lastStatus": "in_stock",
+      "lastData": {
+        "success": true,
+        "platform": "azvietnam",
+        "title": "Sách - Ai Đó (Tập 3)",
+        "price": 279650,
+        "available": true,
+        "image": "https://cdn.hstatic.net/products/200001134165/1_a97c9f37a9ac4a628c2cb693a1fb7a04.png",
+        "variants": [
+          {
+            "id": "1174179922",
+            "title": "Bản Đặc Biệt",
+            "price": 279650,
+            "originalPrice": 329000,
+            "available": false,
+            "sku": "8935325039058"
+          },
+          {
+            "id": "1174179923",
+            "title": "Bản Thường ĐQ",
+            "price": 132300,
+            "originalPrice": 189000,
+            "available": false,
+            "sku": "aido3DQ"
+          },
+          {
+            "id": "1174246628",
+            "title": "Bản Thường",
+            "price": 189000,
+            "originalPrice": 189000,
+            "available": true,
+            "sku": "8935325039041"
+          }
+        ],
+        "url": "https://azvietnam.vn/products/aido3",
+        "responseTimeMs": 205,
+        "timestamp": "2026-09-10T16:29:59.660Z"
+      },
+      "created": "2026-09-10T03:13:07.384Z",
+      "lastError": null
+    },
+    {
+      "id": "nobita-1",
+      "url": "https://nobita.vn/san-pham/ai-do-tap-3-ban-dac-biet",
+      "platform": "nobita",
+      "title": "Sách Nobita",
+      "targetVariant": "all",
+      "lastChecked": "2026-09-10T16:30:05.241Z",
+      "lastStatus": "out_of_stock",
+      "lastData": {
+        "success": true,
+        "platform": "nobita",
+        "title": "Sách Nobita",
+        "price": 200000,
+        "available": false,
+        "image": "https://nobita.vn/wp-content/uploads/2026/09/img-3604-400x400.jpeg",
+        "variants": [
+          {
+            "id": "default",
+            "title": "Mặc định",
+            "price": 200000,
+            "available": false
+          }
+        ],
+        "url": "https://nobita.vn/san-pham/ai-do-tap-3-ban-dac-biet",
+        "responseTimeMs": 5763,
+        "timestamp": "2026-09-10T16:30:05.235Z"
+      },
+      "created": "2026-09-10T03:13:07.384Z",
+      "lastError": null
+    },
+    {
+      "id": "prod-1789010697095",
+      "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
+      "platform": "tiki",
+      "title": "Sách Ai Đó - Tập 3",
+      "targetVariant": "Bản Đặc Biệt",
+      "lastChecked": "2026-09-10T16:29:59.706Z",
+      "lastStatus": "out_of_stock",
+      "lastData": {
+        "success": true,
+        "platform": "tiki",
+        "title": "Sách Ai Đó - Tập 3",
+        "price": 151000,
+        "originalPrice": 189000,
+        "available": false,
+        "stockQty": 1000,
+        "image": "https://salt.tikicdn.com/ts/product/0e/f9/34/47342bc983694d23aa1df2e5b819d304.png",
+        "variants": [
+          {
+            "id": "missing-target",
+            "title": "Bản Đặc Biệt (Ẩn do hết hàng)",
+            "price": 151000,
+            "available": false,
+            "inventoryStatus": "hidden_out_of_stock"
+          },
+          {
+            "id": "279695871",
+            "title": "Bản Thường",
+            "price": 151000,
+            "available": true,
+            "inventoryStatus": "available"
+          }
+        ],
+        "targetVariant": "Bản Đặc Biệt",
+        "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
+        "responseTimeMs": 219,
+        "timestamp": "2026-09-10T16:29:59.701Z"
+      },
+      "created": "2026-09-10T03:24:57.095Z",
+      "lastError": null
+    }
+  ],
+  "logs": [
+    {
+      "id": "log-1789057805249-9a0l",
+      "timestamp": "2026-09-10T16:30:05.249Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (6.06s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789057805239-qjru",
+      "timestamp": "2026-09-10T16:30:05.239Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5763ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799886-69du",
+      "timestamp": "2026-09-10T16:29:59.886Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (434ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799705-svbh",
+      "timestamp": "2026-09-10T16:29:59.705Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (219ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799684-dz11",
+      "timestamp": "2026-09-10T16:29:59.684Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (485ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799666-lie2",
+      "timestamp": "2026-09-10T16:29:59.666Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (205ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799481-21vz",
+      "timestamp": "2026-09-10T16:29:59.481Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799466-flfx",
+      "timestamp": "2026-09-10T16:29:59.466Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799451-afeb",
+      "timestamp": "2026-09-10T16:29:59.451Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799439-koa1",
+      "timestamp": "2026-09-10T16:29:59.439Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799192-gm89",
+      "timestamp": "2026-09-10T16:29:59.192Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789057799186-2y8g",
+      "timestamp": "2026-09-10T16:29:59.186Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789057797157-xqpr",
+      "timestamp": "2026-09-10T16:29:57.158Z",
+      "level": "info",
+      "message": "Hệ thống tự động check stock khởi động (tần suất: 30 giây/lần)",
+      "details": null
+    },
+    {
+      "id": "log-1789057358461-teto",
+      "timestamp": "2026-09-10T16:22:38.461Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (6.47s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789057358452-anbw",
+      "timestamp": "2026-09-10T16:22:38.452Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (6245ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057353599-kvg1",
+      "timestamp": "2026-09-10T16:22:33.599Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (1427ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057353184-5nj2",
+      "timestamp": "2026-09-10T16:22:33.184Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (793ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352731-jsxg",
+      "timestamp": "2026-09-10T16:22:32.731Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (548ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352568-33ja",
+      "timestamp": "2026-09-10T16:22:32.568Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (477ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352317-lg2l",
+      "timestamp": "2026-09-10T16:22:32.317Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352200-gkw4",
+      "timestamp": "2026-09-10T16:22:32.200Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352172-21ra",
+      "timestamp": "2026-09-10T16:22:32.173Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352138-nloo",
+      "timestamp": "2026-09-10T16:22:32.138Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789057352067-hq5d",
+      "timestamp": "2026-09-10T16:22:32.068Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789057351963-iogp",
+      "timestamp": "2026-09-10T16:22:31.963Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055342329-a0d1",
+      "timestamp": "2026-09-10T15:49:02.329Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.51s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055342326-mtta",
+      "timestamp": "2026-09-10T15:49:02.326Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (499ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055342018-5ilp",
+      "timestamp": "2026-09-10T15:49:02.018Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (184ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055342009-dvnf",
+      "timestamp": "2026-09-10T15:49:02.009Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (184ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341967-r04t",
+      "timestamp": "2026-09-10T15:49:01.967Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (135ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341832-a0po",
+      "timestamp": "2026-09-10T15:49:01.832Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341828-2511",
+      "timestamp": "2026-09-10T15:49:01.828Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341824-z6ah",
+      "timestamp": "2026-09-10T15:49:01.824Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341821-4llp",
+      "timestamp": "2026-09-10T15:49:01.821Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055341812-oc2t",
+      "timestamp": "2026-09-10T15:49:01.812Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055319167-y3uj",
+      "timestamp": "2026-09-10T15:48:39.168Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (7.21s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055318924-axd0",
+      "timestamp": "2026-09-10T15:48:38.924Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (6264ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055314514-lpol",
+      "timestamp": "2026-09-10T15:48:34.514Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (2391ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055313514-5l1r",
+      "timestamp": "2026-09-10T15:48:33.514Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (783ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055313253-vogl",
+      "timestamp": "2026-09-10T15:48:33.253Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (889ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055313036-cksl",
+      "timestamp": "2026-09-10T15:48:33.037Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (1001ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055312647-8k0j",
+      "timestamp": "2026-09-10T15:48:32.647Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055312474-2u2m",
+      "timestamp": "2026-09-10T15:48:32.475Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055312246-5uq4",
+      "timestamp": "2026-09-10T15:48:32.247Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055312089-us6j",
+      "timestamp": "2026-09-10T15:48:32.089Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055311959-1ajq",
+      "timestamp": "2026-09-10T15:48:31.959Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055311860-vpt4",
+      "timestamp": "2026-09-10T15:48:31.860Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055284161-31b5",
+      "timestamp": "2026-09-10T15:48:04.161Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (2.26s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055283976-kr41",
+      "timestamp": "2026-09-10T15:48:03.976Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (1826ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055283030-o5r4",
+      "timestamp": "2026-09-10T15:48:03.030Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (684ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055282848-2cc4",
+      "timestamp": "2026-09-10T15:48:02.849Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (864ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055282612-u9s4",
+      "timestamp": "2026-09-10T15:48:02.612Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (420ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055282253-5jnb",
+      "timestamp": "2026-09-10T15:48:02.254Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055282119-x3ym",
+      "timestamp": "2026-09-10T15:48:02.119Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055282020-swa8",
+      "timestamp": "2026-09-10T15:48:02.021Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055281896-0ul0",
+      "timestamp": "2026-09-10T15:48:01.896Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055281835-7dig",
+      "timestamp": "2026-09-10T15:48:01.835Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055257333-yw5c",
+      "timestamp": "2026-09-10T15:47:37.334Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.52s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055257274-j72v",
+      "timestamp": "2026-09-10T15:47:37.274Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5471ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055252292-k7fy",
+      "timestamp": "2026-09-10T15:47:32.292Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (501ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251925-vy99",
+      "timestamp": "2026-09-10T15:47:31.925Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (124ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251917-7lrb",
+      "timestamp": "2026-09-10T15:47:31.917Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (131ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251894-d1ht",
+      "timestamp": "2026-09-10T15:47:31.894Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (100ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251798-pxuj",
+      "timestamp": "2026-09-10T15:47:31.798Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251794-vse3",
+      "timestamp": "2026-09-10T15:47:31.794Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251790-cpgf",
+      "timestamp": "2026-09-10T15:47:31.790Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251787-s31n",
+      "timestamp": "2026-09-10T15:47:31.787Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251783-tulx",
+      "timestamp": "2026-09-10T15:47:31.783Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055251779-bal2",
+      "timestamp": "2026-09-10T15:47:31.779Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055223412-eci6",
+      "timestamp": "2026-09-10T15:47:03.412Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (1.64s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055223404-y1zh",
+      "timestamp": "2026-09-10T15:47:03.404Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (1612ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055223165-k0xu",
+      "timestamp": "2026-09-10T15:47:03.165Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (1372ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055222944-gcsu",
+      "timestamp": "2026-09-10T15:47:02.944Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (1166ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055222857-aj13",
+      "timestamp": "2026-09-10T15:47:02.857Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (1069ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055221788-7ubt",
+      "timestamp": "2026-09-10T15:47:01.788Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055221783-zcn1",
+      "timestamp": "2026-09-10T15:47:01.783Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055221778-7yte",
+      "timestamp": "2026-09-10T15:47:01.778Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055221772-hmi9",
+      "timestamp": "2026-09-10T15:47:01.772Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055221769-x0av",
+      "timestamp": "2026-09-10T15:47:01.769Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055197169-jd9u",
+      "timestamp": "2026-09-10T15:46:37.169Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.41s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055197159-tm3x",
+      "timestamp": "2026-09-10T15:46:37.159Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5383ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055192444-ijuu",
+      "timestamp": "2026-09-10T15:46:32.444Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (682ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055192041-jcwm",
+      "timestamp": "2026-09-10T15:46:32.041Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (273ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191966-aigz",
+      "timestamp": "2026-09-10T15:46:31.966Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (187ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191874-vfns",
+      "timestamp": "2026-09-10T15:46:31.874Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (103ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191775-2xwj",
+      "timestamp": "2026-09-10T15:46:31.775Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191772-mit9",
+      "timestamp": "2026-09-10T15:46:31.772Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191769-5l84",
+      "timestamp": "2026-09-10T15:46:31.769Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191766-oywn",
+      "timestamp": "2026-09-10T15:46:31.766Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191760-xthp",
+      "timestamp": "2026-09-10T15:46:31.760Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055191758-q9dk",
+      "timestamp": "2026-09-10T15:46:31.758Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055162074-2rwm",
+      "timestamp": "2026-09-10T15:46:02.074Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.32s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055162069-pz5i",
+      "timestamp": "2026-09-10T15:46:02.069Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (308ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161963-a1v7",
+      "timestamp": "2026-09-10T15:46:01.963Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (197ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161956-t4xs",
+      "timestamp": "2026-09-10T15:46:01.956Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (203ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161812-7mq9",
+      "timestamp": "2026-09-10T15:46:01.812Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (49ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161764-f1vj",
+      "timestamp": "2026-09-10T15:46:01.764Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161760-1khn",
+      "timestamp": "2026-09-10T15:46:01.760Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161756-q9q9",
+      "timestamp": "2026-09-10T15:46:01.756Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161751-ex0z",
+      "timestamp": "2026-09-10T15:46:01.751Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055161748-3cqc",
+      "timestamp": "2026-09-10T15:46:01.748Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055137577-3slu",
+      "timestamp": "2026-09-10T15:45:37.578Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.83s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055137559-hnoc",
+      "timestamp": "2026-09-10T15:45:37.559Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5797ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055132187-glv9",
+      "timestamp": "2026-09-10T15:45:32.187Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (435ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131882-pxw2",
+      "timestamp": "2026-09-10T15:45:31.882Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (139ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131874-o0lk",
+      "timestamp": "2026-09-10T15:45:31.874Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (110ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131809-gpg9",
+      "timestamp": "2026-09-10T15:45:31.809Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (54ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131760-s19y",
+      "timestamp": "2026-09-10T15:45:31.760Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131756-kgax",
+      "timestamp": "2026-09-10T15:45:31.756Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131752-f30a",
+      "timestamp": "2026-09-10T15:45:31.752Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131748-ri5l",
+      "timestamp": "2026-09-10T15:45:31.748Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131741-t7w8",
+      "timestamp": "2026-09-10T15:45:31.741Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055131737-wnyb",
+      "timestamp": "2026-09-10T15:45:31.737Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055102415-s9j3",
+      "timestamp": "2026-09-10T15:45:02.416Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.68s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055102403-onk2",
+      "timestamp": "2026-09-10T15:45:02.403Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (656ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055102145-baui",
+      "timestamp": "2026-09-10T15:45:02.145Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (404ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101861-xytm",
+      "timestamp": "2026-09-10T15:45:01.861Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (128ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101807-9kb1",
+      "timestamp": "2026-09-10T15:45:01.807Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (63ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101745-j982",
+      "timestamp": "2026-09-10T15:45:01.745Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101740-f6pd",
+      "timestamp": "2026-09-10T15:45:01.740Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101735-pvz9",
+      "timestamp": "2026-09-10T15:45:01.735Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101730-1sd5",
+      "timestamp": "2026-09-10T15:45:01.730Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055101726-u9hd",
+      "timestamp": "2026-09-10T15:45:01.726Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055077454-pnb1",
+      "timestamp": "2026-09-10T15:44:37.454Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.73s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055077445-yztk",
+      "timestamp": "2026-09-10T15:44:37.445Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5708ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055072026-3bi0",
+      "timestamp": "2026-09-10T15:44:32.026Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (296ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071913-gnsv",
+      "timestamp": "2026-09-10T15:44:31.913Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (175ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071906-unhr",
+      "timestamp": "2026-09-10T15:44:31.906Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (181ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071788-odnw",
+      "timestamp": "2026-09-10T15:44:31.788Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (55ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071736-bi0x",
+      "timestamp": "2026-09-10T15:44:31.736Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071733-8ssk",
+      "timestamp": "2026-09-10T15:44:31.733Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071729-q9vm",
+      "timestamp": "2026-09-10T15:44:31.729Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071727-9o38",
+      "timestamp": "2026-09-10T15:44:31.727Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071722-lyfl",
+      "timestamp": "2026-09-10T15:44:31.722Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055071719-j6va",
+      "timestamp": "2026-09-10T15:44:31.719Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055042130-cud3",
+      "timestamp": "2026-09-10T15:44:02.130Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.42s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055042124-i9iw",
+      "timestamp": "2026-09-10T15:44:02.124Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (404ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041855-43p0",
+      "timestamp": "2026-09-10T15:44:01.855Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (133ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041847-ji1z",
+      "timestamp": "2026-09-10T15:44:01.847Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (122ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041840-akqa",
+      "timestamp": "2026-09-10T15:44:01.840Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (127ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041724-6p9v",
+      "timestamp": "2026-09-10T15:44:01.724Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041718-ejpx",
+      "timestamp": "2026-09-10T15:44:01.718Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041715-n1r2",
+      "timestamp": "2026-09-10T15:44:01.715Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041710-j9ur",
+      "timestamp": "2026-09-10T15:44:01.710Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055041707-zod8",
+      "timestamp": "2026-09-10T15:44:01.707Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055017548-6qib",
+      "timestamp": "2026-09-10T15:43:37.548Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.85s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789055017541-s69e",
+      "timestamp": "2026-09-10T15:43:37.541Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5825ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055012108-mpts",
+      "timestamp": "2026-09-10T15:43:32.108Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (400ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011870-x1ha",
+      "timestamp": "2026-09-10T15:43:31.870Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (150ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011863-tsx7",
+      "timestamp": "2026-09-10T15:43:31.863Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (161ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011773-zfft",
+      "timestamp": "2026-09-10T15:43:31.773Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (62ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011717-lua5",
+      "timestamp": "2026-09-10T15:43:31.717Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011713-nxfm",
+      "timestamp": "2026-09-10T15:43:31.713Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011707-raam",
+      "timestamp": "2026-09-10T15:43:31.707Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011703-x8c0",
+      "timestamp": "2026-09-10T15:43:31.703Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011698-hht6",
+      "timestamp": "2026-09-10T15:43:31.698Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789055011695-r6ey",
+      "timestamp": "2026-09-10T15:43:31.695Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054982253-jatg",
+      "timestamp": "2026-09-10T15:43:02.253Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.56s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054982246-iou2",
+      "timestamp": "2026-09-10T15:43:02.246Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (544ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981821-ohnc",
+      "timestamp": "2026-09-10T15:43:01.821Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (112ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981814-gk4r",
+      "timestamp": "2026-09-10T15:43:01.814Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (116ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981807-byl2",
+      "timestamp": "2026-09-10T15:43:01.807Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (101ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981707-ovx6",
+      "timestamp": "2026-09-10T15:43:01.707Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981702-0dp4",
+      "timestamp": "2026-09-10T15:43:01.702Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981699-nvft",
+      "timestamp": "2026-09-10T15:43:01.699Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981695-5289",
+      "timestamp": "2026-09-10T15:43:01.695Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054981692-cz46",
+      "timestamp": "2026-09-10T15:43:01.692Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054957542-gpbl",
+      "timestamp": "2026-09-10T15:42:37.542Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.85s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054957536-8p11",
+      "timestamp": "2026-09-10T15:42:37.536Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5774ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054952248-ooyq",
+      "timestamp": "2026-09-10T15:42:32.248Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (517ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951943-g0jn",
+      "timestamp": "2026-09-10T15:42:31.944Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (151ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951928-yxlx",
+      "timestamp": "2026-09-10T15:42:31.928Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (222ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951903-e0xe",
+      "timestamp": "2026-09-10T15:42:31.903Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (156ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951776-bf9k",
+      "timestamp": "2026-09-10T15:42:31.776Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951759-lspy",
+      "timestamp": "2026-09-10T15:42:31.759Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951739-fbdl",
+      "timestamp": "2026-09-10T15:42:31.739Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951721-66b0",
+      "timestamp": "2026-09-10T15:42:31.721Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951702-5mlf",
+      "timestamp": "2026-09-10T15:42:31.702Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054951687-fq1d",
+      "timestamp": "2026-09-10T15:42:31.687Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054922111-nzuy",
+      "timestamp": "2026-09-10T15:42:02.111Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (0.45s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054922103-epxn",
+      "timestamp": "2026-09-10T15:42:02.103Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (430ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921790-1ih6",
+      "timestamp": "2026-09-10T15:42:01.790Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (123ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921784-h28n",
+      "timestamp": "2026-09-10T15:42:01.784Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (105ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921759-0akn",
+      "timestamp": "2026-09-10T15:42:01.759Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (83ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921677-zg5m",
+      "timestamp": "2026-09-10T15:42:01.677Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921673-u6uu",
+      "timestamp": "2026-09-10T15:42:01.673Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921669-4vob",
+      "timestamp": "2026-09-10T15:42:01.669Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921665-0k2k",
+      "timestamp": "2026-09-10T15:42:01.665Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054921662-hd3n",
+      "timestamp": "2026-09-10T15:42:01.662Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 5 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054897227-t8g2",
+      "timestamp": "2026-09-10T15:41:37.227Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.57s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789054897221-fdkt",
+      "timestamp": "2026-09-10T15:41:37.221Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5556ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054892683-do0b",
+      "timestamp": "2026-09-10T15:41:32.683Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (1021ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054892051-3zhr",
+      "timestamp": "2026-09-10T15:41:32.051Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (389ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891833-nr6q",
+      "timestamp": "2026-09-10T15:41:31.833Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (165ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891826-ar7f",
+      "timestamp": "2026-09-10T15:41:31.826Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (169ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891666-6wdb",
+      "timestamp": "2026-09-10T15:41:31.666Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891662-02qp",
+      "timestamp": "2026-09-10T15:41:31.662Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891660-w588",
+      "timestamp": "2026-09-10T15:41:31.660Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891657-75s8",
+      "timestamp": "2026-09-10T15:41:31.657Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789054891654-1x0e",
+      "timestamp": "2026-09-10T15:41:31.654Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1789017028959",
+      "timestamp": "2026-09-10T05:10:28.959Z",
+      "productId": "prod-1789017022202",
+      "productTitle": "Sách Nobita",
+      "platform": "nobita",
+      "reason": "Phát hiện sản phẩm đang còn hàng khi mở tool",
+      "url": "https://nobita.vn/san-pham/veil-tap-7-ban-dac-biet",
+      "variants": [
+        "Mặc định"
+      ]
+    }
+  ]
+}

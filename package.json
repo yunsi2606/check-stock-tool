@@ -1,0 +1,17 @@
+{
+  "name": "stock-checker-web",
+  "version": "1.0.0",
+  "description": "Auto stock checking tool for Tiki, AZ Vietnam, Fahasa, Nobita with Telegram Notifications and Web Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test/test-all.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "node-cron": "^3.0.3"
+  },
+  "type": "commonjs"
+}
