@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (p.lastData && p.lastData.variants && p.lastData.variants.length > 0) {
                 variantsHtml = `<div class="variant-list">` + 
                     p.lastData.variants.map(v => {
-                        const vClass = v.available ? 'available' : 'unavailable';
-                        const vStatus = v.available ? '✓ Còn' : '✗ Hết';
+                        const qtyText = (v.available && typeof v.stockQty === 'number' && v.stockQty > 0) ? ` ${v.stockQty}` : '';
+                        const vStatus = v.available ? `✓ Còn${qtyText}` : '✗ Hết';
                         return `<span class="variant-pill ${vClass}">${v.title}: ${formatVND(v.price)} (${vStatus})</span>`;
                     }).join('') + 
                     `</div>`;

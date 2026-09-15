@@ -105,10 +105,12 @@ async function sendStockAlert(botToken, chatId, product, scrapeResult, variantDe
     if (variantDetails && variantDetails.length > 0) {
         message += `🏷️ <b>Phân loại còn hàng:</b>\n`;
         variantDetails.forEach(v => {
-            message += `  • <b>${escapeHtml(v.title)}</b>: ${formatPrice(v.price)}\n`;
+            const qtyStr = (typeof v.stockQty === 'number' && v.stockQty > 0) ? ` (Số lượng: <b>${v.stockQty}</b>)` : '';
+            message += `  • <b>${escapeHtml(v.title)}</b>: ${formatPrice(v.price)}${qtyStr}\n`;
         });
     } else {
-        message += `💵 <b>Giá:</b> ${formatPrice(scrapeResult.price)}\n`;
+        const qtyStr = (typeof scrapeResult.stockQty === 'number' && scrapeResult.stockQty > 0) ? ` (Số lượng: <b>${scrapeResult.stockQty}</b>)` : '';
+        message += `💵 <b>Giá:</b> ${formatPrice(scrapeResult.price)}${qtyStr}\n`;
     }
 
     const vnTime = new Date().toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });

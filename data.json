@@ -264,6 +264,20 @@
   ],
   "logs": [
     {
+      "id": "log-1789480356047-dkwc",
+      "timestamp": "2026-09-15T13:52:36.047Z",
+      "level": "success",
+      "message": "Đã gửi tin nhắn Telegram thành công tới Chat ID: -1004324379848",
+      "details": null
+    },
+    {
+      "id": "log-1789480340862-qrd3",
+      "timestamp": "2026-09-15T13:52:20.862Z",
+      "level": "success",
+      "message": "Đã gửi tin nhắn Telegram thành công tới Chat ID: -1004324379848",
+      "details": null
+    },
+    {
       "id": "log-1789479934857-wnea",
       "timestamp": "2026-09-15T13:45:34.857Z",
       "level": "success",
@@ -1645,20 +1659,6 @@
     {
       "id": "log-1789475549270-4kwk",
       "timestamp": "2026-09-15T12:32:29.270Z",
-      "level": "success",
-      "message": "Đã gửi thông báo Telegram thành công cho Sách Ai Đó - Tập 3",
-      "details": null
-    },
-    {
-      "id": "log-1789475549267-hajf",
-      "timestamp": "2026-09-15T12:32:29.267Z",
-      "level": "success",
-      "message": "Đã gửi tin nhắn Telegram thành công tới Chat ID: -1004324379848",
-      "details": null
-    },
-    {
-      "id": "log-1789475549260-2z27",
-      "timestamp": "2026-09-15T12:32:29.260Z",
       "level": "success",
       "message": "Đã gửi thông báo Telegram thành công cho Sách Ai Đó - Tập 3",
       "details": null

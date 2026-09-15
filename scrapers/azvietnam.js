@@ -30,14 +30,18 @@ async function scrapeAzVietnam(url) {
             image = img.startsWith('//') ? `https:${img}` : img;
         }
 
-        const variants = (data.variants || []).map(v => ({
-            id: String(v.id),
-            title: v.title,
-            price: Math.round(v.price / 100),
-            originalPrice: v.compare_at_price ? Math.round(v.compare_at_price / 100) : Math.round(v.price / 100),
-            available: Boolean(v.available),
-            sku: v.sku || ''
-        }));
+        const variants = (data.variants || []).map(v => {
+            const stock = typeof v.inventory_quantity === 'number' ? v.inventory_quantity : (v.available ? 1 : 0);
+            return {
+                id: String(v.id),
+                title: v.title,
+                price: Math.round(v.price / 100),
+                originalPrice: v.compare_at_price ? Math.round(v.compare_at_price / 100) : Math.round(v.price / 100),
+                available: Boolean(v.available) && stock > 0,
+                stockQty: stock,
+                sku: v.sku || ''
+            };
+        });
 
         const isAnyVariantAvailable = variants.some(v => v.available);
 
@@ -47,6 +51,7 @@ async function scrapeAzVietnam(url) {
             title: data.title || 'AZ Vietnam Product',
             price: variants.length > 0 ? variants[0].price : Math.round((data.price || 0) / 100),
             available: isAnyVariantAvailable || Boolean(data.available),
+            stockQty: variants.reduce((acc, v) => acc + (v.available ? (v.stockQty || 1) : 0), 0),
             image: image,
             variants: variants,
             url: url,
