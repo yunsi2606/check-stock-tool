@@ -307,6 +307,7 @@ body {
 .platform-azvietnam { background: rgba(255, 152, 0, 0.2); color: #fbbf24; border: 1px solid rgba(255, 152, 0, 0.3); }
 .platform-fahasa { background: rgba(201, 33, 39, 0.2); color: #f87171; border: 1px solid rgba(201, 33, 39, 0.3); }
 .platform-nobita { background: rgba(156, 39, 176, 0.2); color: #c084fc; border: 1px solid rgba(156, 39, 176, 0.3); }
+.platform-shopee { background: rgba(238, 77, 45, 0.2); color: #ff7654; border: 1px solid rgba(238, 77, 45, 0.3); }
 
 /* Product Info Cell */
 .product-cell {

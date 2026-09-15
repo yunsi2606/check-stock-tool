@@ -56,7 +56,7 @@ app.post('/api/products', async (req, res) => {
 
     const platform = detectPlatform(url);
     if (platform === 'unknown') {
-        return res.status(400).json({ error: 'URL không thuộc danh sách hỗ trợ (Tiki, AZ Vietnam, Fahasa, Nobita.vn)' });
+        return res.status(400).json({ error: 'URL không thuộc danh sách hỗ trợ (Tiki, AZ Vietnam, Fahasa, Nobita.vn, Shopee)' });
     }
 
     const newProduct = addProduct({

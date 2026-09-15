@@ -2,6 +2,7 @@ const { scrapeTiki } = require('./tiki');
 const { scrapeAzVietnam } = require('./azvietnam');
 const { scrapeFahasa } = require('./fahasa');
 const { scrapeNobita } = require('./nobita');
+const { scrapeShopee } = require('./shopee');
 
 /**
  * Detect platform from URL
@@ -13,6 +14,7 @@ function detectPlatform(url) {
     if (lower.includes('azvietnam.vn')) return 'azvietnam';
     if (lower.includes('fahasa.com')) return 'fahasa';
     if (lower.includes('nobita.vn')) return 'nobita';
+    if (lower.includes('shopee.vn') || lower.includes('shope.ee') || lower.includes('shp.ee')) return 'shopee';
     return 'unknown';
 }
 
@@ -30,11 +32,13 @@ async function scrapeProduct(url, targetVariant = 'all') {
             return await scrapeFahasa(url);
         case 'nobita':
             return await scrapeNobita(url);
+        case 'shopee':
+            return await scrapeShopee(url, targetVariant);
         default:
             return {
                 success: false,
                 platform: 'unknown',
-                error: `Không hỗ trợ trang web này. Chỉ hỗ trợ: Tiki, AZ Vietnam, Fahasa, Nobita.vn`,
+                error: `Không hỗ trợ trang web này. Chỉ hỗ trợ: Tiki, AZ Vietnam, Fahasa, Nobita.vn, Shopee`,
                 url: url,
                 responseTimeMs: 0,
                 timestamp: new Date().toISOString()
@@ -48,5 +52,6 @@ module.exports = {
     scrapeTiki,
     scrapeAzVietnam,
     scrapeFahasa,
-    scrapeNobita
+    scrapeNobita,
+    scrapeShopee
 };

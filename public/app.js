@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         productsTableBody.innerHTML = products.map(p => {
             const platformClass = `platform-${p.platform}`;
-            const platformNames = { tiki: 'Tiki', azvietnam: 'AZ Vietnam', fahasa: 'Fahasa', nobita: 'Nobita.vn' };
+            const platformNames = { tiki: 'Tiki', azvietnam: 'AZ Vietnam', fahasa: 'Fahasa', nobita: 'Nobita.vn', shopee: 'Shopee' };
             const platformLabel = platformNames[p.platform] || p.platform.toUpperCase();
 
             // Status Pill
@@ -394,6 +394,10 @@ document.addEventListener('DOMContentLoaded', () => {
             platformPreview.style.display = 'block';
             detectedText.textContent = 'Nobita.vn (WooCommerce Worker Pool)';
             detectedText.className = 'badge-platform platform-nobita';
+        } else if (val.includes('shopee.vn') || val.includes('shope.ee') || val.includes('shp.ee')) {
+            platformPreview.style.display = 'block';
+            detectedText.textContent = 'Shopee (Shopee PDP Scraper)';
+            detectedText.className = 'badge-platform platform-shopee';
         } else {
             platformPreview.style.display = 'none';
         }
