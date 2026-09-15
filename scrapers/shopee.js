@@ -97,26 +97,54 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
             const html = await pageRes.text();
 
-            // Extract initialState from HTML script tag
-            const stateMatch = html.match(/<script\b[^>]*>\s*(\{"initialState":[\s\S]*?\})\s*<\/script>/);
-            if (stateMatch) {
-                try {
-                    const parsed = JSON.parse(stateMatch[1]);
-                    const pdpMap = parsed?.initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
-                    const key = `${shopid}/${itemid}`;
-                    if (pdpMap && pdpMap[key] && pdpMap[key].data) {
-                        const itemObj = pdpMap[key].data.item || pdpMap[key].data;
-                        rawData = itemObj;
-                        fetchSuccess = true;
+            // Extract initialState from HTML script tags
+            const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
+
+            for (const scriptTag of scripts) {
+                if (scriptTag.includes('initialState') || scriptTag.includes('DOMAIN_PDP') || scriptTag.includes('cachedMap')) {
+                    const jsonText = scriptTag.replace(/^<script\b[^>]*>/i, '').replace(/<\/script>$/i, '').trim();
+                    try {
+                        const parsed = JSON.parse(jsonText);
+                        const initialState = parsed?.initialState;
+                        if (!initialState) continue;
+
+                        // Check DOMAIN_PDP cachedMap
+                        const cachedMap = initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
+                        if (cachedMap) {
+                            for (const k of Object.keys(cachedMap)) {
+                                if (k.includes(itemid)) {
+                                    const entry = cachedMap[k];
+                                    const itemObj = entry?.item || entry?.data?.item || entry?.data;
+                                    if (itemObj && (itemObj.title || itemObj.name || itemObj.models)) {
+                                        rawData = itemObj;
+                                        fetchSuccess = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        // Check initialState.item.items
+                        if (!fetchSuccess && initialState?.item) {
+                            if (initialState.item.items && initialState.item.items[itemid]) {
+                                rawData = initialState.item.items[itemid];
+                                fetchSuccess = true;
+                            } else if (initialState.item.title || initialState.item.name) {
+                                rawData = initialState.item;
+                                fetchSuccess = true;
+                            }
+                        }
+
+                        if (fetchSuccess) break;
+                    } catch (e) {
+                        // Skip non-parseable scripts
                     }
-                } catch (e) {
-                    console.log('Failed to parse initialState JSON:', e.message);
                 }
             }
 
-            // Fallback meta parsing if initialState wasn't formatted
+            // Fallback meta parsing if JSON script parsing failed
             if (!fetchSuccess) {
-                const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+                const titleMatch = html.match(/<meta\b[^>]*property="og:title"\s*content="(.*?)"/i) || html.match(/<title>(.*?)<\/title>/i);
                 const title = titleMatch ? titleMatch[1].replace('| Shopee Việt Nam', '').trim() : `Sản phẩm Shopee (${itemid})`;
                 const imageMatch = html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
 
@@ -143,39 +171,39 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
         // Process rawData (Title, price, stock, variants)
         const title = rawData.title || rawData.name || 'Sách Shopee';
-        const rawPrice = rawData.price || rawData.price_min || 0;
-        const price = rawPrice > 1000000 ? Math.round(rawPrice / 100000) : rawPrice; // Shopee prices in API are scaled x100,000
-        const origPriceRaw = rawData.price_before_discount || rawData.price_max || rawPrice;
+        
+        let rawPrice = rawData.price || rawData.price_min || 0;
+        let origPriceRaw = rawData.price_before_discount || rawData.price_max || rawPrice;
+
+        const price = rawPrice > 1000000 ? Math.round(rawPrice / 100000) : rawPrice;
         const originalPrice = origPriceRaw > 1000000 ? Math.round(origPriceRaw / 100000) : origPriceRaw;
 
         const totalStock = typeof rawData.stock === 'number' ? rawData.stock : (rawData.normal_stock || 0);
-        const isAvailable = totalStock > 0 && rawData.item_status !== 'UNLISTED' && rawData.item_status !== 'BANNED';
-
-        // Extract image
-        let image = '';
-        if (rawData.image) {
-            image = rawData.image.startsWith('http') ? rawData.image : `https://down-vn.img.susercontent.com/file/${rawData.image}`;
-        } else if (rawData.images && rawData.images.length > 0) {
-            const img0 = rawData.images[0];
-            image = img0.startsWith('http') ? img0 : `https://down-vn.img.susercontent.com/file/${img0}`;
-        }
-
+        
         // Process Models / Variants
         const variants = [];
         if (rawData.models && rawData.models.length > 0) {
             rawData.models.forEach(m => {
                 const mPriceRaw = m.price || rawPrice;
                 const mPrice = mPriceRaw > 1000000 ? Math.round(mPriceRaw / 100000) : mPriceRaw;
-                const mStock = typeof m.stock === 'number' ? m.stock : (m.normal_stock || 0);
+                
+                // Model is available if NOT grayed out, clickable is not false, and stock > 0 (if stock provided)
+                const isGrayout = m.is_grayout === true;
+                const isNotClickable = m.is_clickable === false;
+                const mStock = typeof m.stock === 'number' ? m.stock : (m.normal_stock !== undefined ? m.normal_stock : 1);
+                
+                const mAvailable = !isGrayout && !isNotClickable && (mStock > 0);
+
                 variants.push({
-                    id: String(m.modelid || m.itemid),
+                    id: String(m.modelid || m.model_id || m.itemid),
                     title: m.name || m.title || 'Mặc định',
                     price: mPrice,
-                    available: mStock > 0,
-                    stockQty: mStock
+                    available: mAvailable,
+                    stockQty: mAvailable ? (mStock || 1) : 0
                 });
             });
         } else {
+            const isAvailable = totalStock > 0 && rawData.item_status !== 'UNLISTED' && rawData.item_status !== 'BANNED';
             variants.push({
                 id: String(itemid),
                 title: title,
@@ -185,8 +213,17 @@ async function scrapeShopee(url, targetVariant = 'all') {
             });
         }
 
-        // Target variant filter matching
-        let isOverallAvailable = isAvailable;
+        // Image extraction
+        let image = '';
+        if (rawData.image) {
+            image = rawData.image.startsWith('http') ? rawData.image : `https://down-vn.img.susercontent.com/file/${rawData.image}`;
+        } else if (rawData.images && rawData.images.length > 0) {
+            const img0 = rawData.images[0];
+            image = img0.startsWith('http') ? img0 : `https://down-vn.img.susercontent.com/file/${img0}`;
+        }
+
+        // Determine overall availability based on targetVariant
+        let isOverallAvailable = variants.some(v => v.available);
         if (targetVariant && targetVariant !== 'all') {
             const cleanTarget = targetVariant.trim().toLowerCase();
             const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
@@ -211,7 +248,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
             price: price,
             originalPrice: originalPrice,
             available: isOverallAvailable,
-            stockQty: totalStock,
+            stockQty: variants.reduce((acc, v) => acc + (v.available ? v.stockQty : 0), 0),
             image: image,
             variants: variants,
             targetVariant: targetVariant,
