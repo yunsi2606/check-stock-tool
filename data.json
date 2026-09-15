@@ -13,7 +13,7 @@
       "platform": "tiki",
       "title": "Sách Ai Đó - Tập 3",
       "targetVariant": "all",
-      "lastChecked": "2026-09-15T13:24:12.434Z",
+      "lastChecked": "2026-09-15T13:27:42.977Z",
       "lastStatus": "in_stock",
       "lastData": {
         "success": true,
@@ -35,8 +35,8 @@
         ],
         "targetVariant": "all",
         "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
-        "responseTimeMs": 127,
-        "timestamp": "2026-09-15T13:24:12.431Z"
+        "responseTimeMs": 632,
+        "timestamp": "2026-09-15T13:27:42.974Z"
       },
       "created": "2026-09-10T03:13:07.383Z",
       "lastError": null
@@ -47,7 +47,7 @@
       "platform": "fahasa",
       "title": "Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo",
       "targetVariant": "all",
-      "lastChecked": "2026-09-15T13:24:12.826Z",
+      "lastChecked": "2026-09-15T13:27:42.861Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -65,8 +65,8 @@
           }
         ],
         "url": "https://www.fahasa.com/ai-do-tap-3-ban-dac-biet-bia-cung-tang-kem-bookmark-postcard-card-pvc-moc-dien-thoai-bao-dung-the-kem-day-deo-so-lo-xo.html?fhs_campaign=SEARCH",
-        "responseTimeMs": 513,
-        "timestamp": "2026-09-15T13:24:12.824Z"
+        "responseTimeMs": 512,
+        "timestamp": "2026-09-15T13:27:42.858Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -77,7 +77,7 @@
       "platform": "azvietnam",
       "title": "Sách - Ai Đó (Tập 3)",
       "targetVariant": "all",
-      "lastChecked": "2026-09-15T13:24:12.413Z",
+      "lastChecked": "2026-09-15T13:27:42.424Z",
       "lastStatus": "in_stock",
       "lastData": {
         "success": true,
@@ -113,8 +113,8 @@
           }
         ],
         "url": "https://azvietnam.vn/products/aido3",
-        "responseTimeMs": 95,
-        "timestamp": "2026-09-15T13:24:12.409Z"
+        "responseTimeMs": 70,
+        "timestamp": "2026-09-15T13:27:42.420Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -125,7 +125,7 @@
       "platform": "nobita",
       "title": "Sách Nobita",
       "targetVariant": "all",
-      "lastChecked": "2026-09-15T13:24:18.763Z",
+      "lastChecked": "2026-09-15T13:27:17.964Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -143,8 +143,8 @@
           }
         ],
         "url": "https://nobita.vn/san-pham/ai-do-tap-3-ban-dac-biet",
-        "responseTimeMs": 6440,
-        "timestamp": "2026-09-15T13:24:18.761Z"
+        "responseTimeMs": 5604,
+        "timestamp": "2026-09-15T13:27:17.961Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -155,7 +155,7 @@
       "platform": "tiki",
       "title": "Sách Ai Đó - Tập 3",
       "targetVariant": "Bản Đặc Biệt",
-      "lastChecked": "2026-09-15T13:24:12.439Z",
+      "lastChecked": "2026-09-15T13:27:42.486Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -184,8 +184,8 @@
         ],
         "targetVariant": "Bản Đặc Biệt",
         "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
-        "responseTimeMs": 112,
-        "timestamp": "2026-09-15T13:24:12.437Z"
+        "responseTimeMs": 128,
+        "timestamp": "2026-09-15T13:27:42.482Z"
       },
       "created": "2026-09-10T03:24:57.095Z",
       "lastError": null
@@ -196,7 +196,7 @@
       "platform": "shopee",
       "title": "SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT)",
       "targetVariant": "BẢN ĐẶC BIỆT",
-      "lastChecked": "2026-09-15T13:24:13.545Z",
+      "lastChecked": "2026-09-15T13:27:43.502Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -209,30 +209,725 @@
         "image": "https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-msuzekwo56h33f",
         "variants": [
           {
-            "id": "441487220908",
-            "title": "BẢN THƯỜNG",
-            "price": 0,
-            "available": true,
-            "stockQty": 10
-          },
-          {
             "id": "441487220909",
             "title": "BẢN ĐẶC BIỆT",
             "price": 0,
             "available": false,
             "stockQty": 0
+          },
+          {
+            "id": "441487220908",
+            "title": "BẢN THƯỜNG",
+            "price": 0,
+            "available": true,
+            "stockQty": 10
           }
         ],
         "targetVariant": "BẢN ĐẶC BIỆT",
         "url": "https://shopee.vn/S%C3%81CH-VE-S%E1%BA%A6U-M%C3%99A-H%E1%BA%A0-L%E1%BA%AENG-NGHE-TUY%E1%BA%BET-TAN-T%E1%BA%ACP-H%E1%BA%A0-THU-MERBOOKS-(B%E1%BA%A2N-TH%C6%AF%E1%BB%9CNG-B%E1%BA%A2N-%C4%90%E1%BA%B6C-BI%E1%BB%86T)-i.1803887349.51667561572?extraParams=%7B%22display_model_id%22%3A441487220908%2C%22model_selection_logic%22%3A3%7D",
-        "responseTimeMs": 1215,
-        "timestamp": "2026-09-15T13:24:13.543Z"
+        "responseTimeMs": 1140,
+        "timestamp": "2026-09-15T13:27:43.498Z"
       },
       "created": "2026-09-15T06:27:34.647Z",
+      "lastError": null
+    },
+    {
+      "id": "prod-1789478852986",
+      "url": "https://www.fahasa.com/tamon-than-tuong-hai-mat-tap-1-tang-kem-standee-pvc-1-poster.html?fhs_campaign=nhaphoimanga_sanphammoi_mangacomicmoi",
+      "platform": "fahasa",
+      "title": "Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster",
+      "targetVariant": "all",
+      "lastChecked": "2026-09-15T13:27:42.785Z",
+      "lastStatus": "out_of_stock",
+      "lastData": {
+        "success": true,
+        "platform": "fahasa",
+        "title": "Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster",
+        "price": 0,
+        "available": false,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/t/a/tamon_than-tuong-hai-mat_tap-1_bia_standee_poster.jpg",
+        "variants": [
+          {
+            "id": "default",
+            "title": "Mặc định",
+            "price": 0,
+            "available": false
+          }
+        ],
+        "url": "https://www.fahasa.com/tamon-than-tuong-hai-mat-tap-1-tang-kem-standee-pvc-1-poster.html?fhs_campaign=nhaphoimanga_sanphammoi_mangacomicmoi",
+        "responseTimeMs": 415,
+        "timestamp": "2026-09-15T13:27:42.780Z"
+      },
+      "created": "2026-09-15T13:27:32.986Z",
       "lastError": null
     }
   ],
   "logs": [
+    {
+      "id": "log-1789478863507-xqlu",
+      "timestamp": "2026-09-15T13:27:43.507Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (1.17s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478863501-p4iu",
+      "timestamp": "2026-09-15T13:27:43.501Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1140ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862976-jz8f",
+      "timestamp": "2026-09-15T13:27:42.976Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (632ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862860-x6xb",
+      "timestamp": "2026-09-15T13:27:42.860Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (512ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862782-ks82",
+      "timestamp": "2026-09-15T13:27:42.782Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (415ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862484-mhlm",
+      "timestamp": "2026-09-15T13:27:42.484Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (128ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862423-nbpp",
+      "timestamp": "2026-09-15T13:27:42.423Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (70ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862361-l7b2",
+      "timestamp": "2026-09-15T13:27:42.361Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862357-w695",
+      "timestamp": "2026-09-15T13:27:42.357Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862353-8pm7",
+      "timestamp": "2026-09-15T13:27:42.353Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862349-sptl",
+      "timestamp": "2026-09-15T13:27:42.349Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862345-uk77",
+      "timestamp": "2026-09-15T13:27:42.345Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862341-5owl",
+      "timestamp": "2026-09-15T13:27:42.341Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478862338-vgus",
+      "timestamp": "2026-09-15T13:27:42.338Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 7 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478853401-ls8o",
+      "timestamp": "2026-09-15T13:27:33.401Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (407ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478852991-stfx",
+      "timestamp": "2026-09-15T13:27:32.991Z",
+      "level": "info",
+      "message": "Đang check stock cho: Đang tải tên sản phẩm (FAHASA)... (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478852989-hhr6",
+      "timestamp": "2026-09-15T13:27:32.989Z",
+      "level": "info",
+      "message": "Đã thêm sản phẩm mới: https://www.fahasa.com/tamon-than-tuong-hai-mat-tap-1-tang-kem-standee-pvc-1-poster.html?fhs_campaign=nhaphoimanga_sanphammoi_mangacomicmoi",
+      "details": null
+    },
+    {
+      "id": "log-1789478837968-j6tm",
+      "timestamp": "2026-09-15T13:27:17.968Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.63s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478837963-7vj8",
+      "timestamp": "2026-09-15T13:27:17.963Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5604ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478833923-7ofd",
+      "timestamp": "2026-09-15T13:27:13.923Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1552ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832769-j7yk",
+      "timestamp": "2026-09-15T13:27:12.769Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (416ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832486-rtmt",
+      "timestamp": "2026-09-15T13:27:12.486Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (123ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832479-ayhm",
+      "timestamp": "2026-09-15T13:27:12.479Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (135ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832453-sntu",
+      "timestamp": "2026-09-15T13:27:12.453Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (97ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832366-qdfz",
+      "timestamp": "2026-09-15T13:27:12.366Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832361-5o0n",
+      "timestamp": "2026-09-15T13:27:12.361Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832355-iljt",
+      "timestamp": "2026-09-15T13:27:12.355Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832352-9bsi",
+      "timestamp": "2026-09-15T13:27:12.352Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832347-ow8a",
+      "timestamp": "2026-09-15T13:27:12.347Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832341-dlnq",
+      "timestamp": "2026-09-15T13:27:12.341Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478832337-r8et",
+      "timestamp": "2026-09-15T13:27:12.337Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478804073-r1oc",
+      "timestamp": "2026-09-15T13:26:44.073Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (1.74s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478804068-2d40",
+      "timestamp": "2026-09-15T13:26:44.068Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1720ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802804-24tn",
+      "timestamp": "2026-09-15T13:26:42.804Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (460ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802464-opq2",
+      "timestamp": "2026-09-15T13:26:42.464Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (131ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802458-9agt",
+      "timestamp": "2026-09-15T13:26:42.458Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (113ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802397-q6zh",
+      "timestamp": "2026-09-15T13:26:42.397Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (55ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802345-k0x2",
+      "timestamp": "2026-09-15T13:26:42.345Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802342-7nv2",
+      "timestamp": "2026-09-15T13:26:42.342Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802339-2zq0",
+      "timestamp": "2026-09-15T13:26:42.339Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802335-ywkm",
+      "timestamp": "2026-09-15T13:26:42.335Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802331-zort",
+      "timestamp": "2026-09-15T13:26:42.331Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478802328-e190",
+      "timestamp": "2026-09-15T13:26:42.328Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478778020-uiss",
+      "timestamp": "2026-09-15T13:26:18.020Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (5.70s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478778010-d5vz",
+      "timestamp": "2026-09-15T13:26:18.010Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5675ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478773497-7hjr",
+      "timestamp": "2026-09-15T13:26:13.497Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1156ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772699-2bh2",
+      "timestamp": "2026-09-15T13:26:12.699Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (369ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772480-vlu6",
+      "timestamp": "2026-09-15T13:26:12.480Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (158ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772472-e4dn",
+      "timestamp": "2026-09-15T13:26:12.472Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (135ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772401-onx8",
+      "timestamp": "2026-09-15T13:26:12.401Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (70ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772337-7q6s",
+      "timestamp": "2026-09-15T13:26:12.337Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772334-mz2v",
+      "timestamp": "2026-09-15T13:26:12.334Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772331-57su",
+      "timestamp": "2026-09-15T13:26:12.331Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772328-ohnc",
+      "timestamp": "2026-09-15T13:26:12.328Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772324-adu5",
+      "timestamp": "2026-09-15T13:26:12.324Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772319-afwl",
+      "timestamp": "2026-09-15T13:26:12.319Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478772316-zsmh",
+      "timestamp": "2026-09-15T13:26:12.316Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478743440-j0gw",
+      "timestamp": "2026-09-15T13:25:43.440Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (1.12s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478743436-0gxo",
+      "timestamp": "2026-09-15T13:25:43.436Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1105ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742706-3og0",
+      "timestamp": "2026-09-15T13:25:42.706Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (381ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742450-gla8",
+      "timestamp": "2026-09-15T13:25:42.450Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (122ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742445-13hu",
+      "timestamp": "2026-09-15T13:25:42.445Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (123ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742376-hn55",
+      "timestamp": "2026-09-15T13:25:42.376Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (50ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742330-s3fa",
+      "timestamp": "2026-09-15T13:25:42.330Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742327-ahth",
+      "timestamp": "2026-09-15T13:25:42.327Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742324-2gdo",
+      "timestamp": "2026-09-15T13:25:42.324Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742322-pqr6",
+      "timestamp": "2026-09-15T13:25:42.322Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742319-6lhm",
+      "timestamp": "2026-09-15T13:25:42.319Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478742316-8lce",
+      "timestamp": "2026-09-15T13:25:42.316Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478718319-3wax",
+      "timestamp": "2026-09-15T13:25:18.319Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (6.01s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478718313-p9zy",
+      "timestamp": "2026-09-15T13:25:18.313Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5987ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478713933-r99q",
+      "timestamp": "2026-09-15T13:25:13.933Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1601ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478713271-xqcj",
+      "timestamp": "2026-09-15T13:25:13.271Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (941ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478713007-0tj9",
+      "timestamp": "2026-09-15T13:25:13.007Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (686ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712806-zgry",
+      "timestamp": "2026-09-15T13:25:12.806Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (483ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712745-mo4m",
+      "timestamp": "2026-09-15T13:25:12.745Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (431ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712328-iq09",
+      "timestamp": "2026-09-15T13:25:12.328Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712326-egvy",
+      "timestamp": "2026-09-15T13:25:12.326Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712323-rchd",
+      "timestamp": "2026-09-15T13:25:12.323Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712321-d3et",
+      "timestamp": "2026-09-15T13:25:12.321Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712317-mv5y",
+      "timestamp": "2026-09-15T13:25:12.317Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712313-cvqj",
+      "timestamp": "2026-09-15T13:25:12.313Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478712310-rzny",
+      "timestamp": "2026-09-15T13:25:12.310Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478683484-4rht",
+      "timestamp": "2026-09-15T13:24:43.484Z",
+      "level": "success",
+      "message": "=== Hoàn thành lượt check stock (1.17s) ===",
+      "details": null
+    },
+    {
+      "id": "log-1789478683478-p590",
+      "timestamp": "2026-09-15T13:24:43.478Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1144ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682610-ngmw",
+      "timestamp": "2026-09-15T13:24:42.610Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (289ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682459-8lqb",
+      "timestamp": "2026-09-15T13:24:42.459Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (143ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682445-7pn3",
+      "timestamp": "2026-09-15T13:24:42.445Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (117ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682386-36li",
+      "timestamp": "2026-09-15T13:24:42.386Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (61ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682330-xuyl",
+      "timestamp": "2026-09-15T13:24:42.330Z",
+      "level": "info",
+      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682325-kc31",
+      "timestamp": "2026-09-15T13:24:42.325Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682321-fqrq",
+      "timestamp": "2026-09-15T13:24:42.321Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682317-ft22",
+      "timestamp": "2026-09-15T13:24:42.317Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682312-ukt9",
+      "timestamp": "2026-09-15T13:24:42.312Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789478682309-6htu",
+      "timestamp": "2026-09-15T13:24:42.309Z",
+      "level": "info",
+      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "details": null
+    },
     {
       "id": "log-1789478658767-12il",
       "timestamp": "2026-09-15T13:24:18.767Z",
@@ -966,671 +1661,6 @@
       "timestamp": "2026-09-15T12:32:29.257Z",
       "level": "success",
       "message": "Đã gửi tin nhắn Telegram thành công tới Chat ID: -1004324379848",
-      "details": null
-    },
-    {
-      "id": "log-1789475549213-s943",
-      "timestamp": "2026-09-15T12:32:29.213Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1080ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548579-hqz6",
-      "timestamp": "2026-09-15T12:32:28.579Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (453ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548256-vvbl",
-      "timestamp": "2026-09-15T12:32:28.256Z",
-      "level": "info",
-      "message": "Gửi thông báo Telegram cho Sách Ai Đó - Tập 3 (Sản phẩm mới có hàng lại (Restock))...",
-      "details": null
-    },
-    {
-      "id": "log-1789475548253-ze5o",
-      "timestamp": "2026-09-15T12:32:28.253Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (124ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548248-pd2x",
-      "timestamp": "2026-09-15T12:32:28.248Z",
-      "level": "info",
-      "message": "Gửi thông báo Telegram cho Sách Ai Đó - Tập 3 (Phân loại mới lên hàng: Bản Đặc Biệt)...",
-      "details": null
-    },
-    {
-      "id": "log-1789475548243-bzpw",
-      "timestamp": "2026-09-15T12:32:28.243Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (121ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548195-apgy",
-      "timestamp": "2026-09-15T12:32:28.195Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (67ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548130-2rxw",
-      "timestamp": "2026-09-15T12:32:28.130Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548127-oy72",
-      "timestamp": "2026-09-15T12:32:28.127Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548124-6afs",
-      "timestamp": "2026-09-15T12:32:28.124Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548122-4px3",
-      "timestamp": "2026-09-15T12:32:28.122Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548118-ftjv",
-      "timestamp": "2026-09-15T12:32:28.118Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475548116-7zgo",
-      "timestamp": "2026-09-15T12:32:28.116Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475523697-dtu9",
-      "timestamp": "2026-09-15T12:32:03.697Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.58s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475523690-ebl7",
-      "timestamp": "2026-09-15T12:32:03.690Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5553ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475519157-165e",
-      "timestamp": "2026-09-15T12:31:59.157Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1011ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518760-1f0w",
-      "timestamp": "2026-09-15T12:31:58.760Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (619ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518620-fk0v",
-      "timestamp": "2026-09-15T12:31:58.620Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (493ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518267-5gmt",
-      "timestamp": "2026-09-15T12:31:58.267Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (145ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518195-bjdt",
-      "timestamp": "2026-09-15T12:31:58.195Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (63ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518142-ehv0",
-      "timestamp": "2026-09-15T12:31:58.142Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518138-4k1k",
-      "timestamp": "2026-09-15T12:31:58.138Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518133-0sux",
-      "timestamp": "2026-09-15T12:31:58.133Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518128-pxz0",
-      "timestamp": "2026-09-15T12:31:58.128Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518123-hdhg",
-      "timestamp": "2026-09-15T12:31:58.123Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518119-ssdy",
-      "timestamp": "2026-09-15T12:31:58.119Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475518117-9fyf",
-      "timestamp": "2026-09-15T12:31:58.117Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475489249-jrl3",
-      "timestamp": "2026-09-15T12:31:29.249Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (1.14s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475489244-ibzd",
-      "timestamp": "2026-09-15T12:31:29.244Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1120ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488568-k94r",
-      "timestamp": "2026-09-15T12:31:28.568Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (453ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488284-dy3g",
-      "timestamp": "2026-09-15T12:31:28.284Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (173ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488278-sb0u",
-      "timestamp": "2026-09-15T12:31:28.278Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (159ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488164-3sh1",
-      "timestamp": "2026-09-15T12:31:28.164Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (48ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488121-2crq",
-      "timestamp": "2026-09-15T12:31:28.121Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488117-yvru",
-      "timestamp": "2026-09-15T12:31:28.117Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488115-asz3",
-      "timestamp": "2026-09-15T12:31:28.115Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488112-c5yj",
-      "timestamp": "2026-09-15T12:31:28.112Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488109-g4zl",
-      "timestamp": "2026-09-15T12:31:28.109Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475488106-vq2q",
-      "timestamp": "2026-09-15T12:31:28.106Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475463627-47cv",
-      "timestamp": "2026-09-15T12:31:03.627Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.52s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475463624-aqgp",
-      "timestamp": "2026-09-15T12:31:03.624Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5504ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475459204-dhf5",
-      "timestamp": "2026-09-15T12:30:59.204Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1079ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458739-a0ge",
-      "timestamp": "2026-09-15T12:30:58.739Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (617ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458558-o5vp",
-      "timestamp": "2026-09-15T12:30:58.558Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (444ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458232-y37b",
-      "timestamp": "2026-09-15T12:30:58.232Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (122ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458183-emgr",
-      "timestamp": "2026-09-15T12:30:58.183Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (66ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458123-qhji",
-      "timestamp": "2026-09-15T12:30:58.123Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458120-mebm",
-      "timestamp": "2026-09-15T12:30:58.120Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458117-ckcb",
-      "timestamp": "2026-09-15T12:30:58.117Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458114-ztt3",
-      "timestamp": "2026-09-15T12:30:58.114Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458111-mmjh",
-      "timestamp": "2026-09-15T12:30:58.111Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458108-wspo",
-      "timestamp": "2026-09-15T12:30:58.108Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475458105-7lyb",
-      "timestamp": "2026-09-15T12:30:58.105Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475429284-k18n",
-      "timestamp": "2026-09-15T12:30:29.284Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (1.19s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475429279-i03x",
-      "timestamp": "2026-09-15T12:30:29.279Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1159ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428499-kxhd",
-      "timestamp": "2026-09-15T12:30:28.499Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (393ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428266-f314",
-      "timestamp": "2026-09-15T12:30:28.266Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (150ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428228-69ig",
-      "timestamp": "2026-09-15T12:30:28.228Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (128ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428200-kl61",
-      "timestamp": "2026-09-15T12:30:28.200Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (90ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428117-k4r4",
-      "timestamp": "2026-09-15T12:30:28.117Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428112-wu3s",
-      "timestamp": "2026-09-15T12:30:28.112Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428106-cdmg",
-      "timestamp": "2026-09-15T12:30:28.106Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428102-hucn",
-      "timestamp": "2026-09-15T12:30:28.102Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428096-qm7h",
-      "timestamp": "2026-09-15T12:30:28.096Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475428093-yzzj",
-      "timestamp": "2026-09-15T12:30:28.093Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475403888-n4r6",
-      "timestamp": "2026-09-15T12:30:03.888Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.80s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475403882-1n1w",
-      "timestamp": "2026-09-15T12:30:03.882Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5784ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475399162-am87",
-      "timestamp": "2026-09-15T12:29:59.163Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1058ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398583-ifsx",
-      "timestamp": "2026-09-15T12:29:58.583Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (491ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398223-jr7o",
-      "timestamp": "2026-09-15T12:29:58.223Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (136ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398218-7jbv",
-      "timestamp": "2026-09-15T12:29:58.218Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (118ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398161-9hmz",
-      "timestamp": "2026-09-15T12:29:58.161Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (66ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398101-vil2",
-      "timestamp": "2026-09-15T12:29:58.101Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398098-m8l3",
-      "timestamp": "2026-09-15T12:29:58.098Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398096-ydy8",
-      "timestamp": "2026-09-15T12:29:58.096Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398093-pi32",
-      "timestamp": "2026-09-15T12:29:58.093Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398088-w6nj",
-      "timestamp": "2026-09-15T12:29:58.088Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398085-35i6",
-      "timestamp": "2026-09-15T12:29:58.085Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475398083-lmhq",
-      "timestamp": "2026-09-15T12:29:58.083Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475369487-4sew",
-      "timestamp": "2026-09-15T12:29:29.487Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (1.41s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475369479-sw6w",
-      "timestamp": "2026-09-15T12:29:29.479Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1391ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368687-l214",
-      "timestamp": "2026-09-15T12:29:28.688Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - CÒN HÀNG (612ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368535-4vk8",
-      "timestamp": "2026-09-15T12:29:28.535Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (456ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368196-nuvi",
-      "timestamp": "2026-09-15T12:29:28.196Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (113ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368134-cyf5",
-      "timestamp": "2026-09-15T12:29:28.134Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (54ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368084-zn8p",
-      "timestamp": "2026-09-15T12:29:28.084Z",
-      "level": "info",
-      "message": "Đang check stock cho: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368081-h3yu",
-      "timestamp": "2026-09-15T12:29:28.081Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368078-0ue1",
-      "timestamp": "2026-09-15T12:29:28.078Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368076-v11f",
-      "timestamp": "2026-09-15T12:29:28.076Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368072-csuz",
-      "timestamp": "2026-09-15T12:29:28.073Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789475368070-rl23",
-      "timestamp": "2026-09-15T12:29:28.070Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475343916-p0xa",
-      "timestamp": "2026-09-15T12:29:03.916Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.86s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789475343910-mrv0",
-      "timestamp": "2026-09-15T12:29:03.910Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5833ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475339309-iz9h",
-      "timestamp": "2026-09-15T12:28:59.309Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: SÁCH - VE SẦU MÙA HẠ LẮNG NGHE TUYẾT TAN - TẬP HẠ THU MERBOOKS (BẢN THƯỜNG + BẢN ĐẶC BIỆT) - HẾT HÀNG (1226ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789475338462-9ypb",
-      "timestamp": "2026-09-15T12:28:58.462Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (391ms)",
       "details": null
     }
   ],
