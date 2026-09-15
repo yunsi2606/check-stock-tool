@@ -22,6 +22,40 @@ function parseShopeeUrl(url) {
     return null;
 }
 
+function parseShopeeHtmlButtons(html) {
+    const variants = [];
+    const regex = /<button\b[^>]*aria-label="([^"]+)"[^>]*aria-disabled="(true|false)"[^>]*>/gi;
+    let match;
+    while ((match = regex.exec(html)) !== null) {
+        const name = match[1].trim();
+        const isDisabled = match[2].toLowerCase() === 'true';
+        variants.push({
+            id: name,
+            title: name,
+            available: !isDisabled,
+            price: 0,
+            stockQty: !isDisabled ? 1 : 0
+        });
+    }
+
+    if (variants.length === 0) {
+        const regexAlt = /<button\b[^>]*aria-disabled="(true|false)"[^>]*aria-label="([^"]+)"[^>]*>/gi;
+        while ((match = regexAlt.exec(html)) !== null) {
+            const isDisabled = match[1].toLowerCase() === 'true';
+            const name = match[2].trim();
+            variants.push({
+                id: name,
+                title: name,
+                available: !isDisabled,
+                price: 0,
+                stockQty: !isDisabled ? 1 : 0
+            });
+        }
+    }
+
+    return variants;
+}
+
 async function scrapeShopee(url, targetVariant = 'all') {
     const startTime = Date.now();
     let currentUrl = url;
@@ -142,13 +176,49 @@ async function scrapeShopee(url, targetVariant = 'all') {
                 }
             }
 
-            // Fallback meta parsing if JSON script parsing failed
+            // Fallback meta/button parsing if JSON script parsing failed
             if (!fetchSuccess) {
+                const htmlButtons = parseShopeeHtmlButtons(html);
+                const h1Match = html.match(/<h1\b[^>]*>(.*?)<\/h1>/i) || html.match(/<span\b[^>]*class="[^"]*jrzBcd[^"]*"[^>]*>(.*?)<\/span>/i);
                 const titleMatch = html.match(/<meta\b[^>]*property="og:title"\s*content="(.*?)"/i) || html.match(/<title>(.*?)<\/title>/i);
-                const title = titleMatch ? titleMatch[1].replace('| Shopee Việt Nam', '').trim() : `Sản phẩm Shopee (${itemid})`;
-                const imageMatch = html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
+                
+                let title = `Sản phẩm Shopee (${itemid})`;
+                if (h1Match && h1Match[1]) {
+                    title = h1Match[1].replace(/<[^>]+>/g, '').trim();
+                } else if (titleMatch && titleMatch[1]) {
+                    title = titleMatch[1].replace('| Shopee Việt Nam', '').trim();
+                }
 
+                const imageMatch = html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
                 const isTargetSpecified = targetVariant && targetVariant !== 'all';
+
+                let variants = [];
+                if (htmlButtons.length > 0) {
+                    variants = htmlButtons;
+                } else {
+                    variants = isTargetSpecified ? [
+                        { id: 'missing-target', title: `${targetVariant} (Hết hàng)`, price: 0, available: false }
+                    ] : [{ id: itemid, title: 'Mặc định', price: 0, available: true }];
+                }
+
+                let isOverallAvailable = variants.some(v => v.available);
+                if (isTargetSpecified) {
+                    const cleanTarget = targetVariant.trim().toLowerCase();
+                    const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
+                    if (matched) {
+                        isOverallAvailable = matched.available;
+                    } else {
+                        variants.unshift({
+                            id: 'missing-target',
+                            title: `${targetVariant} (Hết hàng)`,
+                            price: 0,
+                            available: false,
+                            stockQty: 0
+                        });
+                        isOverallAvailable = false;
+                    }
+                }
+
                 const duration = Date.now() - startTime;
                 return {
                     success: true,
@@ -156,12 +226,10 @@ async function scrapeShopee(url, targetVariant = 'all') {
                     title: title,
                     price: 0,
                     originalPrice: 0,
-                    available: isTargetSpecified ? false : true,
-                    stockQty: isTargetSpecified ? 0 : 1,
+                    available: isOverallAvailable,
+                    stockQty: variants.reduce((acc, v) => acc + (v.available ? 1 : 0), 0),
                     image: imageMatch ? imageMatch[0] : '',
-                    variants: isTargetSpecified ? [
-                        { id: 'missing-target', title: `${targetVariant} (Hết hàng)`, price: 0, available: false }
-                    ] : [{ id: itemid, title: 'Mặc định', price: 0, available: true }],
+                    variants: variants,
                     targetVariant: targetVariant,
                     url: url,
                     responseTimeMs: duration,
