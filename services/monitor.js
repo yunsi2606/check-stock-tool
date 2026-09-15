@@ -105,8 +105,9 @@ async function checkProductItem(product, force = false) {
     }
 
     // Update state in storage
+    const updatedTitle = (result.title && !result.title.includes('Shopping Cart Icon') && !result.title.startsWith('Đang tải')) ? result.title : product.title;
     updateProduct(product.id, {
-        title: result.title || product.title,
+        title: updatedTitle,
         lastChecked: new Date().toISOString(),
         lastStatus: currentStatus,
         lastData: result,
