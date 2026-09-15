@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatDate(isoString) {
         if (!isoString) return 'Chưa check';
         const date = new Date(isoString);
-        return date.toLocaleTimeString('vi-VN') + ' ' + date.toLocaleDateString('vi-VN');
+        return date.toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false }) + ' ' + date.toLocaleDateString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
     }
 
     // Fetch Overview Status

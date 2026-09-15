@@ -111,7 +111,8 @@ async function sendStockAlert(botToken, chatId, product, scrapeResult, variantDe
         message += `💵 <b>Giá:</b> ${formatPrice(scrapeResult.price)}\n`;
     }
 
-    message += `⏰ <b>Thời gian check:</b> ${new Date().toLocaleTimeString('vi-VN')}\n\n`;
+    const vnTime = new Date().toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });
+    message += `⏰ <b>Thời gian check:</b> ${vnTime}\n\n`;
     message += `👉 <a href="${scrapeResult.url}"><b>Bấm vào đây để đặt mua ngay</b></a>`;
 
     return await sendTelegramMessage(botToken, chatId, message);
@@ -121,7 +122,8 @@ async function sendStockAlert(botToken, chatId, product, scrapeResult, variantDe
  * Send test message
  */
 async function sendTestTelegramMessage(botToken, chatId) {
-    const msg = `✅ <b>[KIỂM TRA TELEGRAM BOT - STOCK MONITOR PRO]</b>\n\nChúc mừng! Telegram Bot đã kết nối thành công với Tool Check Stock.\n⏰ <b>Thời gian:</b> ${new Date().toLocaleString('vi-VN')}`;
+    const vnFullTime = new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });
+    const msg = `✅ <b>[KIỂM TRA TELEGRAM BOT - STOCK MONITOR PRO]</b>\n\nChúc mừng! Telegram Bot đã kết nối thành công với Tool Check Stock.\n⏰ <b>Thời gian:</b> ${vnFullTime}`;
     return await sendTelegramMessage(botToken, chatId, msg);
 }
 
