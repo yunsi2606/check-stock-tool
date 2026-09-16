@@ -41,13 +41,21 @@ async function scrapeFahasa(url) {
 
         const duration = Date.now() - startTime;
 
-        // Stock check
-        const isOutOfStock = html.includes("Sản phẩm tạm hết hàng") || 
-                             html.includes("out-of-stock") || 
-                             html.includes("tạm hết hàng") ||
-                             /class=["']availability out-of-stock["']/i.test(html);
-        
-        const isAvailable = !isOutOfStock;
+        // Clean HTML to remove <script> and <style> tags (Fahasa embeds "out_of_stock":"Sản phẩm tạm hết hàng" inside JS translation scripts on ALL pages)
+        const cleanHtml = html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '');
+
+        // Stock check on cleaned HTML
+        const isOosInClean = cleanHtml.includes("Sản phẩm tạm hết hàng") || 
+                             cleanHtml.includes("tạm hết hàng") ||
+                             /class=["'][^"']*out-of-stock[^"']*["']/i.test(cleanHtml) ||
+                             cleanHtml.includes("btn-out-of-stock") ||
+                             cleanHtml.includes("fhs-btn-out-of-stock");
+
+        const hasCartButton = cleanHtml.includes("btn-cart-to-cart") || 
+                              cleanHtml.includes("btn-buy-now") || 
+                              cleanHtml.includes("product_view_add_box");
+
+        const isAvailable = hasCartButton && !isOosInClean;
 
         // Title extraction
         let title = 'Sách Fahasa';
