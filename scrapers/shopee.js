@@ -121,78 +121,87 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
         // Attempt 2: HTML Page Parsing with Mobile User-Agents (Shopee Mobile SSR sends initialState with models & stock)
         if (!fetchSuccess) {
-            for (const ua of mobileUAs) {
-                try {
-                    const pageRes = await fetch(`https://shopee.vn/product/${shopid}/${itemid}`, {
-                        headers: {
-                            'User-Agent': ua,
-                            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                            'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8',
-                            'Cache-Control': 'no-cache'
-                        }
-                    });
+            const pageUrls = [
+                `https://shopee.vn/a-i.${shopid}.${itemid}`,
+                `https://shopee.vn/product/${shopid}/${itemid}`
+            ];
 
-                    if (!pageRes.ok) continue;
+            for (const pageUrl of pageUrls) {
+                if (fetchSuccess) break;
 
-                    const html = await pageRes.text();
+                for (const ua of mobileUAs) {
+                    try {
+                        const pageRes = await fetch(pageUrl, {
+                            headers: {
+                                'User-Agent': ua,
+                                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                                'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8',
+                                'Cache-Control': 'no-cache'
+                            }
+                        });
 
-                    // Extract initialState from HTML script tags
-                    const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
+                        if (!pageRes.ok) continue;
 
-                    for (const scriptTag of scripts) {
-                        if (scriptTag.includes('initialState') || scriptTag.includes('DOMAIN_PDP') || scriptTag.includes('cachedMap') || scriptTag.includes('RW_VARIATION_SELECTION')) {
-                            const firstBrace = scriptTag.indexOf('{');
-                            const lastBrace = scriptTag.lastIndexOf('}');
-                            if (firstBrace === -1 || lastBrace === -1) continue;
+                        const html = await pageRes.text();
 
-                            const jsonText = scriptTag.substring(firstBrace, lastBrace + 1);
-                            try {
-                                const parsed = JSON.parse(jsonText);
-                                const initialState = parsed?.initialState || parsed;
-                                if (!initialState) continue;
+                        // Extract initialState from HTML script tags
+                        const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
 
-                                let itemObj = null;
+                        for (const scriptTag of scripts) {
+                            if (scriptTag.includes('initialState') || scriptTag.includes('DOMAIN_PDP') || scriptTag.includes('cachedMap') || scriptTag.includes('RW_VARIATION_SELECTION')) {
+                                const firstBrace = scriptTag.indexOf('{');
+                                const lastBrace = scriptTag.lastIndexOf('}');
+                                if (firstBrace === -1 || lastBrace === -1) continue;
 
-                                // 1. Check DOMAIN_PDP cachedMap
-                                const cachedMap = initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
-                                if (cachedMap) {
-                                    for (const k of Object.keys(cachedMap)) {
-                                        if (k.includes(itemid)) {
-                                            const entry = cachedMap[k];
-                                            itemObj = entry?.item || entry?.data?.item || entry?.data;
-                                            if (itemObj && (itemObj.title || itemObj.name || (itemObj.models && itemObj.models.length > 0))) {
-                                                break;
+                                const jsonText = scriptTag.substring(firstBrace, lastBrace + 1);
+                                try {
+                                    const parsed = JSON.parse(jsonText);
+                                    const initialState = parsed?.initialState || parsed;
+                                    if (!initialState) continue;
+
+                                    let itemObj = null;
+
+                                    // 1. Check DOMAIN_PDP cachedMap
+                                    const cachedMap = initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
+                                    if (cachedMap) {
+                                        for (const k of Object.keys(cachedMap)) {
+                                            if (k.includes(itemid)) {
+                                                const entry = cachedMap[k];
+                                                itemObj = entry?.item || entry?.data?.item || entry?.data;
+                                                if (itemObj && (itemObj.title || itemObj.name || (itemObj.models && itemObj.models.length > 0))) {
+                                                    break;
+                                                }
                                             }
                                         }
                                     }
-                                }
 
-                                // 2. Check initialState.item.items[itemid]
-                                if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.item?.items) {
-                                    if (initialState.item.items[itemid] && (initialState.item.items[itemid].name || initialState.item.items[itemid].title)) {
-                                        itemObj = initialState.item.items[itemid];
+                                    // 2. Check initialState.item.items[itemid]
+                                    if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.item?.items) {
+                                        if (initialState.item.items[itemid] && (initialState.item.items[itemid].name || initialState.item.items[itemid].title)) {
+                                            itemObj = initialState.item.items[itemid];
+                                        }
                                     }
-                                }
 
-                                // 3. Check RW_VARIATION_SELECTION
-                                if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.RW_VARIATION_SELECTION?.data?.itemLevel?.item) {
-                                    itemObj = initialState.RW_VARIATION_SELECTION.data.itemLevel.item;
-                                }
+                                    // 3. Check RW_VARIATION_SELECTION
+                                    if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.RW_VARIATION_SELECTION?.data?.itemLevel?.item) {
+                                        itemObj = initialState.RW_VARIATION_SELECTION.data.itemLevel.item;
+                                    }
 
-                                if (itemObj && (itemObj.name || itemObj.title)) {
-                                    rawData = itemObj;
-                                    fetchSuccess = true;
-                                    break;
+                                    if (itemObj && (itemObj.name || itemObj.title)) {
+                                        rawData = itemObj;
+                                        fetchSuccess = true;
+                                        break;
+                                    }
+                                } catch (e) {
+                                    // Skip non-parseable scripts
                                 }
-                            } catch (e) {
-                                // Skip non-parseable scripts
                             }
                         }
-                    }
 
-                    if (fetchSuccess) break;
-                } catch (e) {
-                    // Try next UA
+                        if (fetchSuccess) break;
+                    } catch (e) {
+                        // Try next UA
+                    }
                 }
             }
         }
@@ -203,33 +212,60 @@ async function scrapeShopee(url, targetVariant = 'all') {
                 const fbRes = await fetch(`https://shopee.vn/a-i.${shopid}.${itemid}`, {
                     headers: {
                         'User-Agent': 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                        'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8'
                     }
                 });
                 if (fbRes.ok) {
                     const fbHtml = await fbRes.text();
-                    const titleMatch = fbHtml.match(/<meta\b[^>]*property=["']og:title["']\s+content=["'](.*?)["']/i);
-                    const imageMatch = fbHtml.match(/<meta\b[^>]*property=["']og:image["']\s+content=["'](.*?)["']/i);
+                    const titleMatch = fbHtml.match(/<title\b[^>]*>(.*?)<\/title>/i) ||
+                                       fbHtml.match(/<meta\b[^>]*content="([^"]+)"[^>]*property="og:title"/i) ||
+                                       fbHtml.match(/<meta\b[^>]*property="og:title"[^>]*content="([^"]+)"/i);
+
+                    const imageMatch = fbHtml.match(/<meta\b[^>]*content="([^"]+)"[^>]*property="og:image"/i) ||
+                                       fbHtml.match(/<meta\b[^>]*property="og:image"[^>]*content="([^"]+)"/i);
                     
-                    if (titleMatch && titleMatch[1] && !titleMatch[1].includes('Shopee Việt Nam')) {
-                        const title = titleMatch[1].replace(/\s*\|\s*Shopee Việt Nam$/i, '').trim();
-                        const image = imageMatch ? imageMatch[1] : '';
-                        const duration = Date.now() - startTime;
-                        return {
-                            success: true,
-                            platform: 'shopee',
-                            title: title,
-                            price: 0,
-                            originalPrice: 0,
-                            available: true,
-                            stockQty: 1,
-                            image: image,
-                            variants: [{ id: itemid, title: 'Mặc định', price: 0, available: true }],
-                            targetVariant: targetVariant,
-                            url: url,
-                            responseTimeMs: duration,
-                            timestamp: new Date().toISOString()
-                        };
+                    if (titleMatch && titleMatch[1]) {
+                        const cleanTitle = titleMatch[1].replace(/\s*\|\s*Shopee Việt Nam$/i, '').trim();
+                        if (cleanTitle && cleanTitle !== 'Shopee Việt Nam' && !cleanTitle.startsWith('Shopee Việt Nam |')) {
+                            const image = imageMatch ? imageMatch[1] : '';
+                            const duration = Date.now() - startTime;
+                            
+                            const isTargetSpecified = targetVariant && targetVariant !== 'all';
+                            let isAvailable = true;
+                            let variants = [{ id: itemid, title: 'Mặc định', price: 0, available: true }];
+
+                            if (isTargetSpecified) {
+                                const cleanTarget = targetVariant.trim().toLowerCase();
+                                const inTitle = cleanTitle.toLowerCase().includes(cleanTarget);
+                                variants = [
+                                    {
+                                        id: 'target',
+                                        title: targetVariant,
+                                        price: 0,
+                                        available: inTitle,
+                                        stockQty: inTitle ? 1 : 0
+                                    }
+                                ];
+                                isAvailable = inTitle;
+                            }
+
+                            return {
+                                success: true,
+                                platform: 'shopee',
+                                title: cleanTitle,
+                                price: 0,
+                                originalPrice: 0,
+                                available: isAvailable,
+                                stockQty: isAvailable ? 1 : 0,
+                                image: image,
+                                variants: variants,
+                                targetVariant: targetVariant,
+                                url: url,
+                                responseTimeMs: duration,
+                                timestamp: new Date().toISOString()
+                            };
+                        }
                     }
                 }
             } catch (e) {
