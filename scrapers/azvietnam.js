@@ -1,7 +1,7 @@
 /**
  * Scraper module for AZ Vietnam (Haravan platform) using .js JSON API
  */
-async function scrapeAzVietnam(url) {
+async function scrapeAzVietnam(url, targetVariant = 'all') {
     const startTime = Date.now();
     try {
         // Normalize URL to get JSON endpoint
@@ -44,16 +44,40 @@ async function scrapeAzVietnam(url) {
         });
 
         const isAnyVariantAvailable = variants.some(v => v.available);
+        let isOverallAvailable = isAnyVariantAvailable || Boolean(data.available);
+        let effectivePrice = variants.length > 0 ? variants[0].price : Math.round((data.price || 0) / 100);
+        let effectiveStockQty = variants.reduce((acc, v) => acc + (v.available ? (v.stockQty || 1) : 0), 0);
+
+        if (targetVariant && targetVariant !== 'all') {
+            const cleanTarget = targetVariant.trim().toLowerCase();
+            const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
+            if (matched) {
+                isOverallAvailable = matched.available;
+                effectivePrice = matched.price;
+                effectiveStockQty = matched.available ? (matched.stockQty || 1) : 0;
+            } else {
+                variants.unshift({
+                    id: 'missing-target',
+                    title: `${targetVariant} (Hết hàng)`,
+                    price: effectivePrice,
+                    available: false,
+                    stockQty: 0
+                });
+                isOverallAvailable = false;
+                effectiveStockQty = 0;
+            }
+        }
 
         return {
             success: true,
             platform: 'azvietnam',
             title: data.title || 'AZ Vietnam Product',
-            price: variants.length > 0 ? variants[0].price : Math.round((data.price || 0) / 100),
-            available: isAnyVariantAvailable || Boolean(data.available),
-            stockQty: variants.reduce((acc, v) => acc + (v.available ? (v.stockQty || 1) : 0), 0),
+            price: effectivePrice,
+            available: isOverallAvailable,
+            stockQty: isOverallAvailable ? effectiveStockQty : 0,
             image: image,
             variants: variants,
+            targetVariant: targetVariant,
             url: url,
             responseTimeMs: duration,
             timestamp: new Date().toISOString()

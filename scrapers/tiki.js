@@ -89,7 +89,7 @@ async function scrapeTiki(url, targetVariant = 'all') {
             price: data.price || 0,
             originalPrice: data.list_price || data.original_price || data.price,
             available: isOverallAvailable,
-            stockQty: data.stock_item ? data.stock_item.qty : (isAvailable ? 1 : 0),
+            stockQty: isOverallAvailable ? (data.stock_item ? data.stock_item.qty : 1) : 0,
             image: image,
             variants: variants,
             targetVariant: targetVariant,

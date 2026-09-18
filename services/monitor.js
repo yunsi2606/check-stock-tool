@@ -40,35 +40,51 @@ async function checkProductItem(product, force = false) {
     }
 
     // Determine current availability
-    const isNowAvailable = result.available;
+    const isNowAvailable = Boolean(result.available);
     const currentStatus = isNowAvailable ? 'in_stock' : 'out_of_stock';
     const previousStatus = product.lastStatus || 'unknown';
 
-    // Variant diffing
-    const availableVariants = (result.variants || []).filter(v => v.available);
-    const prevAvailableVariants = (product.lastData && product.lastData.variants) 
-        ? product.lastData.variants.filter(v => v.available).map(v => v.title)
+    // Variant diffing - strictly filter by targetVariant if specified so unwanted variants never trigger alerts
+    const isTargetSpecified = Boolean(product.targetVariant && product.targetVariant !== 'all');
+    const cleanTarget = isTargetSpecified ? product.targetVariant.trim().toLowerCase() : '';
+
+    const relevantVariants = isTargetSpecified
+        ? (result.variants || []).filter(v => v.title.toLowerCase().includes(cleanTarget))
+        : (result.variants || []);
+
+    const availableVariants = relevantVariants.filter(v => v.available);
+
+    const prevRelevantVariants = (product.lastData && product.lastData.variants)
+        ? (isTargetSpecified
+            ? product.lastData.variants.filter(v => v.title.toLowerCase().includes(cleanTarget))
+            : product.lastData.variants)
         : [];
 
+    const prevAvailableVariants = prevRelevantVariants.filter(v => v.available).map(v => v.title);
     const newlyAvailableVariants = availableVariants.filter(v => !prevAvailableVariants.includes(v.title));
 
     let shouldNotify = false;
     let notifyReason = '';
 
-    // Condition 1: Product was out_of_stock or unknown, and is now in_stock
-    if (previousStatus === 'out_of_stock' && currentStatus === 'in_stock') {
-        shouldNotify = true;
-        notifyReason = 'Sản phẩm mới có hàng lại (Restock)';
-    } 
-    // Condition 2: Product was already in_stock or unknown, but new variant came back in stock
-    else if (newlyAvailableVariants.length > 0 && previousStatus !== 'unknown') {
-        shouldNotify = true;
-        notifyReason = `Phân loại mới lên hàng: ${newlyAvailableVariants.map(v => v.title).join(', ')}`;
-    }
-    // Condition 3: Initial run & product is in stock
-    else if (previousStatus === 'unknown' && currentStatus === 'in_stock') {
-        shouldNotify = true;
-        notifyReason = 'Phát hiện sản phẩm đang còn hàng khi mở tool';
+    // Only notify when product or targeted variant is ACTUALLY available right now
+    if (isNowAvailable) {
+        // Condition 1: Product was out_of_stock, and is now in_stock
+        if (previousStatus === 'out_of_stock') {
+            shouldNotify = true;
+            notifyReason = isTargetSpecified
+                ? `Phân loại ${product.targetVariant} mới có hàng lại (Restock)`
+                : 'Sản phẩm mới có hàng lại (Restock)';
+        } 
+        // Condition 2: Product was in_stock, but a newly available variant came back
+        else if (newlyAvailableVariants.length > 0 && previousStatus !== 'unknown') {
+            shouldNotify = true;
+            notifyReason = `Phân loại mới lên hàng: ${newlyAvailableVariants.map(v => v.title).join(', ')}`;
+        }
+        // Condition 3: Initial run & product is in stock
+        else if (previousStatus === 'unknown') {
+            shouldNotify = true;
+            notifyReason = 'Phát hiện sản phẩm đang còn hàng khi mở tool';
+        }
     }
 
     addLog('success', `Check hoàn tất [${product.platform.toUpperCase()}]: ${result.title} - ${isNowAvailable ? 'CÒN HÀNG' : 'HẾT HÀNG'} (${result.responseTimeMs}ms)`);

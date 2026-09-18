@@ -119,6 +119,8 @@ async function scrapeShopee(url, targetVariant = 'all') {
             console.log('Shopee API fetch failed, trying HTML parse:', e.message);
         }
 
+        let lastHtml = '';
+
         // Attempt 2: HTML Page Parsing with Mobile User-Agents (Shopee Mobile SSR sends initialState with models & stock)
         if (!fetchSuccess) {
             const pageUrls = [
@@ -143,6 +145,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
                         if (!pageRes.ok) continue;
 
                         const html = await pageRes.text();
+                        lastHtml = html;
 
                         // Extract initialState from HTML script tags
                         const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
@@ -206,72 +209,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
             }
         }
 
-        // Attempt 3: OpenGraph fallback via Facebook External Hit UA if HTML script parsing failed
         if (!fetchSuccess || !rawData) {
-            try {
-                const fbRes = await fetch(`https://shopee.vn/a-i.${shopid}.${itemid}`, {
-                    headers: {
-                        'User-Agent': 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                        'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8'
-                    }
-                });
-                if (fbRes.ok) {
-                    const fbHtml = await fbRes.text();
-                    const titleMatch = fbHtml.match(/<title\b[^>]*>(.*?)<\/title>/i) ||
-                                       fbHtml.match(/<meta\b[^>]*content="([^"]+)"[^>]*property="og:title"/i) ||
-                                       fbHtml.match(/<meta\b[^>]*property="og:title"[^>]*content="([^"]+)"/i);
-
-                    const imageMatch = fbHtml.match(/<meta\b[^>]*content="([^"]+)"[^>]*property="og:image"/i) ||
-                                       fbHtml.match(/<meta\b[^>]*property="og:image"[^>]*content="([^"]+)"/i);
-                    
-                    if (titleMatch && titleMatch[1]) {
-                        const cleanTitle = titleMatch[1].replace(/\s*\|\s*Shopee Việt Nam$/i, '').trim();
-                        if (cleanTitle && cleanTitle !== 'Shopee Việt Nam' && !cleanTitle.startsWith('Shopee Việt Nam |')) {
-                            const image = imageMatch ? imageMatch[1] : '';
-                            const duration = Date.now() - startTime;
-                            
-                            const isTargetSpecified = targetVariant && targetVariant !== 'all';
-                            let isAvailable = true;
-                            let variants = [{ id: itemid, title: 'Mặc định', price: 0, available: true }];
-
-                            if (isTargetSpecified) {
-                                const cleanTarget = targetVariant.trim().toLowerCase();
-                                const inTitle = cleanTitle.toLowerCase().includes(cleanTarget);
-                                variants = [
-                                    {
-                                        id: 'target',
-                                        title: targetVariant,
-                                        price: 0,
-                                        available: inTitle,
-                                        stockQty: inTitle ? 1 : 0
-                                    }
-                                ];
-                                isAvailable = inTitle;
-                            }
-
-                            return {
-                                success: true,
-                                platform: 'shopee',
-                                title: cleanTitle,
-                                price: 0,
-                                originalPrice: 0,
-                                available: isAvailable,
-                                stockQty: isAvailable ? 1 : 0,
-                                image: image,
-                                variants: variants,
-                                targetVariant: targetVariant,
-                                url: url,
-                                responseTimeMs: duration,
-                                timestamp: new Date().toISOString()
-                            };
-                        }
-                    }
-                }
-            } catch (e) {
-                // Skip
-            }
-
             throw new Error(`Shopee WAF anti-bot blocked request (Status 403 / Captcha Required)`);
         }
 
@@ -283,8 +221,17 @@ async function scrapeShopee(url, targetVariant = 'all') {
         let rawPrice = rawData.price || rawData.price_min || 0;
         let origPriceRaw = rawData.price_before_discount || rawData.price_max || rawPrice;
 
-        const price = rawPrice > 1000000 ? Math.round(rawPrice / 100000) : rawPrice;
-        const originalPrice = origPriceRaw > 1000000 ? Math.round(origPriceRaw / 100000) : origPriceRaw;
+        let price = rawPrice > 1000000 ? Math.round(rawPrice / 100000) : rawPrice;
+        let originalPrice = origPriceRaw > 1000000 ? Math.round(origPriceRaw / 100000) : origPriceRaw;
+
+        // Extract price from page text if rawPrice is not present in initial state
+        if (price === 0 && lastHtml) {
+            const pMatch = lastHtml.match(/(?:Giá bìa|giá|₫)\s*[:\s]?\s*(\d{1,3}(?:\.\d{3})+)\s*đ?/i);
+            if (pMatch) {
+                price = parseInt(pMatch[1].replace(/\./g, ''), 10) || 0;
+                originalPrice = price;
+            }
+        }
 
         const totalStock = typeof rawData.stock === 'number' ? rawData.stock : (rawData.normal_stock || 0);
         
@@ -314,7 +261,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
             const isAvailable = totalStock > 0 && rawData.item_status !== 'UNLISTED' && rawData.item_status !== 'BANNED';
             variants.push({
                 id: String(itemid),
-                title: title,
+                title: 'Mặc định',
                 price: price,
                 available: isAvailable,
                 stockQty: totalStock
@@ -332,11 +279,16 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
         // Determine overall availability based on targetVariant
         let isOverallAvailable = variants.some(v => v.available);
+        let effectivePrice = price;
+        let effectiveStockQty = variants.reduce((acc, v) => acc + (v.available ? v.stockQty : 0), 0);
+
         if (targetVariant && targetVariant !== 'all') {
             const cleanTarget = targetVariant.trim().toLowerCase();
             const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
             if (matched) {
                 isOverallAvailable = matched.available;
+                if (matched.price > 0) effectivePrice = matched.price;
+                effectiveStockQty = matched.available ? (matched.stockQty || 1) : 0;
             } else {
                 variants.unshift({
                     id: 'missing-target',
@@ -346,6 +298,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
                     stockQty: 0
                 });
                 isOverallAvailable = false;
+                effectiveStockQty = 0;
             }
         }
 
@@ -353,10 +306,10 @@ async function scrapeShopee(url, targetVariant = 'all') {
             success: true,
             platform: 'shopee',
             title: title,
-            price: price,
+            price: effectivePrice,
             originalPrice: originalPrice,
             available: isOverallAvailable,
-            stockQty: variants.reduce((acc, v) => acc + (v.available ? v.stockQty : 0), 0),
+            stockQty: isOverallAvailable ? effectiveStockQty : 0,
             image: image,
             variants: variants,
             targetVariant: targetVariant,

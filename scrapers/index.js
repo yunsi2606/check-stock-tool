@@ -27,7 +27,7 @@ async function scrapeProduct(url, targetVariant = 'all') {
         case 'tiki':
             return await scrapeTiki(url, targetVariant);
         case 'azvietnam':
-            return await scrapeAzVietnam(url);
+            return await scrapeAzVietnam(url, targetVariant);
         case 'fahasa':
             return await scrapeFahasa(url);
         case 'nobita':

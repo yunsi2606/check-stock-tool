@@ -2,8 +2,7 @@ const { scrapeProduct, detectPlatform } = require('../scrapers');
 
 async function testShopeeIntegration() {
     const urls = [
-        'https://shopee.vn/product/88234394/21834279564',
-        'https://shopee.vn/S%C3%A1ch-Ai-%C4%90%C3%B3-T%E1%BA%ADp-3-i.88234394.21834279564'
+        'https://shopee.vn/S%C3%81CH-VE-S%E1%BA%A6U-M%C3%99A-H%E1%BA%A0-L%E1%BA%AENG-NGHE-TUY%E1%BA%BET-TAN-T%E1%BA%ACP-H%E1%BA%A0-THU-MERBOOKS-(B%E1%BA%A2N-TH%C6%AF%E1%BB%9CNG-B%E1%BA%A2N-%C4%90%E1%BA%B6C-BI%E1%BB%86T)-i.1803887349.51667561572'
     ];
 
     console.log('=== TESTING SHOPEE SCRAPER INTEGRATION ===\n');
