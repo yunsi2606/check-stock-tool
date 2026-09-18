@@ -176,31 +176,25 @@ async function scrapeShopee(url, targetVariant = 'all') {
                 }
             }
 
-            // Fallback meta/button parsing if JSON script parsing failed
+            // Fallback: Check if HTML buttons or meta tags exist
             if (!fetchSuccess) {
                 const htmlButtons = parseShopeeHtmlButtons(html);
                 const h1Match = html.match(/<h1\b[^>]*>(.*?)<\/h1>/i) || html.match(/<span\b[^>]*class="[^"]*jrzBcd[^"]*"[^>]*>(.*?)<\/span>/i);
-                const titleMatch = html.match(/<meta\b[^>]*property="og:title"\s*content="(.*?)"/i) || html.match(/<title>(.*?)<\/title>/i);
+                const titleMatch = html.match(/<meta\b[^>]*property="og:title"\s*content="(.*?)"/i);
                 
-                let title = `Sản phẩm Shopee (${itemid})`;
-                if (h1Match && h1Match[1]) {
-                    title = h1Match[1].replace(/<[^>]+>/g, '').trim();
-                } else if (titleMatch && titleMatch[1]) {
-                    title = titleMatch[1].replace('| Shopee Việt Nam', '').trim();
+                const validTitle = (h1Match && h1Match[1]) ? h1Match[1].replace(/<[^>]+>/g, '').trim() :
+                                   (titleMatch && titleMatch[1] && !titleMatch[1].includes('Shopee Việt Nam')) ? titleMatch[1].trim() : null;
+
+                // If no buttons AND no valid title parsed, Shopee WAF anti-bot blocked the request
+                if (htmlButtons.length === 0 && !validTitle) {
+                    throw new Error(`Shopee WAF anti-bot blocked request (Status 403 / Captcha Required)`);
                 }
 
+                const title = validTitle || `Sản phẩm Shopee (${itemid})`;
                 const imageMatch = html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
                 const isTargetSpecified = targetVariant && targetVariant !== 'all';
 
-                let variants = [];
-                if (htmlButtons.length > 0) {
-                    variants = htmlButtons;
-                } else {
-                    variants = isTargetSpecified ? [
-                        { id: 'missing-target', title: `${targetVariant} (Hết hàng)`, price: 0, available: false }
-                    ] : [{ id: itemid, title: 'Mặc định', price: 0, available: true }];
-                }
-
+                let variants = htmlButtons;
                 let isOverallAvailable = variants.some(v => v.available);
                 if (isTargetSpecified) {
                     const cleanTarget = targetVariant.trim().toLowerCase();

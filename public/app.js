@@ -110,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Image
-            const imgUrl = (p.lastData && p.lastData.image) ? p.lastData.image : 'https://via.placeholder.com/60?text=Book';
+            const DEFAULT_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><rect width='60' height='60' fill='%23334155' rx='6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-size='12' font-family='sans-serif'>Book</text></svg>";
+            const imgUrl = (p.lastData && p.lastData.image) ? p.lastData.image : DEFAULT_IMG;
 
             // Target variant badge
             const targetVarBadge = (p.targetVariant && p.targetVariant !== 'all') 
@@ -142,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                     <td>
                         <div class="product-cell">
-                            <img src="${imgUrl}" alt="cover" class="product-img" onerror="this.src='https://via.placeholder.com/60?text=Book'">
+                            <img src="${imgUrl}" alt="cover" class="product-img" onerror="this.src='${DEFAULT_IMG}'">
                             <div>
                                 <a href="${p.url}" target="_blank" class="product-title" title="${p.title}">${p.title}</a>
                                 <small class="text-muted">${formatVND(p.lastData ? p.lastData.price : 0)}</small>
