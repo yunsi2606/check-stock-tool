@@ -217,24 +217,35 @@
     </div>
 
     <!-- Modal Add Product -->
+    <!-- Modal Add Product -->
     <div class="modal-backdrop" id="addProductModal">
         <div class="modal">
             <div class="modal-header">
-                <h3>Thêm Sản Phẩm Mới Vào Tool Check</h3>
+                <h3>Thêm Sản Phẩm Mới</h3>
                 <button class="modal-close" id="btnCloseModal">&times;</button>
             </div>
             <div class="modal-body">
+                <div class="modal-mode-tabs">
+                    <button type="button" class="mode-tab active" id="tabModeUrl">
+                        <i class="fa-solid fa-link"></i> Nhập Link URL
+                    </button>
+                    <button type="button" class="mode-tab" id="tabModeHtml">
+                        <i class="fa-solid fa-code"></i> Dán Mã Element HTML (Shopee)
+                    </button>
+                </div>
+
+                <!-- Mode 1: URL -->
                 <form id="addProductForm">
                     <div class="form-group">
                         <label for="productUrl">Đường Dẫn (URL) Sản Phẩm</label>
-                        <input type="url" id="productUrl" required placeholder="Dán link Tiki, AZ Vietnam, Fahasa, hoặc Nobita.vn..." class="form-control">
-                        <small class="form-text">Ví dụ: https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871</small>
+                        <input type="url" id="productUrl" required placeholder="Dán link Shopee, Tiki, Fahasa, AZ Vietnam, Nobita..." class="form-control">
+                        <small class="form-text">Ví dụ: https://shopee.vn/Truyen-Tamon-i.242511295.55467709912</small>
                     </div>
 
                     <div class="form-group" style="margin-top: 14px;">
                         <label for="targetVariant">Phân Loại Cần Theo Dõi Cụ Thể (Tùy chọn)</label>
-                        <input type="text" id="targetVariant" placeholder="Ví dụ: Bản Đặc Biệt (Để trống nếu theo dõi tất cả phân loại)" class="form-control">
-                        <small class="form-text">Mẹo đối với Tiki: Nếu Tiki ẩn phân loại hết hàng, việc nhập tên phân loại đích (ví dụ: Bản Đặc Biệt) sẽ giúp tool phát hiện ngay khi Tiki hiện và mở bán lại phân loại đó.</small>
+                        <input type="text" id="targetVariant" placeholder="Ví dụ: Tập 1 PVC Card hoặc Bản Đặc Biệt..." class="form-control">
+                        <small class="form-text">Nếu sản phẩm có nhiều phân loại và bạn chỉ muốn săn 1 phân loại cụ thể, hãy nhập tên phân loại đó.</small>
                     </div>
 
                     <div class="platform-preview-badge" id="platformPreview" style="display: none; margin-top: 12px;">
@@ -242,9 +253,35 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" id="btnCancelModal">Hủy</button>
+                        <button type="button" class="btn btn-secondary btnCancelModal">Hủy</button>
                         <button type="submit" class="btn btn-primary" id="btnSubmitAdd">
                             <i class="fa-solid fa-plus"></i> Thêm Sản Phẩm
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Mode 2: Direct HTML Element -->
+                <form id="importHtmlForm" style="display: none;">
+                    <div class="form-group">
+                        <label for="productHtmlInput">Mã HTML Element của Shopee</label>
+                        <textarea id="productHtmlInput" rows="7" required placeholder="F12 trên trang Shopee > Chuột phải vào thẻ sản phẩm &lt;div class=&quot;page-product...&quot;&gt; > Chọn Copy > Copy outerHTML rồi dán vào đây..." class="form-control" style="font-family: monospace; font-size: 12px;"></textarea>
+                        <small class="form-text">💡 Dành cho Shopee khi chạy trên Cloud/Server bị dính Captcha/WAF chặn IP. Hệ thống sẽ bóc tách ngay lập tức Tên, Giá, Ảnh, Phân loại và Tồn kho!</small>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 14px;">
+                        <label for="productHtmlUrl">Link URL Gốc Sản Phẩm (Tùy chọn)</label>
+                        <input type="url" id="productHtmlUrl" placeholder="https://shopee.vn/... (để liên kết nút Mua Ngay)" class="form-control">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 14px;">
+                        <label for="targetVariantHtml">Phân Loại Cần Theo Dõi Cụ Thể (Tùy chọn)</label>
+                        <input type="text" id="targetVariantHtml" placeholder="Ví dụ: Tập 1 PVC Card hoặc Bản Đặc Biệt..." class="form-control">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnCancelModal">Hủy</button>
+                        <button type="submit" class="btn btn-primary" id="btnSubmitImportHtml">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Bóc Tách & Thêm Sản Phẩm
                         </button>
                     </div>
                 </form>

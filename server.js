@@ -74,6 +74,64 @@ app.post('/api/products', async (req, res) => {
     res.json({ success: true, product: newProduct });
 });
 
+// Import or update product directly from HTML element (Bypass WAF)
+app.post('/api/products/import-html', async (req, res) => {
+    const { html, url, targetVariant } = req.body;
+    if (!html || !html.trim()) {
+        return res.status(400).json({ error: 'Nội dung HTML/Element không được để trống' });
+    }
+
+    const { parseShopeeHtml } = require('./scrapers/shopee');
+    const parsed = parseShopeeHtml(html, targetVariant || 'all');
+    if (!parsed || !parsed.title) {
+        return res.status(400).json({ error: 'Không thể bóc tách thông tin sản phẩm từ HTML vừa dán. Vui lòng kiểm tra lại mã HTML.' });
+    }
+
+    const productUrl = url ? url.trim() : 'https://shopee.vn/';
+    const products = getProducts();
+    let existing = products.find(p => (url && p.url === url) || (parsed.title && p.title.toLowerCase() === parsed.title.toLowerCase()));
+
+    const productData = {
+        success: true,
+        platform: 'shopee',
+        title: parsed.title,
+        price: parsed.price,
+        originalPrice: parsed.originalPrice,
+        available: parsed.available,
+        stockQty: parsed.stockQty,
+        image: parsed.image,
+        variants: parsed.variants,
+        targetVariant: targetVariant || 'all',
+        url: productUrl,
+        responseTimeMs: 10,
+        timestamp: new Date().toISOString()
+    };
+
+    if (existing) {
+        updateProduct(existing.id, {
+            title: parsed.title,
+            lastChecked: new Date().toISOString(),
+            lastStatus: parsed.available ? 'in_stock' : 'out_of_stock',
+            lastData: productData,
+            lastError: null
+        });
+        addLog('success', `Đã cập nhật thủ công từ HTML element [SHOPEE]: ${parsed.title} - ${parsed.available ? 'CÒN HÀNG' : 'HẾT HÀNG'}`);
+        return res.json({ success: true, product: existing, parsed: productData });
+    } else {
+        const newProduct = addProduct({
+            url: productUrl,
+            platform: 'shopee',
+            title: parsed.title,
+            targetVariant: targetVariant || 'all',
+            lastChecked: new Date().toISOString(),
+            lastStatus: parsed.available ? 'in_stock' : 'out_of_stock',
+            lastData: productData
+        });
+        addLog('success', `Đã thêm sản phẩm từ HTML element [SHOPEE]: ${parsed.title} - ${parsed.available ? 'CÒN HÀNG' : 'HẾT HÀNG'}`);
+        return res.json({ success: true, product: newProduct, parsed: productData });
+    }
+});
+
 app.delete('/api/products/:id', (req, res) => {
     const { id } = req.params;
     deleteProduct(id);

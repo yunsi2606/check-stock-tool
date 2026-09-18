@@ -1,7 +1,7 @@
 /**
  * Scraper module for Shopee.vn
- * Supports parsing Shopee URLs (i.SHOPID.ITEMID, /product/SHOPID/ITEMID, shope.ee short links)
- * Extracts stock, price, title, image, and variants/models.
+ * Supports parsing Shopee URLs (i.SHOPID.ITEMID, /product/SHOPID/ITEMID, a-i.SHOPID.ITEMID, shope.ee short links)
+ * Extracts stock, price, title, image, and variants/models via Mobile SSR JSON and Desktop HTML DOM elements.
  */
 
 function parseShopeeUrl(url) {
@@ -9,51 +9,164 @@ function parseShopeeUrl(url) {
     
     // Case 1: i.SHOPID.ITEMID (e.g. shopee.vn/Ten-San-Pham-i.123456.789012)
     const matchI = url.match(/i\.(\d+)\.(\d+)/i);
-    if (matchI) {
-        return { shopid: matchI[1], itemid: matchI[2] };
-    }
+    if (matchI) return { shopid: matchI[1], itemid: matchI[2] };
 
     // Case 2: product/SHOPID/ITEMID
     const matchProduct = url.match(/product\/(\d+)\/(\d+)/i);
-    if (matchProduct) {
-        return { shopid: matchProduct[1], itemid: matchProduct[2] };
-    }
+    if (matchProduct) return { shopid: matchProduct[1], itemid: matchProduct[2] };
+
+    // Case 3: a-i.SHOPID.ITEMID
+    const matchAi = url.match(/a-i\.(\d+)\.(\d+)/i);
+    if (matchAi) return { shopid: matchAi[1], itemid: matchAi[2] };
 
     return null;
 }
 
-function parseShopeeHtmlButtons(html) {
-    const variants = [];
-    const regex = /<button\b[^>]*aria-label="([^"]+)"[^>]*aria-disabled="(true|false)"[^>]*>/gi;
-    let match;
-    while ((match = regex.exec(html)) !== null) {
-        const name = match[1].trim();
-        const isDisabled = match[2].toLowerCase() === 'true';
-        variants.push({
-            id: name,
-            title: name,
-            available: !isDisabled,
-            price: 0,
-            stockQty: !isDisabled ? 1 : 0
-        });
+/**
+ * Parse Shopee product details directly from raw HTML / DOM elements
+ * Supports Shopee Desktop PDP and Mobile HTML layouts
+ */
+function parseShopeeHtml(html, targetVariant = 'all') {
+    if (!html || typeof html !== 'string') return null;
+
+    // 1. Title Extraction
+    let title = '';
+    const h1Match = html.match(/<h1\b[^>]*class="[^"]*auau1S[^"]*"[^>]*>([\s\S]*?)<\/h1>/i) ||
+                    html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) ||
+                    html.match(/<span\b[^>]*class="[^"]*jrzBcd[^"]*"[^>]*>([\s\S]*?)<\/span>/i) ||
+                    html.match(/<meta\s+property=["']og:title["']\s+content=["'](.*?)["']/i) ||
+                    html.match(/<meta\s+content=["'](.*?)["']\s+property=["']og:title["']/i) ||
+                    html.match(/<title\b[^>]*>(.*?)<\/title>/i);
+    if (h1Match) {
+        title = h1Match[1].replace(/<[^>]+>/g, '').replace(/\s*\|\s*Shopee Việt Nam$/i, '').trim();
     }
 
-    if (variants.length === 0) {
-        const regexAlt = /<button\b[^>]*aria-disabled="(true|false)"[^>]*aria-label="([^"]+)"[^>]*>/gi;
-        while ((match = regexAlt.exec(html)) !== null) {
-            const isDisabled = match[1].toLowerCase() === 'true';
-            const name = match[2].trim();
+    if (!title || title === 'Shopee Việt Nam') return null;
+
+    // 2. Image Extraction
+    let image = '';
+    const imgMatch = html.match(/<img\b[^>]*class="[^"]*P39yUt[^"]*"[^>]*src="([^"]+)"/i) ||
+                     html.match(/<meta\s+property=["']og:image["']\s+content=["'](.*?)["']/i) ||
+                     html.match(/<meta\s+content=["'](.*?)["']\s+property=["']og:image["']/i) ||
+                     html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
+    if (imgMatch) {
+        image = imgMatch[1] || imgMatch[0];
+    }
+
+    // 3. Price Extraction
+    let price = 0;
+    const pDomMatch = html.match(/class="[^"]*pw3J3G[^"]*"[^>]*>\s*([\d\.]+)/i) ||
+                      html.match(/class="[^"]*nt0EaI[^"]*"[^>]*>[\s\S]*?(\d{1,3}(?:\.\d{3})+)/i) ||
+                      html.match(/Giá bìa(?:\s+|\\t)+(\d{1,3}(?:\.\d{3})+)/i) ||
+                      html.match(/(?:Giá bìa|giá|₫)(?:\s+|\\t|[:\s])+(\d{1,3}(?:\.\d{3})+)/i);
+    if (pDomMatch) {
+        price = parseInt(pDomMatch[1].replace(/\./g, ''), 10) || 0;
+    }
+
+    // 4. Variants Extraction from HTML Buttons
+    const variants = [];
+    const buttonRegex = /<button\b[^>]*\bclass="[^"]*(?:selection-box|Dbg4vL|lK5dVS|Lj3peW)[^"]*"[^>]*>[\s\S]*?<\/button>/gi;
+    const allButtons = html.match(buttonRegex) || [];
+
+    for (const btnHtml of allButtons) {
+        let label = '';
+        const labelMatch = btnHtml.match(/aria-label="([^"]+)"/i) ||
+                           btnHtml.match(/<span\b[^>]*class="[^"]*f4_5wu[^"]*"[^>]*>([\s\S]*?)<\/span>/i);
+        if (labelMatch) {
+            label = labelMatch[1].replace(/<[^>]+>/g, '').trim();
+        }
+
+        const isDisabled = btnHtml.includes('aria-disabled="true"') ||
+                           btnHtml.includes('disabled') ||
+                           btnHtml.includes('selection-box-disabled');
+
+        if (label && !variants.some(v => v.title.toLowerCase() === label.toLowerCase())) {
             variants.push({
-                id: name,
-                title: name,
+                id: label,
+                title: label,
+                price: price,
                 available: !isDisabled,
-                price: 0,
                 stockQty: !isDisabled ? 1 : 0
             });
         }
     }
 
-    return variants;
+    // Alternative Regex for aria-label & aria-disabled everywhere in HTML
+    if (variants.length === 0) {
+        const regex1 = /<button\b[^>]*aria-label="([^"]+)"[^>]*aria-disabled="(true|false)"[^>]*>/gi;
+        let m;
+        while ((m = regex1.exec(html)) !== null) {
+            const name = m[1].trim();
+            const isDisabled = m[2].toLowerCase() === 'true';
+            if (!variants.some(v => v.title.toLowerCase() === name.toLowerCase())) {
+                variants.push({
+                    id: name,
+                    title: name,
+                    price: price,
+                    available: !isDisabled,
+                    stockQty: !isDisabled ? 1 : 0
+                });
+            }
+        }
+    }
+
+    // 5. Global Stock Status
+    const hasGlobalOosBadge = /class="[^"]*nHt5ah[^"]*"[^>]*>\s*hết hàng/i.test(html) ||
+                            />\s*HẾT HÀNG\s*</i.test(html) ||
+                            (html.includes('btn-solid-primary--disabled') && html.includes('btn-tinted--disabled'));
+
+    let isOverallAvailable = false;
+    if (variants.length > 0) {
+        isOverallAvailable = variants.some(v => v.available);
+    } else {
+        isOverallAvailable = !hasGlobalOosBadge;
+    }
+
+    if (hasGlobalOosBadge && !variants.some(v => v.available)) {
+        isOverallAvailable = false;
+    }
+
+    // 6. Target Variant Handling
+    let effectivePrice = price;
+    let effectiveStockQty = variants.reduce((acc, v) => acc + (v.available ? v.stockQty : 0), 0);
+
+    if (targetVariant && targetVariant !== 'all') {
+        const cleanTarget = targetVariant.trim().toLowerCase();
+        const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
+        if (matched) {
+            isOverallAvailable = matched.available;
+            if (matched.price > 0) effectivePrice = matched.price;
+            effectiveStockQty = matched.available ? (matched.stockQty || 1) : 0;
+        } else {
+            variants.unshift({
+                id: 'missing-target',
+                title: `${targetVariant} (Hết hàng)`,
+                price: price,
+                available: false,
+                stockQty: 0
+            });
+            isOverallAvailable = false;
+            effectiveStockQty = 0;
+        }
+    } else if (variants.length === 0) {
+        variants.push({
+            id: 'default',
+            title: 'Mặc định',
+            price: price,
+            available: isOverallAvailable,
+            stockQty: isOverallAvailable ? 1 : 0
+        });
+    }
+
+    return {
+        title,
+        price: effectivePrice,
+        originalPrice: effectivePrice,
+        available: isOverallAvailable,
+        stockQty: isOverallAvailable ? effectiveStockQty : 0,
+        image,
+        variants
+    };
 }
 
 async function scrapeShopee(url, targetVariant = 'all') {
@@ -92,6 +205,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
         let rawData = null;
         let fetchSuccess = false;
+        let lastHtml = '';
 
         // Attempt 1: Shopee PDP API v4
         try {
@@ -119,9 +233,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
             console.log('Shopee API fetch failed, trying HTML parse:', e.message);
         }
 
-        let lastHtml = '';
-
-        // Attempt 2: HTML Page Parsing with Mobile User-Agents (Shopee Mobile SSR sends initialState with models & stock)
+        // Attempt 2: HTML Page Parsing with Mobile User-Agents & Desktop URLs
         if (!fetchSuccess) {
             const pageUrls = [
                 `https://shopee.vn/a-i.${shopid}.${itemid}`,
@@ -209,14 +321,36 @@ async function scrapeShopee(url, targetVariant = 'all') {
             }
         }
 
-        if (!fetchSuccess || !rawData) {
+        // Attempt 3: If JSON initialState was not available, try parsing raw HTML DOM elements
+        const htmlParsed = lastHtml ? parseShopeeHtml(lastHtml, targetVariant) : null;
+
+        if (!fetchSuccess && !rawData && (!htmlParsed || !htmlParsed.title)) {
             throw new Error(`Shopee WAF anti-bot blocked request (Status 403 / Captcha Required)`);
         }
 
         const duration = Date.now() - startTime;
 
+        // If we don't have rawData but have htmlParsed, use htmlParsed directly
+        if (!rawData && htmlParsed && htmlParsed.title) {
+            return {
+                success: true,
+                platform: 'shopee',
+                title: htmlParsed.title,
+                price: htmlParsed.price,
+                originalPrice: htmlParsed.originalPrice,
+                available: htmlParsed.available,
+                stockQty: htmlParsed.stockQty,
+                image: htmlParsed.image,
+                variants: htmlParsed.variants,
+                targetVariant: targetVariant,
+                url: url,
+                responseTimeMs: duration,
+                timestamp: new Date().toISOString()
+            };
+        }
+
         // Process rawData (Title, price, stock, variants)
-        const title = rawData.title || rawData.name || 'Sách Shopee';
+        const title = rawData.title || rawData.name || (htmlParsed ? htmlParsed.title : 'Sách Shopee');
         
         let rawPrice = rawData.price || rawData.price_min || 0;
         let origPriceRaw = rawData.price_before_discount || rawData.price_max || rawPrice;
@@ -224,12 +358,19 @@ async function scrapeShopee(url, targetVariant = 'all') {
         let price = rawPrice > 1000000 ? Math.round(rawPrice / 100000) : rawPrice;
         let originalPrice = origPriceRaw > 1000000 ? Math.round(origPriceRaw / 100000) : origPriceRaw;
 
-        // Extract price from page text if rawPrice is not present in initial state
-        if (price === 0 && lastHtml) {
-            const pMatch = lastHtml.match(/(?:Giá bìa|giá|₫)\s*[:\s]?\s*(\d{1,3}(?:\.\d{3})+)\s*đ?/i);
-            if (pMatch) {
-                price = parseInt(pMatch[1].replace(/\./g, ''), 10) || 0;
-                originalPrice = price;
+        // Extract price from page text / htmlParsed if rawPrice is not present in initial state
+        if (price === 0) {
+            if (htmlParsed && htmlParsed.price > 0) {
+                price = htmlParsed.price;
+                originalPrice = htmlParsed.originalPrice || price;
+            } else if (lastHtml) {
+                const pMatch = lastHtml.match(/class="[^"]*pw3J3G[^"]*"[^>]*>\s*([\d\.]+)/i) ||
+                              lastHtml.match(/Giá bìa(?:\s+|\\t)+(\d{1,3}(?:\.\d{3})+)/i) ||
+                              lastHtml.match(/(?:Giá bìa|giá|₫)(?:\s+|\\t|[:\s])+(\d{1,3}(?:\.\d{3})+)/i);
+                if (pMatch) {
+                    price = parseInt(pMatch[1].replace(/\./g, ''), 10) || 0;
+                    originalPrice = price;
+                }
             }
         }
 
@@ -240,7 +381,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
         if (rawData.models && rawData.models.length > 0) {
             rawData.models.forEach(m => {
                 const mPriceRaw = m.price || rawPrice;
-                const mPrice = mPriceRaw > 1000000 ? Math.round(mPriceRaw / 100000) : mPriceRaw;
+                const mPrice = mPriceRaw > 1000000 ? Math.round(mPriceRaw / 100000) : (mPriceRaw || price);
                 
                 // Model is available if NOT grayed out, clickable is not false, and stock > 0 (if stock provided)
                 const isGrayout = m.is_grayout === true;
@@ -257,6 +398,9 @@ async function scrapeShopee(url, targetVariant = 'all') {
                     stockQty: mAvailable ? (mStock || 1) : 0
                 });
             });
+        } else if (htmlParsed && htmlParsed.variants && htmlParsed.variants.length > 0) {
+            // Use variants from HTML DOM buttons if JSON models were empty
+            htmlParsed.variants.forEach(v => variants.push(v));
         } else {
             const isAvailable = totalStock > 0 && rawData.item_status !== 'UNLISTED' && rawData.item_status !== 'BANNED';
             variants.push({
@@ -275,10 +419,23 @@ async function scrapeShopee(url, targetVariant = 'all') {
         } else if (rawData.images && rawData.images.length > 0) {
             const img0 = rawData.images[0];
             image = img0.startsWith('http') ? img0 : `https://down-vn.img.susercontent.com/file/${img0}`;
+        } else if (htmlParsed && htmlParsed.image) {
+            image = htmlParsed.image;
         }
+
+        // Global out-of-stock badge check
+        const hasGlobalOosBadge = lastHtml ? (
+            /class="[^"]*nHt5ah[^"]*"[^>]*>\s*hết hàng/i.test(lastHtml) ||
+            />\s*HẾT HÀNG\s*</i.test(lastHtml) ||
+            (lastHtml.includes('btn-solid-primary--disabled') && lastHtml.includes('btn-tinted--disabled'))
+        ) : false;
 
         // Determine overall availability based on targetVariant
         let isOverallAvailable = variants.some(v => v.available);
+        if (hasGlobalOosBadge && !variants.some(v => v.available)) {
+            isOverallAvailable = false;
+        }
+
         let effectivePrice = price;
         let effectiveStockQty = variants.reduce((acc, v) => acc + (v.available ? v.stockQty : 0), 0);
 
@@ -307,7 +464,7 @@ async function scrapeShopee(url, targetVariant = 'all') {
             platform: 'shopee',
             title: title,
             price: effectivePrice,
-            originalPrice: originalPrice,
+            originalPrice: originalPrice || effectivePrice,
             available: isOverallAvailable,
             stockQty: isOverallAvailable ? effectiveStockQty : 0,
             image: image,
@@ -332,5 +489,6 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
 module.exports = {
     parseShopeeUrl,
+    parseShopeeHtml,
     scrapeShopee
 };

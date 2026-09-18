@@ -370,7 +370,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('addProductModal');
     document.getElementById('btnOpenAddModal').addEventListener('click', () => modal.classList.add('show'));
     document.getElementById('btnCloseModal').addEventListener('click', () => modal.classList.remove('show'));
-    document.getElementById('btnCancelModal').addEventListener('click', () => modal.classList.remove('show'));
+    document.querySelectorAll('.btnCancelModal').forEach(btn => {
+        btn.addEventListener('click', () => modal.classList.remove('show'));
+    });
+
+    // Modal Mode Tabs
+    const tabModeUrl = document.getElementById('tabModeUrl');
+    const tabModeHtml = document.getElementById('tabModeHtml');
+    const addProductForm = document.getElementById('addProductForm');
+    const importHtmlForm = document.getElementById('importHtmlForm');
+
+    if (tabModeUrl && tabModeHtml) {
+        tabModeUrl.addEventListener('click', () => {
+            tabModeUrl.classList.add('active');
+            tabModeHtml.classList.remove('active');
+            addProductForm.style.display = 'block';
+            importHtmlForm.style.display = 'none';
+        });
+
+        tabModeHtml.addEventListener('click', () => {
+            tabModeHtml.classList.add('active');
+            tabModeUrl.classList.remove('active');
+            importHtmlForm.style.display = 'block';
+            addProductForm.style.display = 'none';
+        });
+    }
 
     // URL Platform preview
     const urlInput = document.getElementById('productUrl');
@@ -405,8 +429,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Submit Add Product
-    document.getElementById('addProductForm').addEventListener('submit', async (e) => {
+    // Submit Add Product via URL
+    addProductForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const url = urlInput.value.trim();
         const targetVariant = targetVariantInput ? targetVariantInput.value.trim() : 'all';
@@ -432,6 +456,49 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Lỗi thêm sản phẩm: ' + err.message);
         }
     });
+
+    // Submit Import HTML Element Form
+    if (importHtmlForm) {
+        importHtmlForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const html = document.getElementById('productHtmlInput').value.trim();
+            const url = document.getElementById('productHtmlUrl').value.trim();
+            const targetVariant = document.getElementById('targetVariantHtml').value.trim() || 'all';
+
+            if (!html) {
+                alert('Vui lòng dán mã HTML/Element của Shopee!');
+                return;
+            }
+
+            const submitBtn = document.getElementById('btnSubmitImportHtml');
+            submitBtn.disabled = true;
+            const origText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang bóc tách...';
+
+            try {
+                const res = await fetch('/api/products/import-html', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ html, url, targetVariant })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    modal.classList.remove('show');
+                    document.getElementById('productHtmlInput').value = '';
+                    document.getElementById('productHtmlUrl').value = '';
+                    document.getElementById('targetVariantHtml').value = '';
+                    await refreshAll();
+                } else {
+                    alert('Lỗi: ' + data.error);
+                }
+            } catch (err) {
+                alert('Lỗi gửi HTML lên server: ' + err.message);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = origText;
+            }
+        });
+    }
 
     // Clear Logs UI
     document.getElementById('btnClearLogUI').addEventListener('click', () => {
