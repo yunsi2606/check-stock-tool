@@ -132,7 +132,111 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Render Products Table
+    // Helper: Build row inner HTML
+    function buildRowInnerHtml(p, globalSec, qItem) {
+        const platformClass = `platform-${p.platform}`;
+        const platformNames = { tiki: 'Tiki', azvietnam: 'AZ Vietnam', fahasa: 'Fahasa', nobita: 'Nobita.vn', shopee: 'Shopee' };
+        const platformLabel = platformNames[p.platform] || p.platform.toUpperCase();
+
+        // Status Pill
+        let statusPill = `<span class="pill pill-warning"><i class="fa-solid fa-clock"></i> Chờ check</span>`;
+        if (p.lastStatus === 'in_stock') {
+            statusPill = `<span class="pill pill-success"><i class="fa-solid fa-check"></i> CÒN HÀNG</span>`;
+        } else if (p.lastStatus === 'out_of_stock') {
+            statusPill = `<span class="pill pill-danger"><i class="fa-solid fa-xmark"></i> HẾT HÀNG</span>`;
+        } else if (p.lastStatus === 'error') {
+            statusPill = `<span class="pill pill-danger" title="${p.lastError || ''}"><i class="fa-solid fa-triangle-exclamation"></i> LỖI CÀO</span>`;
+        }
+
+        // Image
+        const DEFAULT_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><rect width='60' height='60' fill='%23334155' rx='6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-size='12' font-family='sans-serif'>Book</text></svg>";
+        const imgUrl = (p.lastData && p.lastData.image) ? p.lastData.image : DEFAULT_IMG;
+
+        // Target variant badge
+        const targetVarBadge = (p.targetVariant && p.targetVariant !== 'all') 
+            ? `<br><small class="text-primary">🎯 Lọc: ${p.targetVariant}</small>`
+            : '';
+
+        // Variants Render
+        let variantsHtml = '<span class="text-muted">Mặc định</span>';
+        if (p.lastData && p.lastData.variants && p.lastData.variants.length > 0) {
+            variantsHtml = `<div class="variant-list">` + 
+                p.lastData.variants.map(v => {
+                    const vClass = v.available ? 'available' : 'unavailable';
+                    const qtyText = (v.available && typeof v.stockQty === 'number' && v.stockQty > 0) ? ` ${v.stockQty}` : '';
+                    const vStatus = v.available ? `✓ Còn${qtyText}` : '✗ Hết';
+                    return `<span class="variant-pill ${vClass}">${v.title}: ${formatVND(v.price)} (${vStatus})</span>`;
+                }).join('') + 
+                `</div>`;
+        }
+
+        const speed = (p.lastData && p.lastData.responseTimeMs) ? `${p.lastData.responseTimeMs}ms` : '---';
+        const isCustom = Boolean(p.checkIntervalSeconds && Number(p.checkIntervalSeconds) > 0);
+        const currentIntervalSec = isCustom ? Number(p.checkIntervalSeconds) : globalSec;
+
+        // Next check pill
+        let nextCheckPill = '';
+        if (qItem && qItem.isRunning) {
+            nextCheckPill = `<span class="pill-countdown running"><i class="fa-solid fa-spinner fa-spin"></i> Đang check...</span>`;
+        } else if (qItem && qItem.isPendingPriority) {
+            nextCheckPill = `<span class="pill-countdown priority"><i class="fa-solid fa-bolt"></i> Trong hàng đợi</span>`;
+        } else if (qItem && qItem.secondsUntilNextCheck !== undefined) {
+            nextCheckPill = `<span class="pill-countdown" data-countdown-id="${p.id}" data-seconds="${qItem.secondsUntilNextCheck}"><i class="fa-regular fa-clock"></i> Sau <b class="cnt-val">${formatDuration(qItem.secondsUntilNextCheck)}</b></span>`;
+        } else {
+            nextCheckPill = `<span class="pill-countdown" data-countdown-id="${p.id}" data-seconds="${currentIntervalSec}"><i class="fa-regular fa-clock"></i> Sau <b class="cnt-val">${currentIntervalSec}s</b></span>`;
+        }
+
+        return `
+            <td>
+                <span class="badge-platform ${platformClass}">
+                    ${platformLabel}
+                </span>
+            </td>
+            <td>
+                <div class="product-cell">
+                    <img src="${imgUrl}" alt="cover" class="product-img" onerror="this.src='${DEFAULT_IMG}'">
+                    <div>
+                        <a href="${p.url}" target="_blank" class="product-title" title="${p.title}">${p.title}</a>
+                        <small class="text-muted product-price">${formatVND(p.lastData ? p.lastData.price : 0)}</small>
+                        ${targetVarBadge}
+                    </div>
+                </div>
+            </td>
+            <td>${variantsHtml}</td>
+            <td class="cell-status">${statusPill}</td>
+            <td>
+                <div class="interval-select-wrapper">
+                    <select class="interval-select ${isCustom ? 'is-custom' : ''}" data-id="${p.id}" title="Đổi tần suất check cho sản phẩm này">
+                        <option value="0" ${!isCustom ? 'selected' : ''}>⚙️ Mặc định (${globalSec}s)</option>
+                        <option value="20" ${p.checkIntervalSeconds === 20 ? 'selected' : ''}>⚡ 20s (Cực nhanh)</option>
+                        <option value="30" ${p.checkIntervalSeconds === 30 ? 'selected' : ''}>🚀 30s</option>
+                        <option value="60" ${p.checkIntervalSeconds === 60 ? 'selected' : ''}>⏱️ 1 phút</option>
+                        <option value="120" ${p.checkIntervalSeconds === 120 ? 'selected' : ''}>⏱️ 2 phút</option>
+                        <option value="300" ${p.checkIntervalSeconds === 300 ? 'selected' : ''}>⏱️ 5 phút</option>
+                        <option value="600" ${p.checkIntervalSeconds === 600 ? 'selected' : ''}>⏱️ 10 phút</option>
+                    </select>
+                    <span class="interval-hint">${isCustom ? '⚡ Riêng biệt' : '⚙️ Dùng cài đặt chung'}</span>
+                </div>
+            </td>
+            <td>
+                <div class="schedule-cell">
+                    <div class="schedule-next">${nextCheckPill}</div>
+                    <div class="schedule-last">${formatDate(p.lastChecked)}</div>
+                    <div class="schedule-meta"><i class="fa-solid fa-gauge-high"></i> ${speed}</div>
+                </div>
+            </td>
+            <td class="text-right">
+                <button class="btn btn-sm btn-secondary btn-check-item" data-id="${p.id}" title="Đưa vào đầu hàng đợi check ngay">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-delete-item" data-id="${p.id}" title="Xóa sản phẩm">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </td>
+        `;
+    }
+
+    // Render Products Table (In-place updates without DOM destruction to eliminate jitter)
     function renderProductsTable(products) {
         productCountBadge.textContent = `${products.length} sản phẩm`;
         
@@ -146,118 +250,89 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Remove empty state if present
+        const emptyRow = productsTableBody.querySelector('.empty-state');
+        if (emptyRow) {
+            productsTableBody.innerHTML = '';
+        }
+
         const globalSec = (currentQueue && currentQueue.globalIntervalSeconds) 
             || currentSettings.checkIntervalSeconds 
             || 30;
 
-        productsTableBody.innerHTML = products.map(p => {
-            const platformClass = `platform-${p.platform}`;
-            const platformNames = { tiki: 'Tiki', azvietnam: 'AZ Vietnam', fahasa: 'Fahasa', nobita: 'Nobita.vn', shopee: 'Shopee' };
-            const platformLabel = platformNames[p.platform] || p.platform.toUpperCase();
+        const currentIds = new Set(products.map(p => p.id));
 
-            // Status Pill
-            let statusPill = `<span class="pill pill-warning"><i class="fa-solid fa-clock"></i> Chờ check</span>`;
-            if (p.lastStatus === 'in_stock') {
-                statusPill = `<span class="pill pill-success"><i class="fa-solid fa-check"></i> CÒN HÀNG</span>`;
-            } else if (p.lastStatus === 'out_of_stock') {
-                statusPill = `<span class="pill pill-danger"><i class="fa-solid fa-xmark"></i> HẾT HÀNG</span>`;
-            } else if (p.lastStatus === 'error') {
-                statusPill = `<span class="pill pill-danger" title="${p.lastError || ''}"><i class="fa-solid fa-triangle-exclamation"></i> LỖI CÀO</span>`;
-            }
+        // Remove deleted rows
+        productsTableBody.querySelectorAll('tr[data-product-id]').forEach(tr => {
+            const id = tr.getAttribute('data-product-id');
+            if (!currentIds.has(id)) tr.remove();
+        });
 
-            // Image
-            const DEFAULT_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><rect width='60' height='60' fill='%23334155' rx='6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-size='12' font-family='sans-serif'>Book</text></svg>";
-            const imgUrl = (p.lastData && p.lastData.image) ? p.lastData.image : DEFAULT_IMG;
-
-            // Target variant badge
-            const targetVarBadge = (p.targetVariant && p.targetVariant !== 'all') 
-                ? `<br><small class="text-primary">🎯 Lọc: ${p.targetVariant}</small>`
-                : '';
-
-            // Variants Render
-            let variantsHtml = '<span class="text-muted">Mặc định</span>';
-            if (p.lastData && p.lastData.variants && p.lastData.variants.length > 0) {
-                variantsHtml = `<div class="variant-list">` + 
-                    p.lastData.variants.map(v => {
-                        const vClass = v.available ? 'available' : 'unavailable';
-                        const qtyText = (v.available && typeof v.stockQty === 'number' && v.stockQty > 0) ? ` ${v.stockQty}` : '';
-                        const vStatus = v.available ? `✓ Còn${qtyText}` : '✗ Hết';
-                        return `<span class="variant-pill ${vClass}">${v.title}: ${formatVND(v.price)} (${vStatus})</span>`;
-                    }).join('') + 
-                    `</div>`;
-            }
-
-            // Speed indicator
-            const speed = (p.lastData && p.lastData.responseTimeMs) ? `${p.lastData.responseTimeMs}ms` : '---';
-
-            // Queue & Schedule calculation
+        // Insert or patch each row
+        products.forEach(p => {
             const qItem = (currentQueue && currentQueue.products) ? currentQueue.products.find(item => item.id === p.id) : null;
             const isCustom = Boolean(p.checkIntervalSeconds && Number(p.checkIntervalSeconds) > 0);
             const currentIntervalSec = isCustom ? Number(p.checkIntervalSeconds) : globalSec;
 
-            // Next check pill
-            let nextCheckPill = '';
-            if (qItem && qItem.isRunning) {
-                nextCheckPill = `<span class="pill-countdown running"><i class="fa-solid fa-spinner fa-spin"></i> Đang check...</span>`;
-            } else if (qItem && qItem.isPendingPriority) {
-                nextCheckPill = `<span class="pill-countdown priority"><i class="fa-solid fa-bolt"></i> Trong hàng đợi</span>`;
-            } else if (qItem && qItem.secondsUntilNextCheck !== undefined) {
-                nextCheckPill = `<span class="pill-countdown" data-countdown-id="${p.id}" data-seconds="${qItem.secondsUntilNextCheck}"><i class="fa-regular fa-clock"></i> Sau <b class="cnt-val">${formatDuration(qItem.secondsUntilNextCheck)}</b></span>`;
+            let tr = productsTableBody.querySelector(`tr[data-product-id="${p.id}"]`);
+            if (!tr) {
+                // Create new row
+                tr = document.createElement('tr');
+                tr.setAttribute('data-product-id', p.id);
+                tr.dataset.lastStatus = p.lastStatus || 'unknown';
+                tr.innerHTML = buildRowInnerHtml(p, globalSec, qItem);
+                productsTableBody.appendChild(tr);
             } else {
-                nextCheckPill = `<span class="pill-countdown"><i class="fa-regular fa-clock"></i> Sau ${currentIntervalSec}s</span>`;
-            }
+                // In-place patch existing row without flicker
+                // 1. Status pill
+                if (tr.dataset.lastStatus !== p.lastStatus) {
+                    tr.dataset.lastStatus = p.lastStatus || 'unknown';
+                    const statusCell = tr.querySelector('.cell-status');
+                    if (statusCell) {
+                        let statusPill = `<span class="pill pill-warning"><i class="fa-solid fa-clock"></i> Chờ check</span>`;
+                        if (p.lastStatus === 'in_stock') statusPill = `<span class="pill pill-success"><i class="fa-solid fa-check"></i> CÒN HÀNG</span>`;
+                        else if (p.lastStatus === 'out_of_stock') statusPill = `<span class="pill pill-danger"><i class="fa-solid fa-xmark"></i> HẾT HÀNG</span>`;
+                        else if (p.lastStatus === 'error') statusPill = `<span class="pill pill-danger" title="${p.lastError || ''}"><i class="fa-solid fa-triangle-exclamation"></i> LỖI CÀO</span>`;
+                        statusCell.innerHTML = statusPill;
+                    }
+                }
 
-            return `
-                <tr data-product-id="${p.id}">
-                    <td>
-                        <span class="badge-platform ${platformClass}">
-                            ${platformLabel}
-                        </span>
-                    </td>
-                    <td>
-                        <div class="product-cell">
-                            <img src="${imgUrl}" alt="cover" class="product-img" onerror="this.src='${DEFAULT_IMG}'">
-                            <div>
-                                <a href="${p.url}" target="_blank" class="product-title" title="${p.title}">${p.title}</a>
-                                <small class="text-muted">${formatVND(p.lastData ? p.lastData.price : 0)}</small>
-                                ${targetVarBadge}
-                            </div>
-                        </div>
-                    </td>
-                    <td>${variantsHtml}</td>
-                    <td>${statusPill}</td>
-                    <td>
-                        <div class="interval-select-wrapper">
-                            <select class="interval-select ${isCustom ? 'is-custom' : ''}" data-id="${p.id}" title="Đổi tần suất check cho sản phẩm này">
-                                <option value="0" ${!isCustom ? 'selected' : ''}>⚙️ Mặc định (${globalSec}s)</option>
-                                <option value="20" ${p.checkIntervalSeconds === 20 ? 'selected' : ''}>⚡ 20s (Cực nhanh)</option>
-                                <option value="30" ${p.checkIntervalSeconds === 30 ? 'selected' : ''}>🚀 30s</option>
-                                <option value="60" ${p.checkIntervalSeconds === 60 ? 'selected' : ''}>⏱️ 1 phút</option>
-                                <option value="120" ${p.checkIntervalSeconds === 120 ? 'selected' : ''}>⏱️ 2 phút</option>
-                                <option value="300" ${p.checkIntervalSeconds === 300 ? 'selected' : ''}>⏱️ 5 phút</option>
-                                <option value="600" ${p.checkIntervalSeconds === 600 ? 'selected' : ''}>⏱️ 10 phút</option>
-                            </select>
-                            <span class="interval-hint">${isCustom ? '⚡ Riêng biệt' : '⚙️ Dùng cài đặt chung'}</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="schedule-cell">
-                            <div class="schedule-next">${nextCheckPill}</div>
-                            <div class="schedule-last">${formatDate(p.lastChecked)}</div>
-                            <div class="schedule-meta"><i class="fa-solid fa-gauge-high"></i> ${speed}</div>
-                        </div>
-                    </td>
-                    <td class="text-right">
-                        <button class="btn btn-sm btn-secondary btn-check-item" data-id="${p.id}" title="Đưa vào đầu hàng đợi check ngay">
-                            <i class="fa-solid fa-arrows-rotate"></i>
-                        </button>
-                        <button class="btn btn-sm btn-danger btn-delete-item" data-id="${p.id}" title="Xóa sản phẩm">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>
-            `;
-        }).join('');
+                // 2. Interval Select (Only update if user is NOT currently focusing on it)
+                const select = tr.querySelector('.interval-select');
+                if (select && document.activeElement !== select) {
+                    const targetVal = String(p.checkIntervalSeconds || 0);
+                    if (select.value !== targetVal) select.value = targetVal;
+                    select.classList.toggle('is-custom', isCustom);
+                    const hint = tr.querySelector('.interval-hint');
+                    if (hint) hint.textContent = isCustom ? '⚡ Riêng biệt' : '⚙️ Dùng cài đặt chung';
+                    const defOpt = select.querySelector('option[value="0"]');
+                    if (defOpt) defOpt.textContent = `⚙️ Mặc định (${globalSec}s)`;
+                }
+
+                // 3. Schedule pill
+                const pillEl = tr.querySelector('.pill-countdown');
+                if (pillEl) {
+                    if (qItem && qItem.isRunning) {
+                        pillEl.className = 'pill-countdown running';
+                        pillEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang check...';
+                    } else if (qItem && qItem.isPendingPriority) {
+                        pillEl.className = 'pill-countdown priority';
+                        pillEl.innerHTML = '<i class="fa-solid fa-bolt"></i> Trong hàng đợi';
+                    } else if (qItem && qItem.secondsUntilNextCheck !== undefined) {
+                        pillEl.className = 'pill-countdown';
+                        pillEl.setAttribute('data-seconds', String(qItem.secondsUntilNextCheck));
+                        pillEl.innerHTML = `<i class="fa-regular fa-clock"></i> Sau <b class="cnt-val">${formatDuration(qItem.secondsUntilNextCheck)}</b>`;
+                    }
+                }
+
+                // 4. Last Checked & Speed
+                const lastCheckedEl = tr.querySelector('.schedule-last');
+                if (lastCheckedEl) lastCheckedEl.textContent = formatDate(p.lastChecked);
+                const speedEl = tr.querySelector('.schedule-meta');
+                const speed = (p.lastData && p.lastData.responseTimeMs) ? `${p.lastData.responseTimeMs}ms` : '---';
+                if (speedEl) speedEl.innerHTML = `<i class="fa-solid fa-gauge-high"></i> ${speed}`;
+            }
+        });
     }
 
     // EVENT DELEGATION FOR TABLE ACTIONS

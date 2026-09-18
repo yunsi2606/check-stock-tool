@@ -13,7 +13,7 @@
       "platform": "tiki",
       "title": "Sách Ai Đó - Tập 3",
       "targetVariant": "Bản Đặc Biệt",
-      "lastChecked": "2026-09-18T15:10:17.681Z",
+      "lastChecked": "2026-09-18T15:21:27.134Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -42,8 +42,8 @@
         ],
         "targetVariant": "Bản Đặc Biệt",
         "url": "https://tiki.vn/sach-ai-do-tap-3-p279695769.html?spid=279695871",
-        "responseTimeMs": 253,
-        "timestamp": "2026-09-18T15:10:17.672Z"
+        "responseTimeMs": 126,
+        "timestamp": "2026-09-18T15:21:27.129Z"
       },
       "created": "2026-09-10T03:24:57.095Z",
       "lastError": null,
@@ -55,7 +55,7 @@
       "platform": "fahasa",
       "title": "Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo",
       "targetVariant": "all",
-      "lastChecked": "2026-09-18T15:09:45.530Z",
+      "lastChecked": "2026-09-18T15:21:28.370Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -73,8 +73,8 @@
           }
         ],
         "url": "https://www.fahasa.com/ai-do-tap-3-ban-dac-biet-bia-cung-tang-kem-bookmark-postcard-card-pvc-moc-dien-thoai-bao-dung-the-kem-day-deo-so-lo-xo.html?fhs_campaign=SEARCH",
-        "responseTimeMs": 379,
-        "timestamp": "2026-09-18T15:09:45.519Z"
+        "responseTimeMs": 347,
+        "timestamp": "2026-09-18T15:21:28.364Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -85,7 +85,7 @@
       "platform": "azvietnam",
       "title": "Sách - Ai Đó (Tập 3)",
       "targetVariant": "all",
-      "lastChecked": "2026-09-18T15:10:14.487Z",
+      "lastChecked": "2026-09-18T15:21:24.057Z",
       "lastStatus": "in_stock",
       "lastData": {
         "success": true,
@@ -126,8 +126,8 @@
         ],
         "targetVariant": "all",
         "url": "https://azvietnam.vn/products/aido3",
-        "responseTimeMs": 77,
-        "timestamp": "2026-09-18T15:10:14.478Z"
+        "responseTimeMs": 59,
+        "timestamp": "2026-09-18T15:21:24.045Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -138,7 +138,7 @@
       "platform": "nobita",
       "title": "Sách Nobita",
       "targetVariant": "all",
-      "lastChecked": "2026-09-18T15:10:12.933Z",
+      "lastChecked": "2026-09-18T15:21:23.237Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -156,8 +156,8 @@
           }
         ],
         "url": "https://nobita.vn/san-pham/ai-do-tap-3-ban-dac-biet",
-        "responseTimeMs": 5590,
-        "timestamp": "2026-09-18T15:10:12.927Z"
+        "responseTimeMs": 5287,
+        "timestamp": "2026-09-18T15:21:23.226Z"
       },
       "created": "2026-09-10T03:13:07.384Z",
       "lastError": null
@@ -168,7 +168,7 @@
       "platform": "fahasa",
       "title": "Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster",
       "targetVariant": "all",
-      "lastChecked": "2026-09-18T15:09:43.622Z",
+      "lastChecked": "2026-09-18T15:21:25.525Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -186,8 +186,8 @@
           }
         ],
         "url": "https://www.fahasa.com/tamon-than-tuong-hai-mat-tap-1-tang-kem-standee-pvc-1-poster.html?fhs_campaign=nhaphoimanga_sanphammoi_mangacomicmoi",
-        "responseTimeMs": 470,
-        "timestamp": "2026-09-18T15:09:43.610Z"
+        "responseTimeMs": 522,
+        "timestamp": "2026-09-18T15:21:25.516Z"
       },
       "created": "2026-09-15T13:27:32.986Z",
       "lastError": null
@@ -198,7 +198,7 @@
       "platform": "shopee",
       "title": "Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1",
       "targetVariant": "all",
-      "lastChecked": "2026-09-18T15:10:16.274Z",
+      "lastChecked": "2026-09-18T15:21:36.073Z",
       "lastStatus": "out_of_stock",
       "lastData": {
         "success": true,
@@ -227,1413 +227,1413 @@
         ],
         "targetVariant": "all",
         "url": "https://shopee.vn/product/242511295/55467709912",
-        "responseTimeMs": 875,
-        "timestamp": "2026-09-18T15:10:16.266Z"
+        "responseTimeMs": 980,
+        "timestamp": "2026-09-18T15:21:36.067Z"
       },
       "created": "2026-09-18T14:44:00.141Z",
       "lastError": null,
-      "checkIntervalSeconds": 20
+      "checkIntervalSeconds": 60
     }
   ],
   "logs": [
     {
-      "id": "log-1789744217678-321v",
-      "timestamp": "2026-09-18T15:10:17.678Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (253ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744217416-0jv9",
-      "timestamp": "2026-09-18T15:10:17.416Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744216272-65v8",
-      "timestamp": "2026-09-18T15:10:16.272Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (875ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744215385-mqf7",
-      "timestamp": "2026-09-18T15:10:15.385Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744214483-k5e7",
-      "timestamp": "2026-09-18T15:10:14.483Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (77ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744214398-cb6u",
-      "timestamp": "2026-09-18T15:10:14.398Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744212931-4z5o",
-      "timestamp": "2026-09-18T15:10:12.931Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5590ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744207333-gnz3",
-      "timestamp": "2026-09-18T15:10:07.333Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789744192398-w27d",
-      "timestamp": "2026-09-18T15:09:52.398Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (169ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744192222-cuyn",
-      "timestamp": "2026-09-18T15:09:52.222Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744191139-n21e",
-      "timestamp": "2026-09-18T15:09:51.139Z",
+      "id": "log-1789744896071-l933",
+      "timestamp": "2026-09-18T15:21:36.071Z",
       "level": "success",
       "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (980ms)",
       "details": null
     },
     {
-      "id": "log-1789744190142-dkcy",
-      "timestamp": "2026-09-18T15:09:50.142Z",
+      "id": "log-1789744895083-rk8q",
+      "timestamp": "2026-09-18T15:21:35.083Z",
       "level": "info",
       "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
       "details": null
     },
     {
-      "id": "log-1789744185526-bllj",
-      "timestamp": "2026-09-18T15:09:45.526Z",
+      "id": "log-1789744888369-mnyp",
+      "timestamp": "2026-09-18T15:21:28.369Z",
       "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (379ms)",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (347ms)",
       "details": null
     },
     {
-      "id": "log-1789744185131-tzht",
-      "timestamp": "2026-09-18T15:09:45.131Z",
+      "id": "log-1789744888014-n9ny",
+      "timestamp": "2026-09-18T15:21:28.014Z",
       "level": "info",
       "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789744183618-2uje",
-      "timestamp": "2026-09-18T15:09:43.618Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (470ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744183125-wik1",
-      "timestamp": "2026-09-18T15:09:43.125Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744180212-3b0x",
-      "timestamp": "2026-09-18T15:09:40.212Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (87ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744180109-o4s1",
-      "timestamp": "2026-09-18T15:09:40.109Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744171140-5x1a",
-      "timestamp": "2026-09-18T15:09:31.140Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (154ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744170973-0f0r",
-      "timestamp": "2026-09-18T15:09:30.973Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744169881-ifnd",
-      "timestamp": "2026-09-18T15:09:29.881Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (929ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744168938-1lhq",
-      "timestamp": "2026-09-18T15:09:28.938Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744154148-e33p",
-      "timestamp": "2026-09-18T15:09:14.148Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (277ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744153858-dv21",
-      "timestamp": "2026-09-18T15:09:13.858Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744152232-zr78",
-      "timestamp": "2026-09-18T15:09:12.232Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (404ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744151818-ngsf",
-      "timestamp": "2026-09-18T15:09:11.818Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744150951-tbyg",
-      "timestamp": "2026-09-18T15:09:10.951Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (139ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744150807-g5x5",
-      "timestamp": "2026-09-18T15:09:10.807Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744149985-g0ub",
-      "timestamp": "2026-09-18T15:09:09.985Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (132ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744149821-wv6h",
-      "timestamp": "2026-09-18T15:09:09.822Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744148830-h5r6",
-      "timestamp": "2026-09-18T15:09:08.830Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (963ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744147851-69nb",
-      "timestamp": "2026-09-18T15:09:07.851Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744146400-vsfs",
-      "timestamp": "2026-09-18T15:09:06.400Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5600ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744140783-it19",
-      "timestamp": "2026-09-18T15:09:00.783Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789744126825-hs5e",
-      "timestamp": "2026-09-18T15:08:46.825Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (192ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744126618-qknp",
-      "timestamp": "2026-09-18T15:08:46.618Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744125489-cdkr",
-      "timestamp": "2026-09-18T15:08:45.489Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (873ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744124595-eby0",
-      "timestamp": "2026-09-18T15:08:44.595Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744120135-j4d0",
-      "timestamp": "2026-09-18T15:08:40.135Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (546ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744119561-vu2n",
-      "timestamp": "2026-09-18T15:08:39.561Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744117853-ciht",
-      "timestamp": "2026-09-18T15:08:37.854Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (314ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744117521-5kkg",
-      "timestamp": "2026-09-18T15:08:37.521Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744115619-8hxf",
-      "timestamp": "2026-09-18T15:08:35.619Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (118ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744115488-zmfd",
-      "timestamp": "2026-09-18T15:08:35.488Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744104652-j8td",
-      "timestamp": "2026-09-18T15:08:24.652Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (233ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744104402-eh42",
-      "timestamp": "2026-09-18T15:08:24.402Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744103593-md36",
-      "timestamp": "2026-09-18T15:08:23.593Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1143ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744102404-ozzp",
-      "timestamp": "2026-09-18T15:08:22.404Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744088536-dos4",
-      "timestamp": "2026-09-18T15:08:08.536Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (251ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744088258-u9qk",
-      "timestamp": "2026-09-18T15:08:08.258Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744086607-ctxs",
-      "timestamp": "2026-09-18T15:08:06.607Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (339ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744086245-f4xs",
-      "timestamp": "2026-09-18T15:08:06.245Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744085347-8vvy",
-      "timestamp": "2026-09-18T15:08:05.347Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (102ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744085231-a9um",
-      "timestamp": "2026-09-18T15:08:05.231Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744083528-rf6l",
-      "timestamp": "2026-09-18T15:08:03.528Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (298ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744083214-8c64",
-      "timestamp": "2026-09-18T15:08:03.214Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744082122-x54q",
-      "timestamp": "2026-09-18T15:08:02.122Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (901ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744081203-rvv2",
-      "timestamp": "2026-09-18T15:08:01.203Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744080222-qb8t",
-      "timestamp": "2026-09-18T15:08:00.223Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (19137ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744061060-ckk7",
-      "timestamp": "2026-09-18T15:07:41.060Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789744054267-bzpb",
-      "timestamp": "2026-09-18T15:07:34.267Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (395ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744053852-uchu",
-      "timestamp": "2026-09-18T15:07:33.852Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744052310-9a51",
-      "timestamp": "2026-09-18T15:07:32.310Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (470ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744051823-edz3",
-      "timestamp": "2026-09-18T15:07:31.824Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744048754-avzr",
-      "timestamp": "2026-09-18T15:07:28.754Z",
-      "level": "info",
-      "message": "Cập nhật cấu hình: Sách Ai Đó - Tập 3 (Tần suất: 20s)",
-      "details": null
-    },
-    {
-      "id": "log-1789744047970-8bvh",
-      "timestamp": "2026-09-18T15:07:27.970Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (263ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744047688-uobe",
-      "timestamp": "2026-09-18T15:07:27.688Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744046587-fzix",
-      "timestamp": "2026-09-18T15:07:26.587Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (974ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744045567-u8q5",
-      "timestamp": "2026-09-18T15:07:25.567Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744043777-1ixp",
-      "timestamp": "2026-09-18T15:07:23.777Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (243ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744043527-czxw",
-      "timestamp": "2026-09-18T15:07:23.527Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744025087-n07u",
-      "timestamp": "2026-09-18T15:07:05.087Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1695ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744023380-xxov",
-      "timestamp": "2026-09-18T15:07:03.380Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789744022602-d0mi",
-      "timestamp": "2026-09-18T15:07:02.603Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (208ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744022375-3vgx",
-      "timestamp": "2026-09-18T15:07:02.375Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744020834-4s2s",
-      "timestamp": "2026-09-18T15:07:00.834Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (401ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744020360-6cay",
-      "timestamp": "2026-09-18T15:07:00.360Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789744015510-3f2p",
-      "timestamp": "2026-09-18T15:06:55.511Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (172ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744015321-k6kl",
-      "timestamp": "2026-09-18T15:06:55.321Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789744013438-ai4j",
-      "timestamp": "2026-09-18T15:06:53.438Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (107ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744013314-tdra",
-      "timestamp": "2026-09-18T15:06:53.314Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789744002018-b2i8",
-      "timestamp": "2026-09-18T15:06:42.018Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (853ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789744001152-4a9n",
-      "timestamp": "2026-09-18T15:06:41.152Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743999659-r018",
-      "timestamp": "2026-09-18T15:06:39.659Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5565ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743994069-vyh0",
-      "timestamp": "2026-09-18T15:06:34.069Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789743991226-ys9k",
-      "timestamp": "2026-09-18T15:06:31.226Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (148ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743991063-2tvd",
-      "timestamp": "2026-09-18T15:06:31.063Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743989568-uit2",
-      "timestamp": "2026-09-18T15:06:29.568Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (503ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743989048-9r9j",
-      "timestamp": "2026-09-18T15:06:29.048Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743984657-90l3",
-      "timestamp": "2026-09-18T15:06:24.657Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (543ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743984087-dowj",
-      "timestamp": "2026-09-18T15:06:24.087Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789743983020-knh4",
-      "timestamp": "2026-09-18T15:06:23.020Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (86ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743982924-v380",
-      "timestamp": "2026-09-18T15:06:22.924Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743978178-crgr",
-      "timestamp": "2026-09-18T15:06:18.178Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1180ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743976874-niei",
-      "timestamp": "2026-09-18T15:06:16.874Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743960012-j24z",
-      "timestamp": "2026-09-18T15:06:00.012Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (291ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743959714-g0zd",
-      "timestamp": "2026-09-18T15:05:59.714Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743958144-zkvh",
-      "timestamp": "2026-09-18T15:05:58.144Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (432ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743957702-dx1n",
-      "timestamp": "2026-09-18T15:05:57.702Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743956620-g3kx",
-      "timestamp": "2026-09-18T15:05:56.620Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (934ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743955679-orbm",
-      "timestamp": "2026-09-18T15:05:55.679Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743953796-296u",
-      "timestamp": "2026-09-18T15:05:53.796Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (130ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743953662-m3sc",
-      "timestamp": "2026-09-18T15:05:53.662Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789743952731-jnx1",
-      "timestamp": "2026-09-18T15:05:52.731Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (75ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743952652-yyxw",
-      "timestamp": "2026-09-18T15:05:52.652Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743935311-maf0",
-      "timestamp": "2026-09-18T15:05:35.311Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (807ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743934498-hghl",
-      "timestamp": "2026-09-18T15:05:34.498Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743932743-60p9",
-      "timestamp": "2026-09-18T15:05:32.743Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5276ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743927459-i8gs",
-      "timestamp": "2026-09-18T15:05:27.459Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789743926705-92nt",
-      "timestamp": "2026-09-18T15:05:26.705Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (248ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743926450-du8f",
-      "timestamp": "2026-09-18T15:05:26.450Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743925395-l17f",
-      "timestamp": "2026-09-18T15:05:25.395Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (942ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743924439-bqwg",
-      "timestamp": "2026-09-18T15:05:24.439Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743923617-uksm",
-      "timestamp": "2026-09-18T15:05:23.617Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (181ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743923431-61xv",
-      "timestamp": "2026-09-18T15:05:23.431Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789743922602-95x2",
-      "timestamp": "2026-09-18T15:05:22.602Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (177ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743922421-bsv3",
-      "timestamp": "2026-09-18T15:05:22.421Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743914439-hebp",
-      "timestamp": "2026-09-18T15:05:14.439Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1066ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743913366-8yow",
-      "timestamp": "2026-09-18T15:05:13.367Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743907297-zgyx",
-      "timestamp": "2026-09-18T15:05:07.297Z",
-      "level": "info",
-      "message": "[QUEUE] Bộ máy hàng đợi (Task Queue) đã khởi động",
-      "details": null
-    },
-    {
-      "id": "log-1789743896714-fae0",
-      "timestamp": "2026-09-18T15:04:56.714Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.38s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743896704-rety",
-      "timestamp": "2026-09-18T15:04:56.704Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5350ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743892352-gl6p",
-      "timestamp": "2026-09-18T15:04:52.352Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (983ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891818-6md8",
-      "timestamp": "2026-09-18T15:04:51.818Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (472ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891804-msri",
-      "timestamp": "2026-09-18T15:04:51.804Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (442ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891514-33cd",
-      "timestamp": "2026-09-18T15:04:51.514Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (177ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891503-95bh",
-      "timestamp": "2026-09-18T15:04:51.503Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (156ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891360-waao",
-      "timestamp": "2026-09-18T15:04:51.360Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891355-eqow",
-      "timestamp": "2026-09-18T15:04:51.355Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891348-7a6l",
-      "timestamp": "2026-09-18T15:04:51.348Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Nobita (nobita)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891344-0qyi",
-      "timestamp": "2026-09-18T15:04:51.344Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891338-ykyj",
-      "timestamp": "2026-09-18T15:04:51.338Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891333-qfb8",
-      "timestamp": "2026-09-18T15:04:51.333Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789743891329-s5sm",
-      "timestamp": "2026-09-18T15:04:51.329Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743876501-oz71",
-      "timestamp": "2026-09-18T15:04:36.501Z",
-      "level": "info",
-      "message": "Cập nhật cấu hình: Sách Ai Đó - Tập 3 (Tần suất: Mặc định)",
-      "details": null
-    },
-    {
-      "id": "log-1789743876478-ybeb",
-      "timestamp": "2026-09-18T15:04:36.478Z",
-      "level": "info",
-      "message": "Cập nhật cấu hình: Sách Ai Đó - Tập 3 (Tần suất: 60s)",
-      "details": null
-    },
-    {
-      "id": "log-1789743875840-ddze",
-      "timestamp": "2026-09-18T15:04:35.840Z",
-      "level": "info",
-      "message": "[QUEUE] Bộ máy hàng đợi (Task Queue) đã khởi động",
-      "details": null
-    },
-    {
-      "id": "log-1789743862221-nyjp",
-      "timestamp": "2026-09-18T15:04:22.221Z",
-      "level": "success",
-      "message": "=== Hoàn thành lượt check stock (0.90s) ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743862214-gm7q",
-      "timestamp": "2026-09-18T15:04:22.214Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (877ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861808-2iw0",
-      "timestamp": "2026-09-18T15:04:21.808Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (483ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861782-f9m4",
-      "timestamp": "2026-09-18T15:04:21.782Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (447ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861446-4yd6",
-      "timestamp": "2026-09-18T15:04:21.446Z",
+      "id": "log-1789744887132-43uf",
+      "timestamp": "2026-09-18T15:21:27.132Z",
       "level": "success",
       "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (126ms)",
       "details": null
     },
     {
-      "id": "log-1789743861392-khbq",
-      "timestamp": "2026-09-18T15:04:21.392Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (65ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861331-yl52",
-      "timestamp": "2026-09-18T15:04:21.331Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861328-2ils",
-      "timestamp": "2026-09-18T15:04:21.328Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861324-xnxk",
-      "timestamp": "2026-09-18T15:04:21.324Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861321-r38d",
-      "timestamp": "2026-09-18T15:04:21.321Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743861317-dhr5",
-      "timestamp": "2026-09-18T15:04:21.317Z",
+      "id": "log-1789744887001-lvgt",
+      "timestamp": "2026-09-18T15:21:27.001Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
       "details": null
     },
     {
-      "id": "log-1789743861314-wag1",
-      "timestamp": "2026-09-18T15:04:21.314Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743836901-4ew9",
-      "timestamp": "2026-09-18T15:03:56.901Z",
+      "id": "log-1789744885522-gk0y",
+      "timestamp": "2026-09-18T15:21:25.522Z",
       "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.59s) ===",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (522ms)",
       "details": null
     },
     {
-      "id": "log-1789743836892-hul7",
-      "timestamp": "2026-09-18T15:03:56.892Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5565ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743832229-ut9y",
-      "timestamp": "2026-09-18T15:03:52.229Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (893ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831785-dbfj",
-      "timestamp": "2026-09-18T15:03:51.785Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (468ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831612-j2a2",
-      "timestamp": "2026-09-18T15:03:51.612Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (280ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831447-wnr7",
-      "timestamp": "2026-09-18T15:03:51.447Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (139ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831389-8ztw",
-      "timestamp": "2026-09-18T15:03:51.389Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (69ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831331-mila",
-      "timestamp": "2026-09-18T15:03:51.331Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831327-7yxj",
-      "timestamp": "2026-09-18T15:03:51.327Z",
+      "id": "log-1789744884985-wyc9",
+      "timestamp": "2026-09-18T15:21:24.985Z",
       "level": "info",
       "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789743831321-aupn",
-      "timestamp": "2026-09-18T15:03:51.321Z",
+      "id": "log-1789744884054-enju",
+      "timestamp": "2026-09-18T15:21:24.054Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (59ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744883983-0d4e",
+      "timestamp": "2026-09-18T15:21:23.984Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744883235-r42a",
+      "timestamp": "2026-09-18T15:21:23.235Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5287ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744877936-mekl",
+      "timestamp": "2026-09-18T15:21:17.936Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Nobita (nobita)",
       "details": null
     },
     {
-      "id": "log-1789743831316-n4we",
-      "timestamp": "2026-09-18T15:03:51.316Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "id": "log-1789744864059-ext5",
+      "timestamp": "2026-09-18T15:21:04.060Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (171ms)",
       "details": null
     },
     {
-      "id": "log-1789743831311-pz6w",
-      "timestamp": "2026-09-18T15:03:51.311Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743831306-s6it",
-      "timestamp": "2026-09-18T15:03:51.306Z",
+      "id": "log-1789744863865-vs18",
+      "timestamp": "2026-09-18T15:21:03.866Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
       "details": null
     },
     {
-      "id": "log-1789743831303-p3aw",
-      "timestamp": "2026-09-18T15:03:51.303Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743802149-saov",
-      "timestamp": "2026-09-18T15:03:22.149Z",
+      "id": "log-1789744854099-j5gg",
+      "timestamp": "2026-09-18T15:20:54.099Z",
       "level": "success",
-      "message": "=== Hoàn thành lượt check stock (0.85s) ===",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (289ms)",
       "details": null
     },
     {
-      "id": "log-1789743802142-5gxn",
-      "timestamp": "2026-09-18T15:03:22.142Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (817ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801763-dl9q",
-      "timestamp": "2026-09-18T15:03:21.763Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (452ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801630-qwl0",
-      "timestamp": "2026-09-18T15:03:21.630Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (309ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801467-97mr",
-      "timestamp": "2026-09-18T15:03:21.467Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (163ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801376-6bli",
-      "timestamp": "2026-09-18T15:03:21.376Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (62ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801319-lc55",
-      "timestamp": "2026-09-18T15:03:21.319Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801314-u58n",
-      "timestamp": "2026-09-18T15:03:21.314Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801309-7em3",
-      "timestamp": "2026-09-18T15:03:21.309Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801305-dfzc",
-      "timestamp": "2026-09-18T15:03:21.305Z",
+      "id": "log-1789744853793-h1ei",
+      "timestamp": "2026-09-18T15:20:53.793Z",
       "level": "info",
       "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789743801298-0dp9",
-      "timestamp": "2026-09-18T15:03:21.299Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
-      "details": null
-    },
-    {
-      "id": "log-1789743801294-dkdb",
-      "timestamp": "2026-09-18T15:03:21.294Z",
-      "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
-      "details": null
-    },
-    {
-      "id": "log-1789743776965-fk9c",
-      "timestamp": "2026-09-18T15:02:56.965Z",
+      "id": "log-1789744851188-xkbl",
+      "timestamp": "2026-09-18T15:20:51.188Z",
       "level": "success",
-      "message": "=== Hoàn thành lượt check stock (5.68s) ===",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (409ms)",
       "details": null
     },
     {
-      "id": "log-1789743776961-pmr3",
-      "timestamp": "2026-09-18T15:02:56.961Z",
-      "level": "success",
-      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5657ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743772415-kjzk",
-      "timestamp": "2026-09-18T15:02:52.415Z",
-      "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1097ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771709-imwf",
-      "timestamp": "2026-09-18T15:02:51.709Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (409ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771569-3y7c",
-      "timestamp": "2026-09-18T15:02:51.569Z",
-      "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (258ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771424-cxli",
-      "timestamp": "2026-09-18T15:02:51.424Z",
-      "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (135ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771377-kvf6",
-      "timestamp": "2026-09-18T15:02:51.377Z",
-      "level": "success",
-      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (76ms)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771311-s1fl",
-      "timestamp": "2026-09-18T15:02:51.311Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771305-ggod",
-      "timestamp": "2026-09-18T15:02:51.305Z",
+      "id": "log-1789744850758-b1i0",
+      "timestamp": "2026-09-18T15:20:50.758Z",
       "level": "info",
       "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789743771301-jw9z",
-      "timestamp": "2026-09-18T15:02:51.301Z",
+      "id": "log-1789744848874-dlkk",
+      "timestamp": "2026-09-18T15:20:48.874Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (104ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744848755-6qz3",
+      "timestamp": "2026-09-18T15:20:48.755Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744842854-2c0n",
+      "timestamp": "2026-09-18T15:20:42.854Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (137ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744842707-8u34",
+      "timestamp": "2026-09-18T15:20:42.707Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744834574-r5jo",
+      "timestamp": "2026-09-18T15:20:34.574Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (978ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744833570-43pq",
+      "timestamp": "2026-09-18T15:20:33.570Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744822805-grsp",
+      "timestamp": "2026-09-18T15:20:22.805Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (382ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744822399-5zy6",
+      "timestamp": "2026-09-18T15:20:22.399Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744821674-vknk",
+      "timestamp": "2026-09-18T15:20:21.674Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (261ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744821403-zdew",
+      "timestamp": "2026-09-18T15:20:21.404Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744819865-2f6n",
+      "timestamp": "2026-09-18T15:20:19.865Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (454ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744819378-k1ia",
+      "timestamp": "2026-09-18T15:20:19.378Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744818499-hqt8",
+      "timestamp": "2026-09-18T15:20:18.500Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (107ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744818365-gxdi",
+      "timestamp": "2026-09-18T15:20:18.365Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744816849-j1d1",
+      "timestamp": "2026-09-18T15:20:16.849Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5522ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744811313-94y7",
+      "timestamp": "2026-09-18T15:20:11.313Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Nobita (nobita)",
       "details": null
     },
     {
-      "id": "log-1789743771297-86bt",
-      "timestamp": "2026-09-18T15:02:51.297Z",
-      "level": "info",
-      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "id": "log-1789744796305-bbot",
+      "timestamp": "2026-09-18T15:19:56.305Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (146ms)",
       "details": null
     },
     {
-      "id": "log-1789743771292-ttgs",
-      "timestamp": "2026-09-18T15:02:51.292Z",
-      "level": "info",
-      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743771285-my4g",
-      "timestamp": "2026-09-18T15:02:51.285Z",
+      "id": "log-1789744796148-svz3",
+      "timestamp": "2026-09-18T15:19:56.149Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
       "details": null
     },
     {
-      "id": "log-1789743771281-9sre",
-      "timestamp": "2026-09-18T15:02:51.281Z",
+      "id": "log-1789744786480-u3qq",
+      "timestamp": "2026-09-18T15:19:46.480Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (372ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744786090-gb9p",
+      "timestamp": "2026-09-18T15:19:46.090Z",
       "level": "info",
-      "message": "=== Bắt đầu lượt check stock tự động cho 6 sản phẩm ===",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789743742195-twi8",
-      "timestamp": "2026-09-18T15:02:22.195Z",
+      "id": "log-1789744784630-d0q0",
+      "timestamp": "2026-09-18T15:19:44.630Z",
       "level": "success",
-      "message": "=== Hoàn thành lượt check stock (0.92s) ===",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (535ms)",
       "details": null
     },
     {
-      "id": "log-1789743742188-i415",
-      "timestamp": "2026-09-18T15:02:22.188Z",
+      "id": "log-1789744784067-fm93",
+      "timestamp": "2026-09-18T15:19:44.067Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744782184-fyry",
+      "timestamp": "2026-09-18T15:19:42.184Z",
       "level": "success",
-      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (883ms)",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (115ms)",
       "details": null
     },
     {
-      "id": "log-1789743741732-p4lh",
-      "timestamp": "2026-09-18T15:02:21.732Z",
+      "id": "log-1789744782053-ig3q",
+      "timestamp": "2026-09-18T15:19:42.053Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744775181-h8hx",
+      "timestamp": "2026-09-18T15:19:35.181Z",
       "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (432ms)",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (149ms)",
       "details": null
     },
     {
-      "id": "log-1789743741702-hg9j",
-      "timestamp": "2026-09-18T15:02:21.702Z",
+      "id": "log-1789744775014-43e3",
+      "timestamp": "2026-09-18T15:19:35.014Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744773276-g6y3",
+      "timestamp": "2026-09-18T15:19:33.276Z",
       "level": "success",
-      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (414ms)",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1248ms)",
       "details": null
     },
     {
-      "id": "log-1789743741467-mb5v",
-      "timestamp": "2026-09-18T15:02:21.467Z",
+      "id": "log-1789744771986-v9xq",
+      "timestamp": "2026-09-18T15:19:31.986Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744755162-hqpl",
+      "timestamp": "2026-09-18T15:19:15.162Z",
       "level": "success",
-      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (189ms)",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (332ms)",
       "details": null
     },
     {
-      "id": "log-1789743741423-xqv9",
-      "timestamp": "2026-09-18T15:02:21.423Z",
+      "id": "log-1789744754797-ijk0",
+      "timestamp": "2026-09-18T15:19:14.797Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744754034-rj1b",
+      "timestamp": "2026-09-18T15:19:14.035Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (182ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744753824-fdq7",
+      "timestamp": "2026-09-18T15:19:13.824Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744753120-pk8w",
+      "timestamp": "2026-09-18T15:19:13.120Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (296ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744752792-1es0",
+      "timestamp": "2026-09-18T15:19:12.792Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744751951-rd6k",
+      "timestamp": "2026-09-18T15:19:11.951Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (166ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744751775-aodu",
+      "timestamp": "2026-09-18T15:19:11.775Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744750146-djzr",
+      "timestamp": "2026-09-18T15:19:10.146Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5396ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744744735-n7un",
+      "timestamp": "2026-09-18T15:19:04.735Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744730865-7guc",
+      "timestamp": "2026-09-18T15:18:50.866Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (224ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744730627-czpa",
+      "timestamp": "2026-09-18T15:18:50.627Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744720886-3o1m",
+      "timestamp": "2026-09-18T15:18:40.886Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (320ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744720543-h29c",
+      "timestamp": "2026-09-18T15:18:40.543Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744718057-kzdh",
+      "timestamp": "2026-09-18T15:18:38.057Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (537ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744717494-bk8p",
+      "timestamp": "2026-09-18T15:18:37.494Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744715607-8ar7",
+      "timestamp": "2026-09-18T15:18:35.607Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (83ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744715490-yg5b",
+      "timestamp": "2026-09-18T15:18:35.490Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744711601-t8sz",
+      "timestamp": "2026-09-18T15:18:31.601Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1169ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744710418-1nab",
+      "timestamp": "2026-09-18T15:18:30.418Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744709655-uqny",
+      "timestamp": "2026-09-18T15:18:29.656Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (162ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744709458-fnin",
+      "timestamp": "2026-09-18T15:18:29.458Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744689706-yjnl",
+      "timestamp": "2026-09-18T15:18:09.706Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (449ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744689240-b6qk",
+      "timestamp": "2026-09-18T15:18:09.240Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744688441-9iym",
+      "timestamp": "2026-09-18T15:18:08.441Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (197ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744688232-tx1f",
+      "timestamp": "2026-09-18T15:18:08.232Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744686728-vc7m",
+      "timestamp": "2026-09-18T15:18:06.728Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (483ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744686225-irfe",
+      "timestamp": "2026-09-18T15:18:06.225Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744685385-n1xf",
+      "timestamp": "2026-09-18T15:18:05.385Z",
       "level": "success",
       "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (131ms)",
       "details": null
     },
     {
-      "id": "log-1789743741299-wgbs",
-      "timestamp": "2026-09-18T15:02:21.299Z",
-      "level": "info",
-      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
-      "details": null
-    },
-    {
-      "id": "log-1789743741294-dmzu",
-      "timestamp": "2026-09-18T15:02:21.294Z",
-      "level": "info",
-      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
-      "details": null
-    },
-    {
-      "id": "log-1789743741287-dxqe",
-      "timestamp": "2026-09-18T15:02:21.287Z",
+      "id": "log-1789744685243-hfto",
+      "timestamp": "2026-09-18T15:18:05.243Z",
       "level": "info",
       "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
       "details": null
     },
     {
-      "id": "log-1789743741282-007u",
-      "timestamp": "2026-09-18T15:02:21.282Z",
+      "id": "log-1789744683805-rmzt",
+      "timestamp": "2026-09-18T15:18:03.805Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5640ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744678152-ijin",
+      "timestamp": "2026-09-18T15:17:58.152Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744664157-45gg",
+      "timestamp": "2026-09-18T15:17:44.157Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (124ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744664029-eglw",
+      "timestamp": "2026-09-18T15:17:44.029Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744654273-t1ey",
+      "timestamp": "2026-09-18T15:17:34.273Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (314ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744653954-fog9",
+      "timestamp": "2026-09-18T15:17:33.954Z",
       "level": "info",
       "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
       "details": null
     },
     {
-      "id": "log-1789743741275-5dhu",
-      "timestamp": "2026-09-18T15:02:21.275Z",
+      "id": "log-1789744652468-04ii",
+      "timestamp": "2026-09-18T15:17:32.468Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (528ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744651936-0no8",
+      "timestamp": "2026-09-18T15:17:31.936Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744650990-n6we",
+      "timestamp": "2026-09-18T15:17:30.990Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (58ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744650929-wq7g",
+      "timestamp": "2026-09-18T15:17:30.929Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744649760-0jhm",
+      "timestamp": "2026-09-18T15:17:29.761Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (837ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744648916-h6nk",
+      "timestamp": "2026-09-18T15:17:28.916Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744643026-gi1z",
+      "timestamp": "2026-09-18T15:17:23.026Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (148ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744642872-po5n",
+      "timestamp": "2026-09-18T15:17:22.873Z",
       "level": "info",
       "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744623153-swg4",
+      "timestamp": "2026-09-18T15:17:03.153Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (435ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744622713-c6mz",
+      "timestamp": "2026-09-18T15:17:02.713Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744621899-ahcn",
+      "timestamp": "2026-09-18T15:17:01.899Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (189ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744621707-6fo1",
+      "timestamp": "2026-09-18T15:17:01.707Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744620092-orkm",
+      "timestamp": "2026-09-18T15:17:00.092Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (396ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744619689-suis",
+      "timestamp": "2026-09-18T15:16:59.689Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744618771-e1f3",
+      "timestamp": "2026-09-18T15:16:58.771Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (71ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744618693-jgu5",
+      "timestamp": "2026-09-18T15:16:58.694Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744617151-wxcj",
+      "timestamp": "2026-09-18T15:16:57.151Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5513ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744611631-wgzc",
+      "timestamp": "2026-09-18T15:16:51.631Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744597692-e11c",
+      "timestamp": "2026-09-18T15:16:37.692Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (154ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744597534-vkkl",
+      "timestamp": "2026-09-18T15:16:37.534Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744588802-5q8r",
+      "timestamp": "2026-09-18T15:16:28.803Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (317ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744588479-lyst",
+      "timestamp": "2026-09-18T15:16:28.479Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744587300-iysk",
+      "timestamp": "2026-09-18T15:16:27.300Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (829ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744586466-yp0f",
+      "timestamp": "2026-09-18T15:16:26.466Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744584921-ei0r",
+      "timestamp": "2026-09-18T15:16:24.921Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (457ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744584456-zfnd",
+      "timestamp": "2026-09-18T15:16:24.456Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744582508-ds1s",
+      "timestamp": "2026-09-18T15:16:22.508Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (56ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744582449-6uop",
+      "timestamp": "2026-09-18T15:16:22.449Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744576530-qhgx",
+      "timestamp": "2026-09-18T15:16:16.530Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (119ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744576407-5faf",
+      "timestamp": "2026-09-18T15:16:16.407Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744556602-m5oh",
+      "timestamp": "2026-09-18T15:15:56.602Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (352ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744556245-753m",
+      "timestamp": "2026-09-18T15:15:56.245Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744555436-jxuz",
+      "timestamp": "2026-09-18T15:15:55.436Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (197ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744555236-rioi",
+      "timestamp": "2026-09-18T15:15:55.236Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744553617-zhlv",
+      "timestamp": "2026-09-18T15:15:53.617Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (393ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744553216-iib7",
+      "timestamp": "2026-09-18T15:15:53.216Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744552341-wiat",
+      "timestamp": "2026-09-18T15:15:52.341Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (130ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744552207-5sia",
+      "timestamp": "2026-09-18T15:15:52.207Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744550623-ayn4",
+      "timestamp": "2026-09-18T15:15:50.623Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5487ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744545131-bwu9",
+      "timestamp": "2026-09-18T15:15:45.131Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744529122-ufjg",
+      "timestamp": "2026-09-18T15:15:29.122Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (113ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744529003-s9n7",
+      "timestamp": "2026-09-18T15:15:29.003Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744525786-wlv5",
+      "timestamp": "2026-09-18T15:15:25.786Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (805ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744524975-b014",
+      "timestamp": "2026-09-18T15:15:24.975Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744520089-c349",
+      "timestamp": "2026-09-18T15:15:20.089Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (151ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744519929-stss",
+      "timestamp": "2026-09-18T15:15:19.929Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744518340-rywe",
+      "timestamp": "2026-09-18T15:15:18.340Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (417ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744517916-hwim",
+      "timestamp": "2026-09-18T15:15:17.917Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744515950-hh93",
+      "timestamp": "2026-09-18T15:15:15.950Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (56ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744515890-b5v2",
+      "timestamp": "2026-09-18T15:15:15.890Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744508962-pn7o",
+      "timestamp": "2026-09-18T15:15:08.962Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (114ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744508844-99jf",
+      "timestamp": "2026-09-18T15:15:08.844Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744488968-1rr1",
+      "timestamp": "2026-09-18T15:14:48.968Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (260ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744488703-6rtt",
+      "timestamp": "2026-09-18T15:14:48.703Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744487882-0nt7",
+      "timestamp": "2026-09-18T15:14:47.882Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (183ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744487696-stzj",
+      "timestamp": "2026-09-18T15:14:47.696Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744487024-hpe1",
+      "timestamp": "2026-09-18T15:14:47.024Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (323ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744486692-kc7u",
+      "timestamp": "2026-09-18T15:14:46.692Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744485741-v3sr",
+      "timestamp": "2026-09-18T15:14:45.741Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (52ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744485685-cw4k",
+      "timestamp": "2026-09-18T15:14:45.685Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744484166-pkul",
+      "timestamp": "2026-09-18T15:14:44.166Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5538ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744483185-sqdo",
+      "timestamp": "2026-09-18T15:14:43.185Z",
+      "level": "info",
+      "message": "Cập nhật cấu hình: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (Tần suất: 60s)",
+      "details": null
+    },
+    {
+      "id": "log-1789744478623-a6n6",
+      "timestamp": "2026-09-18T15:14:38.623Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744465661-qlrg",
+      "timestamp": "2026-09-18T15:14:25.661Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (137ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744465521-0ku8",
+      "timestamp": "2026-09-18T15:14:25.521Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744464341-8ssk",
+      "timestamp": "2026-09-18T15:14:24.341Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (841ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744463495-houq",
+      "timestamp": "2026-09-18T15:14:23.495Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744456714-4h75",
+      "timestamp": "2026-09-18T15:14:16.714Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (269ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744456439-eb15",
+      "timestamp": "2026-09-18T15:14:16.439Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744453774-0nhc",
+      "timestamp": "2026-09-18T15:14:13.774Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (346ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744453420-jky9",
+      "timestamp": "2026-09-18T15:14:13.420Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744449527-2n6e",
+      "timestamp": "2026-09-18T15:14:09.527Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (130ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744449391-qy4t",
+      "timestamp": "2026-09-18T15:14:09.391Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744445469-pvgt",
+      "timestamp": "2026-09-18T15:14:05.469Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (122ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744445344-xdyu",
+      "timestamp": "2026-09-18T15:14:05.344Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744442543-bhox",
+      "timestamp": "2026-09-18T15:14:02.543Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1230ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744441308-3mab",
+      "timestamp": "2026-09-18T15:14:01.308Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744425528-hdgm",
+      "timestamp": "2026-09-18T15:13:45.528Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (357ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744425158-ylc3",
+      "timestamp": "2026-09-18T15:13:45.158Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744424400-k1v7",
+      "timestamp": "2026-09-18T15:13:44.400Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (230ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744424162-cx4f",
+      "timestamp": "2026-09-18T15:13:44.162Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744422587-s8sh",
+      "timestamp": "2026-09-18T15:13:42.587Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (439ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744422136-3ht7",
+      "timestamp": "2026-09-18T15:13:42.136Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744421149-ktev",
+      "timestamp": "2026-09-18T15:13:41.149Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1023ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744420114-52xt",
+      "timestamp": "2026-09-18T15:13:40.114Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744419184-832e",
+      "timestamp": "2026-09-18T15:13:39.184Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (68ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744419109-p04g",
+      "timestamp": "2026-09-18T15:13:39.109Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744417612-za6q",
+      "timestamp": "2026-09-18T15:13:37.612Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5555ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744412051-huog",
+      "timestamp": "2026-09-18T15:13:32.051Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744400114-5y4a",
+      "timestamp": "2026-09-18T15:13:20.114Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (170ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744399938-pwum",
+      "timestamp": "2026-09-18T15:13:19.938Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744398016-nlxu",
+      "timestamp": "2026-09-18T15:13:18.016Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1080ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744396925-z9mj",
+      "timestamp": "2026-09-18T15:13:16.925Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744390146-9m07",
+      "timestamp": "2026-09-18T15:13:10.146Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (278ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744389858-3xvg",
+      "timestamp": "2026-09-18T15:13:09.858Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744388268-156i",
+      "timestamp": "2026-09-18T15:13:08.269Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (411ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744387843-2iy3",
+      "timestamp": "2026-09-18T15:13:07.843Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744382887-jiu3",
+      "timestamp": "2026-09-18T15:13:02.887Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (77ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744382801-gef8",
+      "timestamp": "2026-09-18T15:13:02.801Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744378918-vbvu",
+      "timestamp": "2026-09-18T15:12:58.918Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (142ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744378766-c819",
+      "timestamp": "2026-09-18T15:12:58.766Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744376649-k7iq",
+      "timestamp": "2026-09-18T15:12:56.649Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (905ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744375733-kpqh",
+      "timestamp": "2026-09-18T15:12:55.733Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744359014-6tqd",
+      "timestamp": "2026-09-18T15:12:39.014Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo - HẾT HÀNG (439ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744358562-y0cy",
+      "timestamp": "2026-09-18T15:12:38.562Z",
+      "level": "info",
+      "message": "Đang check stock cho: Ai Đó - Tập 3 - Bản Đặc Biệt - Bìa Cứng - Tặng Kèm Bookmark + Postcard + Card PVC + Móc Điện Thoại + Bao Đựng Thẻ Kèm Dây Đeo + Sổ Lò Xo (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744357768-74qv",
+      "timestamp": "2026-09-18T15:12:37.768Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (206ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744357556-2haz",
+      "timestamp": "2026-09-18T15:12:37.556Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744356911-nbf5",
+      "timestamp": "2026-09-18T15:12:36.911Z",
+      "level": "success",
+      "message": "Check hoàn tất [FAHASA]: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster - HẾT HÀNG (350ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744356551-4ovh",
+      "timestamp": "2026-09-18T15:12:36.551Z",
+      "level": "info",
+      "message": "Đang check stock cho: Tamon - Thần Tượng Hai Mặt - Tập 1 - Tặng Kèm Standee PVC + 1 Poster (fahasa)",
+      "details": null
+    },
+    {
+      "id": "log-1789744354899-m9da",
+      "timestamp": "2026-09-18T15:12:34.900Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (1311ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744353533-05yl",
+      "timestamp": "2026-09-18T15:12:33.533Z",
+      "level": "info",
+      "message": "Đang check stock cho: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 (shopee)",
+      "details": null
+    },
+    {
+      "id": "log-1789744352634-17jg",
+      "timestamp": "2026-09-18T15:12:32.634Z",
+      "level": "success",
+      "message": "Check hoàn tất [AZVIETNAM]: Sách - Ai Đó (Tập 3) - CÒN HÀNG (105ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744352520-b3ck",
+      "timestamp": "2026-09-18T15:12:32.520Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách - Ai Đó (Tập 3) (azvietnam)",
+      "details": null
+    },
+    {
+      "id": "log-1789744350943-s1l0",
+      "timestamp": "2026-09-18T15:12:30.943Z",
+      "level": "success",
+      "message": "Check hoàn tất [NOBITA]: Sách Nobita - HẾT HÀNG (5499ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744345431-wmoe",
+      "timestamp": "2026-09-18T15:12:25.431Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Nobita (nobita)",
+      "details": null
+    },
+    {
+      "id": "log-1789744332450-8e7s",
+      "timestamp": "2026-09-18T15:12:12.450Z",
+      "level": "success",
+      "message": "Check hoàn tất [TIKI]: Sách Ai Đó - Tập 3 - HẾT HÀNG (135ms)",
+      "details": null
+    },
+    {
+      "id": "log-1789744332306-ao6o",
+      "timestamp": "2026-09-18T15:12:12.306Z",
+      "level": "info",
+      "message": "Đang check stock cho: Sách Ai Đó - Tập 3 (tiki)",
+      "details": null
+    },
+    {
+      "id": "log-1789744330125-colh",
+      "timestamp": "2026-09-18T15:12:10.125Z",
+      "level": "success",
+      "message": "Check hoàn tất [SHOPEE]: Truyện - Tamon - Thần Tượng Hai Mặt - Tập 1 - HẾT HÀNG (832ms)",
       "details": null
     }
   ],

@@ -259,32 +259,36 @@ body {
     font-weight: 700;
 }
 
-/* Data Table */
+/* Data Table - Fixed Layout to eliminate jitter */
 .table-responsive {
     overflow-x: auto;
+    scrollbar-gutter: stable;
 }
 
 .data-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    table-layout: fixed; /* Freezes column widths completely */
+}
+
+.data-table th, 
+.data-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .data-table th {
-    padding: 14px 16px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-muted);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.data-table td {
-    padding: 16px;
-    font-size: 14px;
-    border-bottom: 1px solid var(--border-color);
-    vertical-align: middle;
 }
 
 .data-table tbody tr:hover {
@@ -293,14 +297,19 @@ body {
 
 /* Platform badges */
 .badge-platform {
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 20px;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
 }
 
 .platform-tiki { background: rgba(26, 148, 255, 0.2); color: #60a5fa; border: 1px solid rgba(26, 148, 255, 0.3); }
@@ -640,9 +649,9 @@ body {
 .text-right { text-align: right; }
 .empty-state { text-align: center; color: var(--text-muted); padding: 40px !important; }
 
-/* Queue Status Badge in Header */
+/* Queue Status Badge in Header - Fixed Size */
 .queue-badge {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     font-size: 13px;
@@ -652,7 +661,12 @@ body {
     padding: 8px 14px;
     border-radius: 30px;
     border: 1px solid rgba(56, 189, 248, 0.3);
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    min-width: 175px;
+    max-width: 250px;
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
 .queue-badge.busy {
@@ -664,6 +678,14 @@ body {
 
 .queue-badge i {
     font-size: 13px;
+    flex-shrink: 0;
+}
+
+#queueStatusText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
 }
 
 /* Inline Interval Select in Table */
@@ -671,6 +693,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    width: 100%;
 }
 
 .interval-select {
@@ -680,11 +703,13 @@ body {
     color: var(--text-main);
     font-size: 12px;
     font-weight: 500;
-    padding: 6px 10px;
+    padding: 6px 8px;
     cursor: pointer;
-    transition: all 0.2s ease;
-    max-width: 170px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
     outline: none;
+    font-variant-numeric: tabular-nums;
 }
 
 .interval-select:hover {
@@ -707,37 +732,48 @@ body {
 .interval-hint {
     font-size: 11px;
     color: var(--text-muted);
+    white-space: nowrap;
 }
 
-/* Schedule Cell */
+/* Schedule Cell - Fixed Dimensions */
 .schedule-cell {
     display: flex;
     flex-direction: column;
     gap: 4px;
     font-size: 12px;
+    width: 100%;
 }
 
 .schedule-last {
     color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .schedule-next {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 5px;
     font-weight: 600;
 }
 
 .pill-countdown {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    gap: 5px;
     background: rgba(59, 130, 246, 0.15);
     color: #60a5fa;
-    padding: 2px 8px;
+    padding: 3px 8px;
     border-radius: 12px;
     font-size: 11px;
-    width: fit-content;
+    min-width: 105px;
+    height: 24px;
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .pill-countdown.running {
