@@ -2,9 +2,6 @@ const { getProducts, updateProduct, getSettings, addLog, addNotification } = req
 const { scrapeProduct } = require('../scrapers');
 const { sendStockAlert } = require('./telegram');
 
-let monitorTimer = null;
-let isChecking = false;
-
 // Track last check timestamp per product to support adaptive throttling (e.g., Nobita max 1 check per 60s)
 const lastCheckTimestamps = {};
 
@@ -133,63 +130,41 @@ async function checkProductItem(product, force = false) {
     return { product, result, changed: shouldNotify };
 }
 
+const { stockQueue } = require('./queue');
+
+// Inject checkProductItem into the queue engine
+stockQueue.setCheckHandler(checkProductItem);
+
 /**
- * Run full check loop across all products
+ * Run full check loop across all products via Task Queue (or sequential for Vercel Cron)
  */
 async function runAllStockChecks(force = false) {
-    if (isChecking && !force) {
-        addLog('warn', 'Tiến trình check stock đang chạy, bỏ qua lượt này để tránh trùng lặp');
-        return;
-    }
-
-    isChecking = true;
-    const products = getProducts();
-    addLog('info', `=== Bắt đầu lượt check stock tự động cho ${products.length} sản phẩm ===`);
-
-    const startTime = Date.now();
-
-    try {
-        // Run all products in parallel
-        const results = await Promise.all(products.map(p => checkProductItem(p, force)));
-        const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
-        addLog('success', `=== Hoàn thành lượt check stock (${elapsed}s) ===`);
+    if (process.env.VERCEL) {
+        // In serverless Vercel Cron, process sequentially within Lambda execution time
+        const products = getProducts();
+        addLog('info', `=== [VERCEL CRON] Bắt đầu check tuần tự ${products.length} sản phẩm ===`);
+        const results = [];
+        for (const p of products) {
+            const res = await checkProductItem(p, force);
+            results.push(res);
+            await new Promise(r => setTimeout(r, 600)); // safe delay
+        }
         return results;
-    } catch (err) {
-        addLog('error', `Lỗi trong tiến trình check stock: ${err.message}`);
-    } finally {
-        isChecking = false;
     }
+
+    // In normal persistent server (Local/VPS/Docker), push all to priority queue
+    stockQueue.enqueueAll(true);
 }
 
 /**
- * Initialize Scheduler (Supports 20s, 30s, 60s, 300s...)
+ * Initialize Monitor Scheduler using StockQueueEngine
  */
 function initMonitorScheduler() {
     const settings = getSettings();
-    if (monitorTimer) {
-        clearInterval(monitorTimer);
-        monitorTimer = null;
-    }
-
     if (settings.autoCheckEnabled) {
-        // Interval calculation in seconds
-        let seconds = settings.checkIntervalSeconds;
-        if (!seconds) {
-            seconds = (settings.checkIntervalMinutes || 5) * 60;
-        }
-        const intervalMs = Math.max(10, seconds) * 1000;
-
-        addLog('info', `Hệ thống tự động check stock khởi động (tần suất: ${seconds} giây/lần)`);
-        
-        // Trigger initial check after 2 seconds
-        setTimeout(() => {
-            runAllStockChecks();
-        }, 2000);
-
-        monitorTimer = setInterval(() => {
-            runAllStockChecks();
-        }, intervalMs);
+        stockQueue.start();
     } else {
+        stockQueue.stop();
         addLog('warn', 'Tự động check stock đang bị TẮT trong cài đặt');
     }
 }
@@ -197,5 +172,6 @@ function initMonitorScheduler() {
 module.exports = {
     checkProductItem,
     runAllStockChecks,
-    initMonitorScheduler
+    initMonitorScheduler,
+    stockQueue
 };

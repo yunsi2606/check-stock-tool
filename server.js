@@ -6,7 +6,7 @@ const {
     getSettings, updateSettings, getLogs, getNotifications, addLog 
 } = require('./services/storage');
 const { detectPlatform } = require('./scrapers');
-const { checkProductItem, runAllStockChecks, initMonitorScheduler } = require('./services/monitor');
+const { checkProductItem, runAllStockChecks, initMonitorScheduler, stockQueue } = require('./services/monitor');
 const { sendTestTelegramMessage } = require('./services/telegram');
 
 const app = express();
@@ -39,8 +39,14 @@ app.get('/api/status', (req, res) => {
         telegramConfigured: Boolean(settings.telegramBotToken && settings.telegramChatId),
         autoCheckEnabled: settings.autoCheckEnabled,
         checkIntervalMinutes: settings.checkIntervalMinutes,
+        checkIntervalSeconds: settings.checkIntervalSeconds || ((settings.checkIntervalMinutes || 5) * 60),
+        queue: stockQueue.getStatus(),
         recentLogs: logs
     });
+});
+
+app.get('/api/queue-status', (req, res) => {
+    res.json(stockQueue.getStatus());
 });
 
 // Products CRUD
@@ -49,7 +55,7 @@ app.get('/api/products', (req, res) => {
 });
 
 app.post('/api/products', async (req, res) => {
-    const { url, targetVariant } = req.body;
+    const { url, targetVariant, checkIntervalSeconds } = req.body;
     if (!url) {
         return res.status(400).json({ error: 'URL không được để trống' });
     }
@@ -59,24 +65,27 @@ app.post('/api/products', async (req, res) => {
         return res.status(400).json({ error: 'URL không thuộc danh sách hỗ trợ (Tiki, AZ Vietnam, Fahasa, Nobita.vn, Shopee)' });
     }
 
+    const interval = (checkIntervalSeconds && Number(checkIntervalSeconds) > 0) ? Number(checkIntervalSeconds) : null;
+
     const newProduct = addProduct({
         url,
         platform,
         title: `Đang tải tên sản phẩm (${platform.toUpperCase()})...`,
-        targetVariant: targetVariant || 'all'
+        targetVariant: targetVariant || 'all',
+        checkIntervalSeconds: interval
     });
 
-    addLog('info', `Đã thêm sản phẩm mới: ${url}`);
+    addLog('info', `Đã thêm sản phẩm mới: ${url} (Tần suất: ${interval ? interval + 's' : 'Mặc định'})`);
 
-    // Trigger initial check asynchronously for the newly added product
-    checkProductItem(newProduct);
+    // Enqueue newly added product to priority queue for immediate check
+    stockQueue.enqueue(newProduct.id, true);
 
     res.json({ success: true, product: newProduct });
 });
 
 // Import or update product directly from HTML element (Bypass WAF)
 app.post('/api/products/import-html', async (req, res) => {
-    const { html, url, targetVariant } = req.body;
+    const { html, url, targetVariant, checkIntervalSeconds } = req.body;
     if (!html || !html.trim()) {
         return res.status(400).json({ error: 'Nội dung HTML/Element không được để trống' });
     }
@@ -90,6 +99,8 @@ app.post('/api/products/import-html', async (req, res) => {
     const productUrl = url ? url.trim() : 'https://shopee.vn/';
     const products = getProducts();
     let existing = products.find(p => (url && p.url === url) || (parsed.title && p.title.toLowerCase() === parsed.title.toLowerCase()));
+
+    const interval = (checkIntervalSeconds && Number(checkIntervalSeconds) > 0) ? Number(checkIntervalSeconds) : null;
 
     const productData = {
         success: true,
@@ -108,13 +119,18 @@ app.post('/api/products/import-html', async (req, res) => {
     };
 
     if (existing) {
-        updateProduct(existing.id, {
+        const updates = {
             title: parsed.title,
             lastChecked: new Date().toISOString(),
             lastStatus: parsed.available ? 'in_stock' : 'out_of_stock',
             lastData: productData,
             lastError: null
-        });
+        };
+        if (checkIntervalSeconds !== undefined) {
+            updates.checkIntervalSeconds = interval;
+            stockQueue.updateProductInterval(existing.id, interval);
+        }
+        updateProduct(existing.id, updates);
         addLog('success', `Đã cập nhật thủ công từ HTML element [SHOPEE]: ${parsed.title} - ${parsed.available ? 'CÒN HÀNG' : 'HẾT HÀNG'}`);
         return res.json({ success: true, product: existing, parsed: productData });
     } else {
@@ -123,13 +139,43 @@ app.post('/api/products/import-html', async (req, res) => {
             platform: 'shopee',
             title: parsed.title,
             targetVariant: targetVariant || 'all',
+            checkIntervalSeconds: interval,
             lastChecked: new Date().toISOString(),
             lastStatus: parsed.available ? 'in_stock' : 'out_of_stock',
             lastData: productData
         });
+        stockQueue.enqueue(newProduct.id, false);
         addLog('success', `Đã thêm sản phẩm từ HTML element [SHOPEE]: ${parsed.title} - ${parsed.available ? 'CÒN HÀNG' : 'HẾT HÀNG'}`);
         return res.json({ success: true, product: newProduct, parsed: productData });
     }
+});
+
+// Update single product attributes (e.g. interval, variant, title)
+app.patch('/api/products/:id', (req, res) => {
+    const { id } = req.params;
+    const { checkIntervalSeconds, targetVariant, title } = req.body;
+    const updates = {};
+
+    if (checkIntervalSeconds !== undefined) {
+        updates.checkIntervalSeconds = (checkIntervalSeconds && Number(checkIntervalSeconds) > 0)
+            ? Number(checkIntervalSeconds)
+            : null;
+    }
+    if (targetVariant !== undefined) updates.targetVariant = targetVariant;
+    if (title !== undefined) updates.title = title;
+
+    const updated = updateProduct(id, updates);
+    if (!updated) {
+        return res.status(404).json({ error: 'Không tìm thấy sản phẩm' });
+    }
+
+    if (checkIntervalSeconds !== undefined) {
+        stockQueue.updateProductInterval(id, updates.checkIntervalSeconds);
+    }
+
+    const intervalDesc = updates.checkIntervalSeconds ? `${updates.checkIntervalSeconds}s` : 'Mặc định';
+    addLog('info', `Cập nhật cấu hình: ${updated.title} (Tần suất: ${intervalDesc})`);
+    res.json({ success: true, product: updated });
 });
 
 app.delete('/api/products/:id', (req, res) => {
@@ -147,14 +193,14 @@ app.post('/api/products/:id/check', async (req, res) => {
         return res.status(404).json({ error: 'Không tìm thấy sản phẩm' });
     }
 
-    const result = await checkProductItem(product);
+    const result = await stockQueue.runJobNow(product);
     res.json(result);
 });
 
 app.post('/api/check-all', async (req, res) => {
     addLog('info', 'Bắt đầu thủ công lượt check stock toàn bộ sản phẩm từ Web UI');
-    runAllStockChecks(); // run async
-    res.json({ success: true, message: 'Đã phát lệnh check stock toàn bộ sản phẩm' });
+    runAllStockChecks(); // run async via queue
+    res.json({ success: true, message: 'Đã phát lệnh check stock toàn bộ sản phẩm vào hàng đợi ưu tiên' });
 });
 
 // Settings
@@ -166,6 +212,7 @@ app.post('/api/settings', (req, res) => {
     const updated = updateSettings(req.body);
     addLog('info', 'Đã cập nhật cấu hình hệ thống');
     initMonitorScheduler(); // re-init scheduler with new interval/settings
+    stockQueue.initSchedules();
     res.json({ success: true, settings: updated });
 });
 

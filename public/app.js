@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // State
     let productsList = [];
     let currentSettings = {};
+    let currentQueue = null;
 
     // DOM Elements
     const productsTableBody = document.getElementById('productsTableBody');
@@ -12,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const productCountBadge = document.getElementById('productCountBadge');
     const autoCheckStatus = document.getElementById('autoCheckStatus');
     const autoCheckText = document.getElementById('autoCheckText');
+    const queueStatusIndicator = document.getElementById('queueStatusIndicator');
+    const queueStatusText = document.getElementById('queueStatusText');
     const logConsole = document.getElementById('logConsole');
 
     // Tab Management
@@ -24,6 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(target).classList.add('active');
         });
     });
+
+    // Helper: Toast notification
+    function showToast(message, type = 'success') {
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        const icon = type === 'success' ? 'fa-circle-check text-success' : 'fa-circle-info text-primary';
+        toast.innerHTML = `<i class="fa-solid ${icon}"></i> <span>${message}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(12px) scale(0.95)';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    // Helper: Format Duration (seconds to human string)
+    function formatDuration(seconds) {
+        if (seconds <= 0) return 'ngay bây giờ';
+        if (seconds < 60) return `${seconds}s`;
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        return s > 0 ? `${m}m ${s}s` : `${m}m`;
+    }
 
     // Helper: Format Price
     function formatVND(price) {
@@ -38,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return date.toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false }) + ' ' + date.toLocaleDateString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
     }
 
-    // Fetch Overview Status
+    // Fetch Overview Status & Queue
     async function loadStatus() {
         try {
             const res = await fetch('/api/status');
@@ -63,6 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 autoCheckStatus.style.display = 'inline-flex';
             } else {
                 autoCheckStatus.style.display = 'none';
+            }
+
+            // Update Queue Status Widget
+            if (data.queue) {
+                currentQueue = data.queue;
+                if (queueStatusIndicator && queueStatusText) {
+                    if (data.queue.isProcessing && data.queue.currentlyChecking) {
+                        queueStatusIndicator.className = 'queue-badge busy';
+                        const shortTitle = data.queue.currentlyChecking.title.length > 22
+                            ? data.queue.currentlyChecking.title.substring(0, 20) + '...'
+                            : data.queue.currentlyChecking.title;
+                        queueStatusText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Đang check: ${shortTitle}`;
+                    } else if (data.queue.priorityQueueLength > 0) {
+                        queueStatusIndicator.className = 'queue-badge busy';
+                        queueStatusText.innerHTML = `<i class="fa-solid fa-layer-group"></i> Hàng đợi: ${data.queue.priorityQueueLength} đang chờ`;
+                    } else {
+                        queueStatusIndicator.className = 'queue-badge';
+                        queueStatusText.innerHTML = `<i class="fa-solid fa-layer-group"></i> Hàng đợi: Sẵn sàng`;
+                    }
+                }
             }
         } catch (err) {
             console.error('Lỗi khi tải trạng thái:', err);
@@ -93,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>`;
             return;
         }
+
+        const globalSec = (currentQueue && currentQueue.globalIntervalSeconds) 
+            || currentSettings.checkIntervalSeconds 
+            || 30;
 
         productsTableBody.innerHTML = products.map(p => {
             const platformClass = `platform-${p.platform}`;
@@ -134,6 +190,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Speed indicator
             const speed = (p.lastData && p.lastData.responseTimeMs) ? `${p.lastData.responseTimeMs}ms` : '---';
 
+            // Queue & Schedule calculation
+            const qItem = (currentQueue && currentQueue.products) ? currentQueue.products.find(item => item.id === p.id) : null;
+            const isCustom = Boolean(p.checkIntervalSeconds && Number(p.checkIntervalSeconds) > 0);
+            const currentIntervalSec = isCustom ? Number(p.checkIntervalSeconds) : globalSec;
+
+            // Next check pill
+            let nextCheckPill = '';
+            if (qItem && qItem.isRunning) {
+                nextCheckPill = `<span class="pill-countdown running"><i class="fa-solid fa-spinner fa-spin"></i> Đang check...</span>`;
+            } else if (qItem && qItem.isPendingPriority) {
+                nextCheckPill = `<span class="pill-countdown priority"><i class="fa-solid fa-bolt"></i> Trong hàng đợi</span>`;
+            } else if (qItem && qItem.secondsUntilNextCheck !== undefined) {
+                nextCheckPill = `<span class="pill-countdown" data-countdown-id="${p.id}" data-seconds="${qItem.secondsUntilNextCheck}"><i class="fa-regular fa-clock"></i> Sau <b class="cnt-val">${formatDuration(qItem.secondsUntilNextCheck)}</b></span>`;
+            } else {
+                nextCheckPill = `<span class="pill-countdown"><i class="fa-regular fa-clock"></i> Sau ${currentIntervalSec}s</span>`;
+            }
+
             return `
                 <tr data-product-id="${p.id}">
                     <td>
@@ -153,10 +226,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                     <td>${variantsHtml}</td>
                     <td>${statusPill}</td>
-                    <td><code>${speed}</code></td>
-                    <td><small>${formatDate(p.lastChecked)}</small></td>
+                    <td>
+                        <div class="interval-select-wrapper">
+                            <select class="interval-select ${isCustom ? 'is-custom' : ''}" data-id="${p.id}" title="Đổi tần suất check cho sản phẩm này">
+                                <option value="0" ${!isCustom ? 'selected' : ''}>⚙️ Mặc định (${globalSec}s)</option>
+                                <option value="20" ${p.checkIntervalSeconds === 20 ? 'selected' : ''}>⚡ 20s (Cực nhanh)</option>
+                                <option value="30" ${p.checkIntervalSeconds === 30 ? 'selected' : ''}>🚀 30s</option>
+                                <option value="60" ${p.checkIntervalSeconds === 60 ? 'selected' : ''}>⏱️ 1 phút</option>
+                                <option value="120" ${p.checkIntervalSeconds === 120 ? 'selected' : ''}>⏱️ 2 phút</option>
+                                <option value="300" ${p.checkIntervalSeconds === 300 ? 'selected' : ''}>⏱️ 5 phút</option>
+                                <option value="600" ${p.checkIntervalSeconds === 600 ? 'selected' : ''}>⏱️ 10 phút</option>
+                            </select>
+                            <span class="interval-hint">${isCustom ? '⚡ Riêng biệt' : '⚙️ Dùng cài đặt chung'}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="schedule-cell">
+                            <div class="schedule-next">${nextCheckPill}</div>
+                            <div class="schedule-last">${formatDate(p.lastChecked)}</div>
+                            <div class="schedule-meta"><i class="fa-solid fa-gauge-high"></i> ${speed}</div>
+                        </div>
+                    </td>
                     <td class="text-right">
-                        <button class="btn btn-sm btn-secondary btn-check-item" data-id="${p.id}" title="Check ngay">
+                        <button class="btn btn-sm btn-secondary btn-check-item" data-id="${p.id}" title="Đưa vào đầu hàng đợi check ngay">
                             <i class="fa-solid fa-arrows-rotate"></i>
                         </button>
                         <button class="btn btn-sm btn-danger btn-delete-item" data-id="${p.id}" title="Xóa sản phẩm">
@@ -169,6 +261,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // EVENT DELEGATION FOR TABLE ACTIONS
+    productsTableBody.addEventListener('change', async (e) => {
+        const select = e.target.closest('.interval-select');
+        if (select) {
+            const id = select.getAttribute('data-id');
+            const val = parseInt(select.value, 10);
+            const newInterval = val > 0 ? val : null;
+
+            try {
+                select.disabled = true;
+                const res = await fetch(`/api/products/${id}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ checkIntervalSeconds: newInterval })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    const label = newInterval ? `${newInterval}s` : 'Mặc định';
+                    showToast(`✅ Đã đổi tần suất check cho sản phẩm thành: ${label}`);
+                    await refreshAll();
+                } else {
+                    alert('Lỗi cập nhật tần suất: ' + (data.error || 'Thất bại'));
+                }
+            } catch (err) {
+                alert('Lỗi kết nối khi cập nhật tần suất: ' + err.message);
+            } finally {
+                select.disabled = false;
+            }
+            return;
+        }
+    });
+
     productsTableBody.addEventListener('click', async (e) => {
         // Handle Delete Button
         const deleteBtn = e.target.closest('.btn-delete-item');
@@ -183,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const res = await fetch(`/api/products/${id}`, { method: 'DELETE' });
                     const data = await res.json();
                     if (data.success) {
+                        showToast('🗑️ Đã xóa sản phẩm khỏi danh sách theo dõi');
                         await refreshAll();
                     } else {
                         alert('Không thể xóa: ' + (data.error || 'Lỗi không xác định'));
@@ -204,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkBtn.disabled = true;
                 const icon = checkBtn.querySelector('i');
                 if (icon) icon.classList.add('fa-spin');
+                showToast('🚀 Đã kích hoạt lượt check ưu tiên qua hàng đợi...', 'info');
                 try {
                     await fetch(`/api/products/${id}/check`, { method: 'POST' });
                     await refreshAll();
@@ -434,20 +559,26 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const url = urlInput.value.trim();
         const targetVariant = targetVariantInput ? targetVariantInput.value.trim() : 'all';
+        const intervalSelect = document.getElementById('productInterval');
+        const intervalVal = intervalSelect ? parseInt(intervalSelect.value, 10) : 0;
+        const checkIntervalSeconds = intervalVal > 0 ? intervalVal : null;
+
         if (!url) return;
 
         try {
             const res = await fetch('/api/products', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url, targetVariant })
+                body: JSON.stringify({ url, targetVariant, checkIntervalSeconds })
             });
             const data = await res.json();
             if (data.success) {
                 modal.classList.remove('show');
                 urlInput.value = '';
                 if (targetVariantInput) targetVariantInput.value = '';
+                if (intervalSelect) intervalSelect.value = '0';
                 platformPreview.style.display = 'none';
+                showToast('✅ Đã thêm sản phẩm vào hàng đợi theo dõi!');
                 await refreshAll();
             } else {
                 alert('Lỗi: ' + data.error);
@@ -464,6 +595,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const html = document.getElementById('productHtmlInput').value.trim();
             const url = document.getElementById('productHtmlUrl').value.trim();
             const targetVariant = document.getElementById('targetVariantHtml').value.trim() || 'all';
+            const intervalSelect = document.getElementById('productIntervalHtml');
+            const intervalVal = intervalSelect ? parseInt(intervalSelect.value, 10) : 0;
+            const checkIntervalSeconds = intervalVal > 0 ? intervalVal : null;
 
             if (!html) {
                 alert('Vui lòng dán mã HTML/Element của Shopee!');
@@ -479,7 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const res = await fetch('/api/products/import-html', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ html, url, targetVariant })
+                    body: JSON.stringify({ html, url, targetVariant, checkIntervalSeconds })
                 });
                 const data = await res.json();
                 if (data.success) {
@@ -487,6 +621,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('productHtmlInput').value = '';
                     document.getElementById('productHtmlUrl').value = '';
                     document.getElementById('targetVariantHtml').value = '';
+                    if (intervalSelect) intervalSelect.value = '0';
+                    showToast('✅ Đã bóc tách và thêm sản phẩm Shopee thành công!');
                     await refreshAll();
                 } else {
                     alert('Lỗi: ' + data.error);
@@ -509,6 +645,26 @@ document.addEventListener('DOMContentLoaded', () => {
     async function refreshAll() {
         await Promise.all([loadStatus(), loadProducts(), loadLogs()]);
     }
+
+    // Live Local Countdown Ticker (ticks every 1s smoothly)
+    setInterval(() => {
+        document.querySelectorAll('[data-countdown-id]').forEach(el => {
+            let sec = parseInt(el.getAttribute('data-seconds'), 10);
+            if (!isNaN(sec) && sec > 0) {
+                sec -= 1;
+                el.setAttribute('data-seconds', String(sec));
+                const valEl = el.querySelector('.cnt-val');
+                if (valEl) {
+                    valEl.textContent = formatDuration(sec);
+                }
+            } else if (sec === 0) {
+                const valEl = el.querySelector('.cnt-val');
+                if (valEl) {
+                    valEl.textContent = 'đang đợi lượt...';
+                }
+            }
+        });
+    }, 1000);
 
     // Initial Load & Polling (every 5s)
     loadSettings();

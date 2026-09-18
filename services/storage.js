@@ -128,6 +128,14 @@ function updateSettings(newSettings) {
     return data.settings;
 }
 
+function getEffectiveInterval(product, settings = null) {
+    if (product && product.checkIntervalSeconds && Number(product.checkIntervalSeconds) > 0) {
+        return Number(product.checkIntervalSeconds);
+    }
+    const s = settings || getSettings();
+    return Number(s.checkIntervalSeconds) || (Number(s.checkIntervalMinutes || 5) * 60);
+}
+
 function getProducts() {
     const data = loadData();
     return data.products;
@@ -135,12 +143,14 @@ function getProducts() {
 
 function addProduct(productData) {
     const data = loadData();
+    const interval = productData.checkIntervalSeconds ? parseInt(productData.checkIntervalSeconds, 10) : null;
     const newProduct = {
         id: `prod-${Date.now()}`,
         url: productData.url,
         platform: productData.platform || 'unknown',
         title: productData.title || productData.url,
         targetVariant: productData.targetVariant || 'all',
+        checkIntervalSeconds: (interval && interval > 0) ? interval : null,
         lastChecked: null,
         lastStatus: 'unknown',
         lastData: null,
@@ -216,6 +226,7 @@ module.exports = {
     saveData,
     getSettings,
     updateSettings,
+    getEffectiveInterval,
     getProducts,
     addProduct,
     updateProduct,
