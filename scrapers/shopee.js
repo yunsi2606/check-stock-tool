@@ -84,16 +84,20 @@ async function scrapeShopee(url, targetVariant = 'all') {
 
         const { shopid, itemid } = ids;
 
-        const pcUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+        const mobileUAs = [
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1',
+            'Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+        ];
 
-        // Attempt 1: Shopee PDP API v4
         let rawData = null;
         let fetchSuccess = false;
 
+        // Attempt 1: Shopee PDP API v4
         try {
             const apiRes = await fetch(`https://shopee.vn/api/v4/pdp/get_pc?itemid=${itemid}&shopid=${shopid}`, {
                 headers: {
-                    'User-Agent': pcUA,
+                    'User-Agent': mobileUAs[2],
                     'Accept': 'application/json',
                     'x-shopee-language': 'vi',
                     'x-api-source': 'pc',
@@ -115,121 +119,124 @@ async function scrapeShopee(url, targetVariant = 'all') {
             console.log('Shopee API fetch failed, trying HTML parse:', e.message);
         }
 
-        // Attempt 2: HTML Page Parsing if API was blocked (403 WAF)
+        // Attempt 2: HTML Page Parsing with Mobile User-Agents (Shopee Mobile SSR sends initialState with models & stock)
         if (!fetchSuccess) {
-            const pageRes = await fetch(`https://shopee.vn/product/${shopid}/${itemid}`, {
-                headers: {
-                    'User-Agent': pcUA,
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=9.0,*/*;q=0.8',
-                    'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8'
-                }
-            });
+            for (const ua of mobileUAs) {
+                try {
+                    const pageRes = await fetch(`https://shopee.vn/product/${shopid}/${itemid}`, {
+                        headers: {
+                            'User-Agent': ua,
+                            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                            'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8',
+                            'Cache-Control': 'no-cache'
+                        }
+                    });
 
-            if (!pageRes.ok) {
-                throw new Error(`Shopee page returned status ${pageRes.status}`);
-            }
+                    if (!pageRes.ok) continue;
 
-            const html = await pageRes.text();
+                    const html = await pageRes.text();
 
-            // Extract initialState from HTML script tags
-            const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
+                    // Extract initialState from HTML script tags
+                    const scripts = html.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gi) || [];
 
-            for (const scriptTag of scripts) {
-                if (scriptTag.includes('initialState') || scriptTag.includes('DOMAIN_PDP') || scriptTag.includes('cachedMap')) {
-                    const jsonText = scriptTag.replace(/^<script\b[^>]*>/i, '').replace(/<\/script>$/i, '').trim();
-                    try {
-                        const parsed = JSON.parse(jsonText);
-                        const initialState = parsed?.initialState;
-                        if (!initialState) continue;
+                    for (const scriptTag of scripts) {
+                        if (scriptTag.includes('initialState') || scriptTag.includes('DOMAIN_PDP') || scriptTag.includes('cachedMap') || scriptTag.includes('RW_VARIATION_SELECTION')) {
+                            const firstBrace = scriptTag.indexOf('{');
+                            const lastBrace = scriptTag.lastIndexOf('}');
+                            if (firstBrace === -1 || lastBrace === -1) continue;
 
-                        // Check DOMAIN_PDP cachedMap
-                        const cachedMap = initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
-                        if (cachedMap) {
-                            for (const k of Object.keys(cachedMap)) {
-                                if (k.includes(itemid)) {
-                                    const entry = cachedMap[k];
-                                    const itemObj = entry?.item || entry?.data?.item || entry?.data;
-                                    if (itemObj && (itemObj.title || itemObj.name || itemObj.models)) {
-                                        rawData = itemObj;
-                                        fetchSuccess = true;
-                                        break;
+                            const jsonText = scriptTag.substring(firstBrace, lastBrace + 1);
+                            try {
+                                const parsed = JSON.parse(jsonText);
+                                const initialState = parsed?.initialState || parsed;
+                                if (!initialState) continue;
+
+                                let itemObj = null;
+
+                                // 1. Check DOMAIN_PDP cachedMap
+                                const cachedMap = initialState?.DOMAIN_PDP?.data?.PDP_BFF_DATA?.cachedMap;
+                                if (cachedMap) {
+                                    for (const k of Object.keys(cachedMap)) {
+                                        if (k.includes(itemid)) {
+                                            const entry = cachedMap[k];
+                                            itemObj = entry?.item || entry?.data?.item || entry?.data;
+                                            if (itemObj && (itemObj.title || itemObj.name || (itemObj.models && itemObj.models.length > 0))) {
+                                                break;
+                                            }
+                                        }
                                     }
                                 }
+
+                                // 2. Check initialState.item.items[itemid]
+                                if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.item?.items) {
+                                    if (initialState.item.items[itemid] && (initialState.item.items[itemid].name || initialState.item.items[itemid].title)) {
+                                        itemObj = initialState.item.items[itemid];
+                                    }
+                                }
+
+                                // 3. Check RW_VARIATION_SELECTION
+                                if ((!itemObj || (!itemObj.name && !itemObj.title)) && initialState?.RW_VARIATION_SELECTION?.data?.itemLevel?.item) {
+                                    itemObj = initialState.RW_VARIATION_SELECTION.data.itemLevel.item;
+                                }
+
+                                if (itemObj && (itemObj.name || itemObj.title)) {
+                                    rawData = itemObj;
+                                    fetchSuccess = true;
+                                    break;
+                                }
+                            } catch (e) {
+                                // Skip non-parseable scripts
                             }
                         }
-
-                        // Check initialState.item.items
-                        if (!fetchSuccess && initialState?.item) {
-                            if (initialState.item.items && initialState.item.items[itemid]) {
-                                rawData = initialState.item.items[itemid];
-                                fetchSuccess = true;
-                            } else if (initialState.item.title || initialState.item.name) {
-                                rawData = initialState.item;
-                                fetchSuccess = true;
-                            }
-                        }
-
-                        if (fetchSuccess) break;
-                    } catch (e) {
-                        // Skip non-parseable scripts
                     }
+
+                    if (fetchSuccess) break;
+                } catch (e) {
+                    // Try next UA
                 }
             }
+        }
 
-            // Fallback: Check if HTML buttons or meta tags exist
-            if (!fetchSuccess) {
-                const htmlButtons = parseShopeeHtmlButtons(html);
-                const h1Match = html.match(/<h1\b[^>]*>(.*?)<\/h1>/i) || html.match(/<span\b[^>]*class="[^"]*jrzBcd[^"]*"[^>]*>(.*?)<\/span>/i);
-                const titleMatch = html.match(/<meta\b[^>]*property="og:title"\s*content="(.*?)"/i);
-                
-                const validTitle = (h1Match && h1Match[1]) ? h1Match[1].replace(/<[^>]+>/g, '').trim() :
-                                   (titleMatch && titleMatch[1] && !titleMatch[1].includes('Shopee Việt Nam')) ? titleMatch[1].trim() : null;
-
-                // If no buttons AND no valid title parsed, Shopee WAF anti-bot blocked the request
-                if (htmlButtons.length === 0 && !validTitle) {
-                    throw new Error(`Shopee WAF anti-bot blocked request (Status 403 / Captcha Required)`);
-                }
-
-                const title = validTitle || `Sản phẩm Shopee (${itemid})`;
-                const imageMatch = html.match(/https:\/\/down-vn\.img\.susercontent\.com\/file\/[a-zA-Z0-9_-]+/i);
-                const isTargetSpecified = targetVariant && targetVariant !== 'all';
-
-                let variants = htmlButtons;
-                let isOverallAvailable = variants.some(v => v.available);
-                if (isTargetSpecified) {
-                    const cleanTarget = targetVariant.trim().toLowerCase();
-                    const matched = variants.find(v => v.title.toLowerCase().includes(cleanTarget));
-                    if (matched) {
-                        isOverallAvailable = matched.available;
-                    } else {
-                        variants.unshift({
-                            id: 'missing-target',
-                            title: `${targetVariant} (Hết hàng)`,
+        // Attempt 3: OpenGraph fallback via Facebook External Hit UA if HTML script parsing failed
+        if (!fetchSuccess || !rawData) {
+            try {
+                const fbRes = await fetch(`https://shopee.vn/a-i.${shopid}.${itemid}`, {
+                    headers: {
+                        'User-Agent': 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+                    }
+                });
+                if (fbRes.ok) {
+                    const fbHtml = await fbRes.text();
+                    const titleMatch = fbHtml.match(/<meta\b[^>]*property=["']og:title["']\s+content=["'](.*?)["']/i);
+                    const imageMatch = fbHtml.match(/<meta\b[^>]*property=["']og:image["']\s+content=["'](.*?)["']/i);
+                    
+                    if (titleMatch && titleMatch[1] && !titleMatch[1].includes('Shopee Việt Nam')) {
+                        const title = titleMatch[1].replace(/\s*\|\s*Shopee Việt Nam$/i, '').trim();
+                        const image = imageMatch ? imageMatch[1] : '';
+                        const duration = Date.now() - startTime;
+                        return {
+                            success: true,
+                            platform: 'shopee',
+                            title: title,
                             price: 0,
-                            available: false,
-                            stockQty: 0
-                        });
-                        isOverallAvailable = false;
+                            originalPrice: 0,
+                            available: true,
+                            stockQty: 1,
+                            image: image,
+                            variants: [{ id: itemid, title: 'Mặc định', price: 0, available: true }],
+                            targetVariant: targetVariant,
+                            url: url,
+                            responseTimeMs: duration,
+                            timestamp: new Date().toISOString()
+                        };
                     }
                 }
-
-                const duration = Date.now() - startTime;
-                return {
-                    success: true,
-                    platform: 'shopee',
-                    title: title,
-                    price: 0,
-                    originalPrice: 0,
-                    available: isOverallAvailable,
-                    stockQty: variants.reduce((acc, v) => acc + (v.available ? 1 : 0), 0),
-                    image: imageMatch ? imageMatch[0] : '',
-                    variants: variants,
-                    targetVariant: targetVariant,
-                    url: url,
-                    responseTimeMs: duration,
-                    timestamp: new Date().toISOString()
-                };
+            } catch (e) {
+                // Skip
             }
+
+            throw new Error(`Shopee WAF anti-bot blocked request (Status 403 / Captcha Required)`);
         }
 
         const duration = Date.now() - startTime;
